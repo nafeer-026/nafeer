@@ -1,53 +1,143 @@
-# NAFEER DIGITAL — Website
+# NAFEER DIGITAL | نفير الرقمي — Official Website
 
-The official single-page website of **NAFEER DIGITAL**, a full-service digital marketing agency.
+The official, international, premium digital marketing agency website of **NAFEER DIGITAL (نفير الرقمي)**.
 
-🌐 **Live:** _coming soon (Vercel)_ · 📦 **Repo:** [github.com/nafeer-026/nafeer](https://github.com/nafeer-026/nafeer)
+🌐 **Production Site:** [https://nafeer-sigma.vercel.app](https://nafeer-sigma.vercel.app) · 📦 **Repository:** [github.com/nafeer-026/nafeer](https://github.com/nafeer-026/nafeer)
 
-## What's inside
+---
 
-| File | Purpose |
-|---|---|
-| `index.html` | **Production page** — complete document (head, meta, SEO) wrapping the site |
-| `nafeer.html` | Original raw export (editor fragment) — kept as reference |
+## 🚀 Overview of Redesign & Architecture
 
-The entire site lives in one self-contained file: all CSS is inline, images are base64-embedded,
-and there is **zero JavaScript** — even the language switch and mobile menu are pure CSS.
+This repository contains the completely redesigned, fully responsive, bilingual (English & Arabic) multi-page web platform for **NAFEER DIGITAL**, engineered according to international agency standards, modern UI/UX design, and technical SEO best practices.
 
-## Features
+### Key Pillars & Accomplishments
 
-- 🌍 **Bilingual EN / العربية** — pure-CSS radio-button switcher with full RTL support
-- 📱 **Fully responsive** — CSS-only breakpoints (920 / 880 / 820 / 640 / 430px): hamburger menu, adaptive grids, stacked sections — zero JavaScript
-- 📄 **Six sections as pages** — Home, About, Services, Portfolio, Blog, Contact
-- 💬 **Lead generation** — WhatsApp CTAs (`+60 11 7006 6150`), contact form via FormSubmit (`nafeerdigital@gmail.com`), floating WhatsApp button
-- 🎨 Inline SVG illustrations & animations (no image weight)
+1. **Brand Identity & Aesthetics:**
+   - **Deep Forest Green** (`#063B35`), **Dark Navy** (`#10243A`), **Premium Gold** (`#E7B94F`), **Pure White** (`#FFFFFF`), and **Soft Gray/Mint** (`#F5F7F6`).
+   - Official logos and graphic visual assets preserved, optimized, and linked.
+   - Professional typography: `Plus Jakarta Sans` for English and `Cairo` / `Tajawal` for Arabic.
 
-### Responsive behavior
+2. **Mobile-First Responsive Layout:**
+   - Resolved narrow mobile containers: full mobile viewport utilization (`100%` width with fluid gutters).
+   - Fluid typography using CSS `clamp()`.
+   - Adaptive grids for smartphones (<640px), tablets (641px - 1024px), laptops (1025px - 1440px), and large displays (>1440px).
+   - Zero horizontal overflow, touch-friendly navigation drawer, and floating action triggers.
 
-All responsive rules live in the `<style id="nd-responsive">` block and are **additive** — layouts above 920px behave exactly as the original design.
+3. **Complete Bilingual Implementation (English & Arabic):**
+   - **Strict Single-Language Display:** Only one language is active at a time.
+   - **English (Default):** LTR layout, English typography, English navigation, and English CTAs.
+   - **Arabic (RTL):** Full right-to-left alignment, Arabic typography, Arabic brand name **(نفير الرقمي)**, and Arabic CTAs.
+   - Dedicated SEO URLs:
+     - Root `/` and `/en/` for English
+     - `/ar/` for Arabic
+     - `/en/services/` and `/ar/services/`
+     - `/en/blog/` and `/ar/blog/`
+   - Instant language switching with `localStorage` memory and automated URL synchronization.
+   - Bidirectional `hreflang` tags on all 55 indexed pages.
 
-| Width | Changes |
-|---|---|
-| ≤920px | Hamburger menu (pure-CSS dropdown via `#nd-m`), header CTA hidden, split sections stack, 4-column grids → 2×2 hairline grid |
-| ≤880px | Quick-guide 5 → 3 columns |
-| ≤820px | Footer 3 → 2 columns (brand spans full width) |
-| ≤640px | Tighter page gutters (32px), form fields stack, footer 1 column, quick-guide 2 columns, hero map dimmed |
-| ≤430px | Feature/step/why grids → single column, contact buttons full-width |
+4. **Interactive Theme & Mood Customizer:**
+   - Floating customization trigger button and header trigger.
+   - **6 Ready-Made Themes:** NAFEER Signature, Midnight Professional, Royal Luxury, Ocean Blue, Modern Minimal, Emerald Premium.
+   - **5 Visual Moods:** Professional, Luxury, Modern, Minimal, Dark.
+   - **Light / Dark Mode Toggle.**
+   - **Live Custom Color Pickers:** Primary, Secondary, Accent, Background.
+   - `localStorage` persistence and "Reset to Official Default" functionality.
 
-## Roadmap (scaling later)
+5. **Founder Credentials & Credibility (Section 8):**
+   - Highlighting founder **Mohamed Alhadi (Mohamed Alhadi Alneel)**.
+   - Verified credentials: **Illinois Institute of Technology (IIT)** Digital Marketing Course completed with a **97.5% grade**.
+   - Verified experience in technical SEO, market research, content strategy, team operations, and voluntary community empowerment.
+   - Ethical, transparent separation between individual qualifications and corporate milestones.
 
-1. ~~Responsive pass~~ ✅ **Done** — CSS-only responsive layer shipped (see table above)
-2. Split CSS/JS into files; optimize base64 images to real assets
-3. Multi-page architecture or framework migration
-4. Custom domain + analytics (GA4) + SEO sitemap/robots
+6. **11 Dedicated Individual Service Pages (EN & AR):**
+   - Search Engine Optimization (SEO)
+   - Technical SEO
+   - Local SEO
+   - Content Marketing
+   - Social Media Marketing
+   - Pay-Per-Click Advertising (PPC)
+   - Google Ads
+   - B2B Lead Generation
+   - Digital Marketing Strategy
+   - Website Design and Development
+   - Marketing Analytics and Reporting
+   - Each with problems solved, 4-step methodology, commercial benefits, FAQs, schema, and internal linking.
 
-## Deploy (Vercel)
+7. **13 In-Depth Blog Articles (EN & AR):**
+   - 10 newly authored strategic guides + 3 original preserved topics fully developed into comprehensive 1,000+ word guides.
+   - JSON-LD `BlogPosting` schema, reading times, category tags, author boxes, and conversion CTAs.
 
-1. Push to this GitHub repo (done via `git push`)
-2. On [vercel.com](https://vercel.com) → **Add New… → Project → Import** `nafeer-026/nafeer`
-3. Framework preset: **Other** (static) — no build command needed
-4. Deploy → every future `git push` auto-deploys
+8. **Lead Generation & Contact Integrations:**
+   - Interactive multi-field consultation form with client-side validation and bilingual feedback.
+   - Integrated with FormSubmit endpoint (`nafeerdigital@gmail.com`).
+   - Pre-filled **WhatsApp integrations** with language-tailored messages:
+     - **EN:** `"Hello NAFEER DIGITAL, I'm interested in your digital marketing services. I'd like to discuss my business requirements."`
+     - **AR:** `"مرحباً نفير الرقمي، أنا مهتم بخدمات التسويق الرقمي لديكم وأرغب في مناقشة احتياجات عملي."`
+   - Direct contacts: Phone `+60 11 7006 6150`, `nafeerdigital@gmail.com`, manager `m.alhadi.alneel@gmail.com`.
 
-## Local preview
+9. **Technical SEO & Core Web Vitals:**
+   - Clean `sitemap.xml` with 55 mapped bilingual URLs.
+   - Optimized `robots.txt`.
+   - `vercel.json` with security headers (`X-Frame-Options`, `X-Content-Type-Options`) and immutable static caching.
 
-Just open `index.html` in any browser — no build step, no server required.
+---
+
+## 📁 Repository Structure
+
+```
+nafeer/
+├── index.html                   # Root English Homepage (with language router)
+├── nafeer.html                  # Original raw export (preserved reference)
+├── robots.txt                   # Search crawler directives
+├── sitemap.xml                  # XML Sitemap (55 URLs with hreflang alternates)
+├── vercel.json                  # Vercel deployment & routing config
+├── assets/
+│   ├── css/
+│   │   └── main.css             # Unified mobile-first design system & theme variables
+│   ├── js/
+│   │   ├── main.js              # Nav drawer, form validation, WhatsApp integration, routing
+│   │   └── theme-customizer.js  # Interactive 6-theme, 5-mood, dark/light customization engine
+│   ├── images/
+│   │   ├── logo.jpg             # Official NAFEER DIGITAL brand logo
+│   │   ├── hero-map.jpg         # Hero visual map composition
+│   │   ├── case-study-tako-healthcare.jpg
+│   │   ├── case-study-tako-internship.jpg
+│   │   └── case-study-tako-digital-marketing.jpg
+│   └── svgs/                    # Preserved original SVG illustrations & badges
+├── en/
+│   ├── index.html               # Dedicated English Homepage
+│   ├── services/                # 11 Dedicated English Service Pages + Services Hub
+│   └── blog/                    # 13 Dedicated English Blog Post Pages + Blog Hub
+├── ar/
+│   ├── index.html               # Dedicated Arabic RTL Homepage (نفير الرقمي)
+│   ├── services/                # 11 Dedicated Arabic Service Pages + Services Hub
+│   └── blog/                    # 13 Dedicated Arabic Blog Post Pages + Blog Hub
+└── scripts/
+    ├── data_services.js         # Service catalog data (bilingual)
+    ├── data_blog.js             # Article catalog data (bilingual)
+    ├── build_template.js        # HTML document shell generator & components
+    ├── build_all.js             # Master static site generator
+    └── test_server.js           # Automated local test harness
+```
+
+---
+
+## 🛠️ Local Development & Testing
+
+No external frameworks or build dependencies required. Powered by Node.js built-ins.
+
+```bash
+# Generate / update all 56 pages & sitemap:
+node scripts/build_all.js
+
+# Run the automated endpoint test harness:
+node scripts/test_server.js
+```
+
+---
+
+## 🚀 Deployment (Vercel)
+
+The project is connected to Vercel via GitHub auto-deployment:
+1. Every commit pushed to branch `main` automatically triggers an instant production build on Vercel.
+2. Production URL: [https://nafeer-sigma.vercel.app](https://nafeer-sigma.vercel.app)

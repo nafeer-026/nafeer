@@ -1,0 +1,5 @@
+# NAFEER DIGITAL | نفير الرقمي
+User-agent: *
+Allow: /
+
+Sitemap: https://nafeer-sigma.vercel.app/sitemap.xml
