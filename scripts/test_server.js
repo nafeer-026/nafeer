@@ -47,6 +47,12 @@ server.listen(PORT, async () => {
     '/ar/services/',
     '/en/services/seo.html',
     '/ar/services/seo.html',
+    '/en/services/branding-and-brand-strategy.html',
+    '/ar/services/branding-and-brand-strategy.html',
+    '/en/services/digital-marketing-strategy.html',
+    '/ar/services/digital-marketing-strategy.html',
+    '/en/services/google-ads.html',
+    '/ar/services/google-ads.html',
     '/en/blog/',
     '/ar/blog/',
     '/en/blog/how-seo-helps-small-businesses.html',
@@ -54,9 +60,10 @@ server.listen(PORT, async () => {
     '/sitemap.xml',
     '/robots.txt',
     '/assets/css/main.css',
-    '/assets/js/theme-customizer.js',
     '/assets/js/main.js',
-    '/assets/images/logo.jpg'
+    '/assets/images/logo.jpg',
+    '/assets/images/logo-icon.png',
+    '/assets/images/favicon.png'
   ];
 
   let passed = 0;

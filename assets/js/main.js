@@ -1,70 +1,61 @@
 /**
  * NAFEER DIGITAL | نفير الرقمي
- * Core Website Scripts: Navigation, Language Switching, Lead Forms & WhatsApp Integration
+ * Core International Agency Script: Navigation, Dynamic Expertise Showcase,
+ * Multilingual Switching, Validated Lead Forms & Direct WhatsApp Routing
  */
 
 (function () {
   'use strict';
 
   const WHATSAPP_NUMBER = '601170066150';
-  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I'm interested in your digital marketing services. I'd like to discuss my business requirements.";
-  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أنا مهتم بخدمات التسويق الرقمي لديكم وأرغب في مناقشة احتياجات عملي.";
+  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I am looking for a strategic partner to grow our business through digital marketing. I'd like to book a free consultation.";
+  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أود استشارة فريقكم الاستراتيجي لتطوير خطة تسويق ونمو رقمي لأعمالنا.";
 
   function getActiveLang() {
     return document.documentElement.getAttribute('lang') || 'en';
   }
 
-  // 1. Language Switcher Routing & Sync
-  function initLanguageSwitcher() {
-    const langBtns = document.querySelectorAll('.js-switch-lang');
+  // 1. Transparent Header on Scroll
+  function initHeaderScroll() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
 
-    langBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetLang = btn.getAttribute('data-target-lang');
-        const currentPath = window.location.pathname;
+    function handleScroll() {
+      if (window.scrollY > 25) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
 
-        try {
-          localStorage.setItem('nafeer_lang', targetLang);
-        } catch (err) {}
-
-        // Calculate target URL
-        let targetUrl = '/';
-        if (targetLang === 'ar') {
-          if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/ar/')) {
-            targetUrl = '/ar/';
-          } else if (currentPath.includes('/en/')) {
-            targetUrl = currentPath.replace('/en/', '/ar/');
-          } else if (!currentPath.includes('/ar/')) {
-            targetUrl = '/ar' + currentPath;
-          } else {
-            targetUrl = currentPath;
-          }
-        } else {
-          // targetLang === 'en'
-          if (currentPath.includes('/ar/')) {
-            targetUrl = currentPath.replace('/ar/', '/en/');
-            if (targetUrl === '/en/') targetUrl = '/';
-          } else {
-            targetUrl = '/';
-          }
-        }
-
-        window.location.href = targetUrl;
-      });
-    });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
-  // 2. WhatsApp Integration with Language Presets
-  function initWhatsAppIntegration() {
-    const isAr = getActiveLang() === 'ar';
-    const message = encodeURIComponent(isAr ? WHATSAPP_MSG_AR : WHATSAPP_MSG_EN);
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+  // 2. Interactive Expertise Showcase Tabs
+  function initExpertiseTabs() {
+    const tabBtns = document.querySelectorAll('.expertise-tab-btn');
+    const panels = document.querySelectorAll('.expertise-panel');
 
-    document.querySelectorAll('.js-whatsapp-link').forEach(link => {
-      link.setAttribute('href', waUrl);
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
+    if (!tabBtns.length || !panels.length) return;
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+
+        // Toggle active button
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Toggle active panel
+        panels.forEach(p => {
+          if (p.id === targetId) {
+            p.classList.add('active');
+          } else {
+            p.classList.remove('active');
+          }
+        });
+      });
     });
   }
 
@@ -93,29 +84,68 @@
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     if (overlay) overlay.addEventListener('click', closeDrawer);
 
-    // Close when clicking any nav link inside drawer
     drawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeDrawer);
     });
   }
 
-  // 4. Header Scroll Effect
-  function initHeaderScroll() {
-    const header = document.querySelector('.site-header');
-    if (!header) return;
+  // 4. Multilingual Switching Engine
+  function initLanguageSwitcher() {
+    const langBtns = document.querySelectorAll('.js-switch-lang');
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }, { passive: true });
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetLang = btn.getAttribute('data-target-lang');
+        const currentPath = window.location.pathname;
+
+        try {
+          localStorage.setItem('nafeer_lang', targetLang);
+        } catch (err) {}
+
+        let targetUrl = '/';
+
+        if (targetLang === 'ar') {
+          if (currentPath === '/' || (currentPath.endsWith('index.html') && !currentPath.includes('/ar/'))) {
+            targetUrl = '/ar/';
+          } else if (currentPath.includes('/en/')) {
+            targetUrl = currentPath.replace('/en/', '/ar/');
+          } else if (!currentPath.includes('/ar/')) {
+            targetUrl = '/ar' + (currentPath.startsWith('/') ? currentPath : '/' + currentPath);
+          } else {
+            targetUrl = currentPath;
+          }
+        } else {
+          // targetLang === 'en'
+          if (currentPath.includes('/ar/')) {
+            targetUrl = currentPath.replace('/ar/', '/en/');
+            if (targetUrl === '/en/') targetUrl = '/';
+          } else {
+            targetUrl = '/';
+          }
+        }
+
+        window.location.href = targetUrl;
+      });
+    });
   }
 
-  // 5. Contact Form Validation & Submission
-  function initContactForm() {
-    const form = document.getElementById('contact-form');
+  // 5. Direct WhatsApp Integration
+  function initWhatsAppIntegration() {
+    const isAr = getActiveLang() === 'ar';
+    const message = encodeURIComponent(isAr ? WHATSAPP_MSG_AR : WHATSAPP_MSG_EN);
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
+    document.querySelectorAll('.js-whatsapp-link').forEach(link => {
+      link.setAttribute('href', waUrl);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+
+  // 6. Professional Consultation Form Submission
+  function initConsultationForm() {
+    const form = document.getElementById('consultation-form') || document.getElementById('contact-form');
     if (!form) return;
 
     const feedback = document.getElementById('form-feedback');
@@ -124,77 +154,75 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Check required fields
       const nameInput = form.querySelector('[name="name"]');
       const emailInput = form.querySelector('[name="email"]');
       const messageInput = form.querySelector('[name="message"]');
+
+      if (!nameInput || !emailInput) return;
 
       if (!nameInput.value.trim() || !emailInput.value.trim()) {
         if (feedback) {
           feedback.className = 'form-feedback error';
           feedback.textContent = isAr 
-            ? 'يرجى ملء جميع الحقول المطلوبة (الاسم والبريد الإلكتروني).'
-            : 'Please fill in all required fields (Name and Email).';
+            ? 'يرجى إكمال الحقول الإلزامية (الاسم والبريد الإلكتروني).'
+            : 'Please complete all required fields (Name and Business Email).';
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         return;
       }
 
-      // Basic email regex
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(emailInput.value.trim())) {
         if (feedback) {
           feedback.className = 'form-feedback error';
           feedback.textContent = isAr
             ? 'يرجى إدخال عنوان بريد إلكتروني صحيح.'
-            : 'Please enter a valid email address.';
+            : 'Please enter a valid business email address.';
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         return;
       }
 
-      // Submit via Fetch to FormSubmit endpoint
       const submitBtn = form.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+      const originalText = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = isAr ? 'جارٍ الإرسال...' : 'Sending...';
+        submitBtn.innerHTML = isAr ? 'جارٍ الإرسال...' : 'Submitting Request...';
       }
 
       const formData = new FormData(form);
 
       fetch('https://formsubmit.co/ajax/nafeerdigital@gmail.com', {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(Object.fromEntries(formData))
       })
-      .then(response => response.json())
-      .then(data => {
+      .then(res => res.json())
+      .then(() => {
         if (feedback) {
           feedback.className = 'form-feedback success';
           feedback.textContent = isAr
-            ? 'شكراً لك! تم استلام رسالتك بنجاح. سيتواصل معك فريق نفير الرقمي في غضون 24 ساعة.'
-            : 'Thank you! Your message has been sent successfully. The NAFEER DIGITAL team will contact you within 24 hours.';
+            ? 'شكراً لتواصلك معنا! تم استلام طلب الاستشارة وسيتواصل معك أحد خبرائنا الاستراتيجيين خلال 24 ساعة.'
+            : 'Thank you for reaching out! Your consultation request has been received. A senior growth strategist will contact you within 24 hours.';
         }
         form.reset();
       })
-      .catch(error => {
-        // Fallback friendly message
+      .catch(() => {
         if (feedback) {
           feedback.className = 'form-feedback success';
           feedback.textContent = isAr
-            ? 'تم استلام طلبك بنجاح! يمكنك أيضاً التواصل معنا مباشرة عبر واتساب لرد فوري.'
-            : 'Your enquiry has been received! You can also reach us directly via WhatsApp for immediate assistance.';
+            ? 'تم استلام طلبك! يمكنك أيضاً التواصل معنا مباشرة عبر واتساب لرد سريع.'
+            : 'Your request has been received! You may also contact us directly via WhatsApp for immediate coordination.';
         }
         form.reset();
       })
       .finally(() => {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
+          submitBtn.innerHTML = originalText;
         }
         if (feedback) {
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -203,31 +231,37 @@
     });
   }
 
-  // 6. FAQ Accordion
-  function initFAQ() {
+  // 7. FAQ Accordion Interaction
+  function initFaqAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question');
-      if (question) {
-        question.addEventListener('click', () => {
-          const isOpen = item.classList.contains('open');
-          // Close others in same accordion
-          faqItems.forEach(other => other.classList.remove('open'));
-          if (!isOpen) {
-            item.classList.add('open');
-          }
-        });
-      }
+      if (!question) return;
+
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        // Close others in the same list
+        const parentList = item.closest('.faq-list');
+        if (parentList) {
+          parentList.querySelectorAll('.faq-item').forEach(other => {
+            if (other !== item) other.classList.remove('open');
+          });
+        }
+        item.classList.toggle('open', !isOpen);
+      });
     });
   }
 
-  // DOMContentLoaded initialization
+  // DOM Loaded Trigger
   document.addEventListener('DOMContentLoaded', () => {
+    initHeaderScroll();
+    initExpertiseTabs();
+    initMobileNav();
     initLanguageSwitcher();
     initWhatsAppIntegration();
-    initMobileNav();
-    initHeaderScroll();
-    initContactForm();
-    initFAQ();
+    initConsultationForm();
+    initFaqAccordion();
   });
 })();

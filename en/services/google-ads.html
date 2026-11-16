@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="signature" data-mood="professional" data-mode="light">
 <head>
   <meta charset="UTF-8">
@@ -32,6 +32,8 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/main.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
   
   <script type="application/ld+json">
 {
@@ -54,7 +56,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="../../" class="brand-logo-wrap" aria-label="NAFEER DIGITAL">
-        <img src="../../assets/images/logo.jpg" alt="NAFEER DIGITAL" class="brand-logo-img" width="44" height="44">
+        <img src="../../assets/images/logo-icon.png" alt="NAFEER DIGITAL" class="brand-logo-img" width="44" height="44">
         <div class="brand-text-block">
           <span class="brand-name">NAFEER DIGITAL</span>
           <span class="brand-tagline">DIGITAL MARKETING AGENCY</span>
@@ -71,27 +73,20 @@
         <a href="../../#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Header Actions -->
+            <!-- Header Actions -->
       <div class="header-actions">
         <!-- Language Switcher Button -->
         <a href="#" class="lang-switch-btn js-switch-lang" data-target-lang="ar" title="التحويل إلى العربية">
-          <span>🇲🇾</span>
           <span>العربية</span>
         </a>
 
-        <!-- Theme Customizer Trigger -->
-        <button type="button" class="theme-trigger-btn js-open-theme-panel" title="Customize Theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-          <span class="sr-only">Theme</span>
-        </button>
-
         <!-- Header CTA -->
         <a href="../../#contact" class="btn btn-primary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
-          Let's Talk
+          Get in Touch
         </a>
 
         <!-- Mobile Hamburger Trigger -->
-        <button type="button" class="hamburger-btn" id="btn-hamburger" aria-label="Menu">
+        <button type="button" class="hamburger-btn" id="btn-hamburger" aria-label="Open Navigation Menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -105,7 +100,7 @@
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <div class="brand-logo-wrap">
-        <img src="../../assets/images/logo.jpg" alt="NAFEER DIGITAL" class="brand-logo-img" width="36" height="36">
+        <img src="../../assets/images/logo-icon.png" alt="NAFEER DIGITAL" class="brand-logo-img" width="36" height="36">
         <span class="brand-name">NAFEER DIGITAL</span>
       </div>
       <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="Close">✕</button>
@@ -120,15 +115,12 @@
       <a href="../../#contact" class="drawer-nav-link">Contact Us</a>
     </nav>
 
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.85rem;">
       <a href="#" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="ar">
-        🇲🇾 التحويل إلى العربية
+        التحويل إلى العربية
       </a>
-      <button type="button" class="btn btn-secondary btn-full js-open-theme-panel">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg> Theme & Mood Customizer
-      </button>
       <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg> Chat on WhatsApp
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg> Direct WhatsApp
       </a>
     </div>
   </aside>
@@ -158,7 +150,7 @@
         <div class="container service-detail-grid">
           <div class="content-article">
             <h2>Business Problems We Solve</h2>
-            <p>Operating without specialized strategic execution leads to wasted marketing budgets and missed revenue opportunities. Here are the core challenges our Google Ads service systematically resolves:</p>
+            <p>Operating without specialised strategic execution leads to wasted marketing budgets and missed revenue opportunities. Here are the core challenges our Google Ads service systematically resolves:</p>
             <ul>
               <li><strong>Low Quality Score inflating your cost per click (CPC).</strong></li><li><strong>Broad-match keywords draining budgets on irrelevant queries.</strong></li><li><strong>Poorly structured campaigns suffering from internal ad group cannibalization.</strong></li><li><strong>Missing ad extensions and asset groups reducing SERP click-through rates.</strong></li>
             </ul>
@@ -219,7 +211,7 @@
                     <span>Are Search Ads or Performance Max campaigns better?</span>
                     <span class="faq-toggle-icon">▼</span>
                   </div>
-                  <div class="faq-answer">Search Ads offer maximum precision control over keyword triggers, ideal for specialized services and B2B. Performance Max leverages Google AI across all properties simultaneously, ideal for e-commerce and broader scale.</div>
+                  <div class="faq-answer">Search Ads offer maximum precision control over keyword triggers, ideal for specialised services and B2B. Performance Max leverages Google AI across all properties simultaneously, ideal for e-commerce and broader scale.</div>
                 </div>
               
             </div>
@@ -310,202 +302,85 @@
     
   </main>
 
-  <!-- Floating Quick Actions -->
+  <!-- Floating WhatsApp Action -->
   <div class="floating-actions">
     <a href="https://wa.me/601170066150" class="floating-btn floating-whatsapp js-whatsapp-link" title="Chat on WhatsApp" aria-label="WhatsApp">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
     </a>
-    <button type="button" class="floating-btn floating-theme js-open-theme-panel" title="Theme Customizer" aria-label="Theme Customizer">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-    </button>
   </div>
-
-  <!-- Interactive Theme & Mood Customizer Drawer -->
-  <div class="theme-panel-overlay" id="theme-panel-overlay"></div>
-  <aside class="theme-panel" id="theme-panel" aria-label="Website Theme Customizer">
-    <div class="theme-panel-header">
-      <h3 class="theme-panel-title">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-        <span>Theme & Mood Customizer</span>
-      </h3>
-      <button type="button" class="drawer-close-btn js-close-theme-panel" aria-label="Close">✕</button>
-    </div>
-
-    <!-- Ready-Made Color Themes -->
-    <div class="theme-panel-section">
-      <h4 class="theme-section-title">1. Ready-Made Themes</h4>
-      <div class="theme-presets-grid">
-        <button type="button" class="theme-preset-btn active" data-theme-val="signature">
-          <span class="preset-swatch" style="background:#063B35;"></span>
-          <span>NAFEER Signature</span>
-        </button>
-        <button type="button" class="theme-preset-btn" data-theme-val="midnight">
-          <span class="preset-swatch" style="background:#0F172A;"></span>
-          <span>Midnight Pro</span>
-        </button>
-        <button type="button" class="theme-preset-btn" data-theme-val="luxury">
-          <span class="preset-swatch" style="background:#121212;"></span>
-          <span>Royal Luxury</span>
-        </button>
-        <button type="button" class="theme-preset-btn" data-theme-val="ocean">
-          <span class="preset-swatch" style="background:#0C4A6E;"></span>
-          <span>Ocean Blue</span>
-        </button>
-        <button type="button" class="theme-preset-btn" data-theme-val="minimal">
-          <span class="preset-swatch" style="background:#1E293B;"></span>
-          <span>Modern Minimal</span>
-        </button>
-        <button type="button" class="theme-preset-btn" data-theme-val="emerald">
-          <span class="preset-swatch" style="background:#064E3B;"></span>
-          <span>Emerald Premium</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mood Selection -->
-    <div class="theme-panel-section">
-      <h4 class="theme-section-title">2. Visual Mood</h4>
-      <div class="mood-options-grid">
-        <button type="button" class="mood-btn active" data-mood-val="professional">Professional</button>
-        <button type="button" class="mood-btn" data-mood-val="luxury">Luxury</button>
-        <button type="button" class="mood-btn" data-mood-val="modern">Modern</button>
-        <button type="button" class="mood-btn" data-mood-val="minimal">Minimal</button>
-        <button type="button" class="mood-btn" data-mood-val="dark">Dark Mood</button>
-      </div>
-    </div>
-
-    <!-- Light / Dark Mode -->
-    <div class="theme-panel-section">
-      <h4 class="theme-section-title">3. Light / Dark Mode</h4>
-      <div class="mode-toggle-grid">
-        <button type="button" class="mode-btn active" data-mode-val="light">☀️ Light Mode</button>
-        <button type="button" class="mode-btn" data-mode-val="dark">🌙 Dark Mode</button>
-      </div>
-    </div>
-
-    <!-- Custom Color Selection -->
-    <div class="theme-panel-section">
-      <h4 class="theme-section-title">4. Custom Colors</h4>
-      <div class="color-picker-row">
-        <span class="color-picker-label">Primary Color</span>
-        <input type="color" id="picker-primary" class="color-picker-input" value="#063B35">
-      </div>
-      <div class="color-picker-row">
-        <span class="color-picker-label">Secondary Color</span>
-        <input type="color" id="picker-secondary" class="color-picker-input" value="#10243A">
-      </div>
-      <div class="color-picker-row">
-        <span class="color-picker-label">Accent Color</span>
-        <input type="color" id="picker-accent" class="color-picker-input" value="#E7B94F">
-      </div>
-      <div class="color-picker-row">
-        <span class="color-picker-label">Background Color</span>
-        <input type="color" id="picker-bg" class="color-picker-input" value="#F5F7F6">
-      </div>
-    </div>
-
-    <button type="button" class="theme-reset-btn" id="btn-reset-theme">
-      ↺ Reset to Official Default
-    </button>
-  </aside>
 
   <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand-col">
-        <img src="../../assets/images/logo.jpg" alt="NAFEER DIGITAL" class="brand-logo-img" width="50" height="50">
-        <div class="footer-slogan">Your Growth Is Our Mission. Your Success Is Our Passion.</div>
-        <p class="footer-desc">
-          NAFEER DIGITAL is a full-service digital marketing agency helping businesses in Malaysia and global markets achieve sustainable growth, capture qualified leads, and build dominant search authority.
-        </p>
-        <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-sm js-whatsapp-link">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg> Message on WhatsApp
-        </a>
-      </div>
-
-      <div>
-        <h4 class="footer-heading">Navigation</h4>
-        <nav class="footer-nav">
-          <a href="../../">Home</a>
-          <a href="../../#about">About NAFEER</a>
-          <a href="../../en/services/">All Services</a>
-          <a href="../../#portfolio">Portfolio</a>
-          <a href="../../en/blog/">Blog Articles</a>
-          <a href="../../#contact">Contact Us</a>
-        </nav>
-      </div>
-
-      <div>
-        <h4 class="footer-heading">Core Services</h4>
-        <nav class="footer-nav">
-          
-            <a href="../../en/services/seo.html">
-              Search Engine Optimization (SEO)
-            </a>
-          
-            <a href="../../en/services/technical-seo.html">
-              Technical SEO
-            </a>
-          
-            <a href="../../en/services/local-seo.html">
-              Local SEO
-            </a>
-          
-            <a href="../../en/services/content-marketing.html">
-              Content Marketing
-            </a>
-          
-            <a href="../../en/services/social-media-marketing.html">
-              Social Media Marketing
-            </a>
-          
-            <a href="../../en/services/ppc-advertising.html">
-              Pay-Per-Click Advertising (PPC)
-            </a>
-          
-        </nav>
-      </div>
-
-      <div>
-        <h4 class="footer-heading">Get In Touch</h4>
-        <div class="footer-contact-list">
-          <div class="footer-contact-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <div>
-              <div style="font-size:0.75rem; color:var(--text-light);">Phone / WhatsApp</div>
-              <a href="tel:+601170066150" style="color:#FFFFFF; font-weight:700;">+60 11 7006 6150</a>
-            </div>
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
+            <img src="../../assets/images/logo-icon.png" alt="NAFEER DIGITAL" class="brand-logo-img" width="44" height="44">
+            <span class="brand-name">NAFEER DIGITAL</span>
           </div>
-          <div class="footer-contact-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <div>
-              <div style="font-size:0.75rem; color:var(--text-light);">General Enquiries</div>
-              <a href="mailto:nafeerdigital@gmail.com" style="color:#FFFFFF;">nafeerdigital@gmail.com</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <div>
-              <div style="font-size:0.75rem; color:var(--text-light);">Manager Direct</div>
-              <a href="mailto:m.alhadi.alneel@gmail.com" style="color:#FFFFFF;">m.alhadi.alneel@gmail.com</a>
-            </div>
-          </div>
+          <p class="footer-brand-desc">
+            A premier international digital marketing agency engineering durable search authority, high-converting platforms, and predictable commercial revenue streams.
+          </p>
+          <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-sm js-whatsapp-link">
+            <span>Direct WhatsApp: +60 11 7006 6150</span>
+          </a>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="../../" class="footer-link">Home</a></li>
+            <li><a href="../../#about" class="footer-link">About NAFEER DIGITAL</a></li>
+            <li><a href="../../en/services/" class="footer-link">All Services</a></li>
+            <li><a href="../../#why-us" class="footer-link">Why Choose Us</a></li>
+            <li><a href="../../#work" class="footer-link">Case Studies & Work</a></li>
+            <li><a href="../../en/blog/" class="footer-link">Insights & Blog</a></li>
+            <li><a href="../../#contact" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services Directory</h4>
+          <ul class="footer-links-list">
+            <li><a href="../../en/services/seo.html" class="footer-link">SEO Services</a></li>
+            <li><a href="../../en/services/technical-seo.html" class="footer-link">Technical SEO</a></li>
+            <li><a href="../../en/services/local-seo.html" class="footer-link">Local SEO</a></li>
+            <li><a href="../../en/services/b2b-lead-generation.html" class="footer-link">B2B Lead Generation</a></li>
+            <li><a href="../../en/services/google-ads.html" class="footer-link">Google Ads</a></li>
+            <li><a href="../../en/services/content-marketing.html" class="footer-link">Content Marketing</a></li>
+            <li><a href="../../en/services/website-design-development.html" class="footer-link">Web Design & Dev</a></li>
+            <li><a href="../../en/services/marketing-analytics.html" class="footer-link">Marketing Analytics</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Strategic Enquiries</h4>
+          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
+            Email: <a href="mailto:nafeerdigital@gmail.com" style="color:var(--color-gold);">nafeerdigital@gmail.com</a>
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+            WhatsApp: <a href="https://wa.me/601170066150" class="js-whatsapp-link" style="color:var(--color-gold);">+60 11 7006 6150</a>
+          </p>
+          <p style="font-size:0.825rem; color:var(--text-light); line-height: 1.5;">
+            Serving enterprise clients across Malaysia, the Middle East, and worldwide markets.
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="container footer-bottom">
-      <div>
-        © 2026 NAFEER DIGITAL. All rights reserved.
-      </div>
-      <div>
-        Engineered for Performance, Mobile Usability & Technical SEO.
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 NAFEER DIGITAL. All rights reserved. Professional Digital Marketing Agency.
+        </div>
+        <div style="display:flex; gap:1.5rem; align-items:center;">
+          <a href="#" class="js-switch-lang" data-target-lang="ar" style="color:var(--color-gold);">العربية</a>
+          <span>•</span>
+          <a href="../../sitemap.xml" target="_blank" style="color:var(--text-light);">XML Sitemap</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="../../assets/js/theme-customizer.js"></script>
+  <!-- Core JavaScript -->
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>

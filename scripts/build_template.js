@@ -13,7 +13,7 @@ const SITE_URL = 'https://nafeer-sigma.vercel.app';
 const PHONE_DISPLAY = '+60 11 7006 6150';
 const PHONE_RAW = '601170066150';
 const EMAIL_MAIN = 'nafeerdigital@gmail.com';
-const EMAIL_MGR = 'm.alhadi.alneel@gmail.com';
+const EMAIL_MGR = 'nafeerdigital@gmail.com';
 
 // Ensure all output folders exist
 const dirsToEnsure = [
