@@ -13,10 +13,10 @@
     mood: 'professional', // professional | luxury | modern | minimal | dark
     mode: 'light', // light | dark
     customColors: {
-      primary: '#063B35',
-      secondary: '#10243A',
-      accent: '#E7B94F',
-      bgPage: '#F5F7F6'
+      primary: '#781E28',
+      secondary: '#32131B',
+      accent: '#C69A35',
+      bgPage: '#F8F5F1'
     }
   };
 

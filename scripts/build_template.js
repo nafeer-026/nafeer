@@ -104,7 +104,7 @@ function renderDocument({
   <header class="site-header">
     <div class="container header-inner">
       <a href="${homeUrl}" class="brand-logo-wrap" aria-label="${brandName}">
-        <img src="${assetPrefix}assets/images/logo.jpg" alt="${brandName}" class="brand-logo-img" width="44" height="44">
+        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
         <div class="brand-text-block">
           <span class="brand-name">${brandName}</span>
           <span class="brand-tagline">${isAr ? 'وكالة تسويق رقمي متكاملة' : 'DIGITAL MARKETING AGENCY'}</span>
@@ -155,7 +155,7 @@ function renderDocument({
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
       <div class="brand-logo-wrap">
-        <img src="${assetPrefix}assets/images/logo.jpg" alt="${brandName}" class="brand-logo-img" width="36" height="36">
+        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
         <span class="brand-name">${brandName}</span>
       </div>
       <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="Close">✕</button>
@@ -214,7 +214,7 @@ function renderDocument({
       <h4 class="theme-section-title">${isAr ? '1. الثيمات الجاهزة' : '1. Ready-Made Themes'}</h4>
       <div class="theme-presets-grid">
         <button type="button" class="theme-preset-btn active" data-theme-val="signature">
-          <span class="preset-swatch" style="background:#063B35;"></span>
+          <span class="preset-swatch" style="background:#781E28;"></span>
           <span>${isAr ? 'نفير الأصلي' : 'NAFEER Signature'}</span>
         </button>
         <button type="button" class="theme-preset-btn" data-theme-val="midnight">
@@ -266,19 +266,19 @@ function renderDocument({
       <h4 class="theme-section-title">${isAr ? '4. اختيار ألوان مخصصة' : '4. Custom Colors'}</h4>
       <div class="color-picker-row">
         <span class="color-picker-label">${isAr ? 'اللون الأساسي' : 'Primary Color'}</span>
-        <input type="color" id="picker-primary" class="color-picker-input" value="#063B35">
+        <input type="color" id="picker-primary" class="color-picker-input" value="#781E28">
       </div>
       <div class="color-picker-row">
         <span class="color-picker-label">${isAr ? 'اللون الثانوي' : 'Secondary Color'}</span>
-        <input type="color" id="picker-secondary" class="color-picker-input" value="#10243A">
+        <input type="color" id="picker-secondary" class="color-picker-input" value="#32131B">
       </div>
       <div class="color-picker-row">
         <span class="color-picker-label">${isAr ? 'لون التمييز (الذهبي)' : 'Accent Color'}</span>
-        <input type="color" id="picker-accent" class="color-picker-input" value="#E7B94F">
+        <input type="color" id="picker-accent" class="color-picker-input" value="#C69A35">
       </div>
       <div class="color-picker-row">
         <span class="color-picker-label">${isAr ? 'لون الخلفية' : 'Background Color'}</span>
-        <input type="color" id="picker-bg" class="color-picker-input" value="#F5F7F6">
+        <input type="color" id="picker-bg" class="color-picker-input" value="#F8F5F1">
       </div>
     </div>
 
@@ -291,7 +291,7 @@ function renderDocument({
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand-col">
-        <img src="${assetPrefix}assets/images/logo.jpg" alt="${brandName}" class="brand-logo-img" width="50" height="50">
+        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
         <div class="footer-slogan">${brandSlogan}</div>
         <p class="footer-desc">
           ${isAr 

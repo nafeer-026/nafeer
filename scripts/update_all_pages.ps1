@@ -15,7 +15,7 @@ $footerEN = @'
       <div class="footer-top-grid">
         <div>
           <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
-            <img src="../../assets/images/logo-icon.png" alt="NAFEER DIGITAL" class="brand-logo-img" width="44" height="44">
+            <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
             <span class="brand-name">NAFEER DIGITAL</span>
           </div>
           <p class="footer-brand-desc">
@@ -33,7 +33,7 @@ $footerEN = @'
             <li><a href="../../#about" class="footer-link">About NAFEER DIGITAL</a></li>
             <li><a href="../../en/services/" class="footer-link">All Services</a></li>
             <li><a href="../../#why-us" class="footer-link">Why Choose Us</a></li>
-            <li><a href="../../#work" class="footer-link">Case Studies & Work</a></li>
+            <li><a href="../../en/work/" class="footer-link">Our Work</a></li>
             <li><a href="../../en/blog/" class="footer-link">Insights & Blog</a></li>
             <li><a href="../../#contact" class="footer-link">Contact Us</a></li>
           </ul>
@@ -46,7 +46,7 @@ $footerEN = @'
             <li><a href="../../en/services/technical-seo.html" class="footer-link">Technical SEO</a></li>
             <li><a href="../../en/services/local-seo.html" class="footer-link">Local SEO</a></li>
             <li><a href="../../en/services/b2b-lead-generation.html" class="footer-link">B2B Lead Generation</a></li>
-            <li><a href="../../en/services/google-ads.html" class="footer-link">Google Ads</a></li>
+            <li><a href="../../en/services/email-marketing.html" class="footer-link">Email Marketing</a></li>
             <li><a href="../../en/services/content-marketing.html" class="footer-link">Content Marketing</a></li>
             <li><a href="../../en/services/website-design-development.html" class="footer-link">Web Design & Dev</a></li>
             <li><a href="../../en/services/marketing-analytics.html" class="footer-link">Marketing Analytics</a></li>
@@ -100,7 +100,7 @@ $footerAR = @'
       <div class="footer-top-grid">
         <div>
           <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
-            <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="44" height="44">
+            <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
             <span class="brand-name">نفير الرقمي</span>
           </div>
           <p class="footer-brand-desc">
@@ -118,7 +118,7 @@ $footerAR = @'
             <li><a href="../../ar/#about" class="footer-link">من نحن وفلسفتنا</a></li>
             <li><a href="../../ar/services/" class="footer-link">خدماتنا الكاملة</a></li>
             <li><a href="../../ar/#why-us" class="footer-link">لماذا نفير الرقمي</a></li>
-            <li><a href="../../ar/#work" class="footer-link">دراسات الحالة والأعمال</a></li>
+            <li><a href="../../ar/work/" class="footer-link">أعمالنا</a></li>
             <li><a href="../../ar/blog/" class="footer-link">المدونة والتحليلات</a></li>
             <li><a href="../../ar/#contact" class="footer-link">طلب استشارة</a></li>
           </ul>
@@ -131,7 +131,7 @@ $footerAR = @'
             <li><a href="../../ar/services/technical-seo.html" class="footer-link">السيو التقني</a></li>
             <li><a href="../../ar/services/local-seo.html" class="footer-link">السيو المحلي للشركات</a></li>
             <li><a href="../../ar/services/b2b-lead-generation.html" class="footer-link">توليد صفقات الشركات B2B</a></li>
-            <li><a href="../../ar/services/google-ads.html" class="footer-link">إعلانات جوجل المتقدمة</a></li>
+            <li><a href="../../ar/services/email-marketing.html" class="footer-link">التسويق بالبريد الإلكتروني</a></li>
             <li><a href="../../ar/services/content-marketing.html" class="footer-link">التسويق بالمحتوى الاستراتيجي</a></li>
             <li><a href="../../ar/services/website-design-development.html" class="footer-link">تصميم وتطوير المواقع</a></li>
             <li><a href="../../ar/services/marketing-analytics.html" class="footer-link">تحليلات الأداء ولوحات البيانات</a></li>
@@ -184,8 +184,8 @@ function Process-Subpage {
         $html = $html -replace '(<link rel="stylesheet" href="\.\./\.\./assets/css/main\.css">)', "`$1`n  <!-- Favicon -->`n  <link rel=`"icon`" type=`"image/png`" href=`"../../assets/images/favicon.png`">"
     }
 
-    # 2. Update brand logo src to logo-icon.png
-    $html = $html -replace '<img src="\.\./\.\./assets/images/logo\.jpg" alt="([^"]+)" class="brand-logo-img"', '<img src="../../assets/images/logo-icon.png" alt="$1" class="brand-logo-img"'
+    # 2. Replace brand image marks with the inline brand monogram
+    $html = $html -replace '<img\b(?=[^>]*class="brand-logo-img")[^>]*>', '<span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>'
 
     # 3. Clean Header Actions (remove theme button)
     if ($isArabic) {

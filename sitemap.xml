@@ -154,38 +154,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/social-media-marketing.html" />
   </url>
   <url>
-    <loc>https://nafeer-sigma.vercel.app/en/services/ppc-advertising.html</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/ppc-advertising.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/ppc-advertising.html" />
-  </url>
-  <url>
-    <loc>https://nafeer-sigma.vercel.app/ar/services/ppc-advertising.html</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/ppc-advertising.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/ppc-advertising.html" />
-  </url>
-  <url>
-    <loc>https://nafeer-sigma.vercel.app/en/services/google-ads.html</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/google-ads.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/google-ads.html" />
-  </url>
-  <url>
-    <loc>https://nafeer-sigma.vercel.app/ar/services/google-ads.html</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/google-ads.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/google-ads.html" />
-  </url>
-  <url>
     <loc>https://nafeer-sigma.vercel.app/en/services/b2b-lead-generation.html</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -456,5 +424,129 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/blog/marketing-businesses-vs-consumers.html" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/blog/marketing-businesses-vs-consumers.html" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/work/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/en/work/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/ar/work/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/work/tako-healthcare/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-healthcare/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/en/work/tako-healthcare/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-healthcare/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/ar/work/tako-healthcare/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-healthcare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-healthcare/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/work/tako-internship/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-internship/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/en/work/tako-internship/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-internship/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/ar/work/tako-internship/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-internship/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-internship/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/work/tako-digital-marketing/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-digital-marketing/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/en/work/tako-digital-marketing/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-digital-marketing/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/ar/work/tako-digital-marketing/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/work/tako-digital-marketing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/work/tako-digital-marketing/" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/en/services/email-marketing.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/email-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/email-marketing.html" />
+  </url>
+  <url>
+    <loc>https://nafeer-sigma.vercel.app/ar/services/email-marketing.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/services/email-marketing.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/services/email-marketing.html" />
   </url>
 </urlset>

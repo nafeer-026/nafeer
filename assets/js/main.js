@@ -151,14 +151,21 @@
     const feedback = document.getElementById('form-feedback');
     const isAr = getActiveLang() === 'ar';
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const nameInput = form.querySelector('[name="name"]');
       const emailInput = form.querySelector('[name="email"]');
-      const messageInput = form.querySelector('[name="message"]');
 
-      if (!nameInput || !emailInput) return;
+      if (!nameInput || !emailInput) {
+        if (feedback) {
+          feedback.className = 'form-feedback error';
+          feedback.textContent = isAr
+            ? 'تعذّر تجهيز نموذج الاستفسار. يرجى التواصل معنا عبر واتساب.'
+            : 'The enquiry form could not be prepared. Please contact us on WhatsApp.';
+        }
+        return;
+      }
 
       if (!nameInput.value.trim() || !emailInput.value.trim()) {
         if (feedback) {
@@ -187,39 +194,42 @@
       const originalText = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = isAr ? 'جارٍ الإرسال...' : 'Submitting Request...';
+        submitBtn.textContent = isAr ? 'جارٍ الإرسال...' : 'Sending enquiry...';
       }
 
       const formData = new FormData(form);
 
-      fetch('https://formsubmit.co/ajax/nafeerdigital@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(Object.fromEntries(formData))
-      })
-      .then(res => res.json())
-      .then(() => {
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/nafeerdigital@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(Object.fromEntries(formData))
+        });
+
+        const result = await response.json();
+        if (!response.ok || !result || (result.success !== true && result.success !== 'true')) {
+          throw new Error(result && result.message ? result.message : `Form submission failed (${response.status}).`);
+        }
+
         if (feedback) {
           feedback.className = 'form-feedback success';
           feedback.textContent = isAr
-            ? 'شكراً لتواصلك معنا! تم استلام طلب الاستشارة وسيتواصل معك أحد خبرائنا الاستراتيجيين خلال 24 ساعة.'
-            : 'Thank you for reaching out! Your consultation request has been received. A senior growth strategist will contact you within 24 hours.';
+            ? 'شكراً لتواصلك معنا. تم إرسال استفسارك بنجاح.'
+            : 'Thanks for reaching out. Your enquiry has been sent successfully.';
         }
         form.reset();
-      })
-      .catch(() => {
+      } catch (error) {
+        console.error('Enquiry form submission failed:', error);
         if (feedback) {
-          feedback.className = 'form-feedback success';
+          feedback.className = 'form-feedback error';
           feedback.textContent = isAr
-            ? 'تم استلام طلبك! يمكنك أيضاً التواصل معنا مباشرة عبر واتساب لرد سريع.'
-            : 'Your request has been received! You may also contact us directly via WhatsApp for immediate coordination.';
+            ? 'تعذّر إرسال استفسارك. يرجى المحاولة مرة أخرى أو التواصل عبر واتساب.'
+            : 'We could not send your enquiry. Please try again or contact us on WhatsApp.';
         }
-        form.reset();
-      })
-      .finally(() => {
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
@@ -227,7 +237,7 @@
         if (feedback) {
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-      });
+      }
     });
   }
 

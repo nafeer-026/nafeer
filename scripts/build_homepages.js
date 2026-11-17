@@ -14,7 +14,7 @@ const pages = [
     description: 'Grow your digital presence with NAFEER DIGITAL: SEO, website design, content and copywriting, social media, email marketing, and lead generation.',
     name: 'NAFEER DIGITAL',
     tagline: 'SEO · WEBSITES · DIGITAL CONTENT',
-    nav: ['About', 'Services', 'Work', 'Process', 'Insights'],
+    nav: ['About', 'Services', 'Our Work', 'Process', 'Insights'],
     switchLabel: 'العربية',
     switchTarget: 'ar',
     menuLabel: 'Open menu',
@@ -23,15 +23,9 @@ const pages = [
     intro: 'We help businesses build the search visibility, websites, and useful content that make it easier for the right customers to find and choose them.',
     primaryCta: 'Talk to us on WhatsApp',
     secondaryCta: 'See our work',
-    signalTitle: 'A clearer route to your next customer',
-    signalSteps: [
-      ['01', 'Be discovered', 'Show up when the right people are searching.'],
-      ['02', 'Build trust', 'Give people helpful answers and a clear experience.'],
-      ['03', 'Start a conversation', 'Make it easy to take the next step.']
-    ],
-    aboutLabel: 'What we believe',
-    aboutTitle: 'Good marketing connects the whole journey.',
-    aboutText: 'Search, websites, content, social media, and email work better when they support the same business goal. Nafeer brings those pieces together with a clear plan and useful work—not empty promises.',
+    aboutLabel: 'Our story',
+    aboutTitle: 'Growth should feel clear, not complicated.',
+    aboutText: 'Nafeer’s story starts with a simple belief: digital marketing works better when visibility, a trustworthy website, and useful content support the same goal. We connect those pieces around your business—not a one-size-fits-all playbook.',
     servicesLabel: 'What we do',
     servicesTitle: 'The right work, connected.',
     servicesIntro: 'Start with the challenge your business has today. We’ll help you choose the next practical step.',
@@ -46,9 +40,9 @@ const pages = [
     workTitle: 'Real projects. Clear contributions.',
     workIntro: 'A few examples of the websites, content, and lead journeys we have worked on.',
     work: [
-      ['case-study-tako-healthcare.jpg', 'SEO & product content', 'TAKO Healthcare', 'A structured medical packaging guide with product information, clear sections, FAQs, and quotation pathways.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'View project'],
-      ['case-study-tako-internship.jpg', 'Website & conversion journey', 'TAKO Internship', 'A mobile-friendly programme page with clear benefits, eligibility details, and a direct WhatsApp application route.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'View project'],
-      ['case-study-tako-digital-marketing.jpg', 'Content & B2B lead generation', 'TAKO Digital Marketing', 'An export guide for manufacturers, with a six-step plan and clear enquiry pathways for prospective buyers.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'View project']
+      ['case-study-tako-healthcare.jpg', 'SEO & product content', 'TAKO Healthcare', 'A structured medical packaging guide with product information, clear sections, FAQs, and quotation pathways.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'View project', 'tako-healthcare'],
+      ['case-study-tako-internship.jpg', 'Website & conversion journey', 'TAKO Internship', 'A mobile-friendly programme page with clear benefits, eligibility details, and a direct WhatsApp application route.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'View project', 'tako-internship'],
+      ['case-study-tako-digital-marketing.jpg', 'Content & B2B lead generation', 'TAKO Digital Marketing', 'An export guide for manufacturers, with a six-step plan and clear enquiry pathways for prospective buyers.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'View project', 'tako-digital-marketing']
     ],
     processLabel: 'How we work',
     processTitle: 'A thoughtful process. Useful progress.',
@@ -83,7 +77,7 @@ const pages = [
     description: 'Grow your digital presence with NAFEER DIGITAL: SEO, website design, content and copywriting, social media, email marketing, and lead generation.',
     name: 'NAFEER DIGITAL',
     tagline: 'SEO · WEBSITES · DIGITAL CONTENT',
-    nav: ['About', 'Services', 'Work', 'Process', 'Insights'],
+    nav: ['About', 'Services', 'Our Work', 'Process', 'Insights'],
     switchLabel: 'العربية',
     switchTarget: 'ar',
     menuLabel: 'Open menu',
@@ -92,15 +86,9 @@ const pages = [
     intro: 'We help businesses build the search visibility, websites, and useful content that make it easier for the right customers to find and choose them.',
     primaryCta: 'Talk to us on WhatsApp',
     secondaryCta: 'See our work',
-    signalTitle: 'A clearer route to your next customer',
-    signalSteps: [
-      ['01', 'Be discovered', 'Show up when the right people are searching.'],
-      ['02', 'Build trust', 'Give people helpful answers and a clear experience.'],
-      ['03', 'Start a conversation', 'Make it easy to take the next step.']
-    ],
-    aboutLabel: 'What we believe',
-    aboutTitle: 'Good marketing connects the whole journey.',
-    aboutText: 'Search, websites, content, social media, and email work better when they support the same business goal. Nafeer brings those pieces together with a clear plan and useful work—not empty promises.',
+    aboutLabel: 'Our story',
+    aboutTitle: 'Growth should feel clear, not complicated.',
+    aboutText: 'Nafeer’s story starts with a simple belief: digital marketing works better when visibility, a trustworthy website, and useful content support the same goal. We connect those pieces around your business—not a one-size-fits-all playbook.',
     servicesLabel: 'What we do',
     servicesTitle: 'The right work, connected.',
     servicesIntro: 'Start with the challenge your business has today. We’ll help you choose the next practical step.',
@@ -115,9 +103,9 @@ const pages = [
     workTitle: 'Real projects. Clear contributions.',
     workIntro: 'A few examples of the websites, content, and lead journeys we have worked on.',
     work: [
-      ['case-study-tako-healthcare.jpg', 'SEO & product content', 'TAKO Healthcare', 'A structured medical packaging guide with product information, clear sections, FAQs, and quotation pathways.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'View project'],
-      ['case-study-tako-internship.jpg', 'Website & conversion journey', 'TAKO Internship', 'A mobile-friendly programme page with clear benefits, eligibility details, and a direct WhatsApp application route.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'View project'],
-      ['case-study-tako-digital-marketing.jpg', 'Content & B2B lead generation', 'TAKO Digital Marketing', 'An export guide for manufacturers, with a six-step plan and clear enquiry pathways for prospective buyers.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'View project']
+      ['case-study-tako-healthcare.jpg', 'SEO & product content', 'TAKO Healthcare', 'A structured medical packaging guide with product information, clear sections, FAQs, and quotation pathways.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'View project', 'tako-healthcare'],
+      ['case-study-tako-internship.jpg', 'Website & conversion journey', 'TAKO Internship', 'A mobile-friendly programme page with clear benefits, eligibility details, and a direct WhatsApp application route.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'View project', 'tako-internship'],
+      ['case-study-tako-digital-marketing.jpg', 'Content & B2B lead generation', 'TAKO Digital Marketing', 'An export guide for manufacturers, with a six-step plan and clear enquiry pathways for prospective buyers.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'View project', 'tako-digital-marketing']
     ],
     processLabel: 'How we work',
     processTitle: 'A thoughtful process. Useful progress.',
@@ -161,15 +149,9 @@ const pages = [
     intro: 'نساعد الشركات على بناء حضور قوي في نتائج البحث ومواقع إلكترونية ومحتوى واضح يسهّل على العملاء المناسبين العثور عليها واختيارها.',
     primaryCta: 'تواصل معنا عبر واتساب',
     secondaryCta: 'استكشف أعمالنا',
-    signalTitle: 'طريق أوضح للوصول إلى عميلك القادم',
-    signalSteps: [
-      ['٠١', 'اكتشافك', 'الظهور عندما يبحث الأشخاص المناسبون.'],
-      ['٠٢', 'بناء الثقة', 'تقديم إجابات مفيدة وتجربة واضحة.'],
-      ['٠٣', 'بدء التواصل', 'تسهيل الخطوة التالية على العميل.']
-    ],
-    aboutLabel: 'ما نؤمن به',
-    aboutTitle: 'التسويق الجيد يربط رحلة العميل كاملة.',
-    aboutText: 'تعمل محركات البحث والمواقع والمحتوى والتواصل الاجتماعي والبريد الإلكتروني بصورة أفضل عندما تخدم هدفاً واحداً. في نفير، نربط هذه العناصر بخطة واضحة وعمل مفيد، دون وعود مبالغ فيها.',
+    aboutLabel: 'قصتنا',
+    aboutTitle: 'ينبغي أن يكون النمو واضحاً، لا معقداً.',
+    aboutText: 'تبدأ قصة نفير من قناعة بسيطة: يعمل التسويق الرقمي بصورة أفضل حين يخدم الظهور في البحث والموقع الجدير بالثقة والمحتوى المفيد هدفاً واحداً. نربط هذه العناصر بما يناسب عملك، لا بقالب جاهز للجميع.',
     servicesLabel: 'خدماتنا',
     servicesTitle: 'خدمات متكاملة لهدف واضح.',
     servicesIntro: 'نبدأ بالتحدي الذي يواجه عملك اليوم، ثم نساعدك على اختيار الخطوة العملية التالية.',
@@ -184,9 +166,9 @@ const pages = [
     workTitle: 'مشاريع حقيقية. ومساهمة واضحة.',
     workIntro: 'نماذج من المواقع والمحتوى ورحلات العملاء التي عملنا عليها.',
     work: [
-      ['case-study-tako-healthcare.jpg', 'تحسين البحث ومحتوى المنتجات', 'TAKO Healthcare', 'دليل منظم للتغليف الطبي يضم معلومات المنتجات وأقساماً واضحة وأسئلة شائعة ومسارات لطلب عروض الأسعار.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'عرض المشروع'],
-      ['case-study-tako-internship.jpg', 'المواقع وتجربة التحويل', 'TAKO Internship', 'صفحة متوافقة مع الهاتف تعرض مزايا البرنامج ومتطلبات الأهلية وتتيح التقديم مباشرة عبر واتساب.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'عرض المشروع'],
-      ['case-study-tako-digital-marketing.jpg', 'المحتوى وتوليد عملاء الشركات', 'TAKO Digital Marketing', 'دليل تصدير للمصنّعين يتضمن خطة من ست خطوات ومسارات واضحة لاستفسارات المشترين المحتملين.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'عرض المشروع']
+      ['case-study-tako-healthcare.jpg', 'تحسين البحث ومحتوى المنتجات', 'TAKO Healthcare', 'دليل منظم للتغليف الطبي يضم معلومات المنتجات وأقساماً واضحة وأسئلة شائعة ومسارات لطلب عروض الأسعار.', 'https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/', 'عرض المشروع', 'tako-healthcare'],
+      ['case-study-tako-internship.jpg', 'المواقع وتجربة التحويل', 'TAKO Internship', 'صفحة متوافقة مع الهاتف تعرض مزايا البرنامج ومتطلبات الأهلية وتتيح التقديم مباشرة عبر واتساب.', 'https://www.takointernship.com/work-from-home-internship-malaysia/', 'عرض المشروع', 'tako-internship'],
+      ['case-study-tako-digital-marketing.jpg', 'المحتوى وتوليد عملاء الشركات', 'TAKO Digital Marketing', 'دليل تصدير للمصنّعين يتضمن خطة من ست خطوات ومسارات واضحة لاستفسارات المشترين المحتملين.', 'https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/', 'عرض المشروع', 'tako-digital-marketing']
     ],
     processLabel: 'منهجية العمل',
     processTitle: 'خطوات مدروسة. وتقدم عملي.',
@@ -217,9 +199,33 @@ const pages = [
 function renderPage(page) {
   const isArabic = page.lang === 'ar';
   const assetPrefix = page.file === 'index.html' ? '' : '../';
+  const workBase = isArabic ? '/ar/work/' : '/en/work/';
   const canonical = `${origin}${page.home}`;
   const englishUrl = `${origin}/en/`;
   const arabicUrl = `${origin}/ar/`;
+  const formLabels = isArabic
+    ? {
+        name: 'الاسم',
+        email: 'البريد الإلكتروني',
+        service: 'الخدمة التي تحتاج إليها',
+        serviceOptions: ['تحسين محركات البحث', 'تصميم المواقع', 'المحتوى والكتابة التسويقية', 'التواصل الاجتماعي', 'التسويق بالبريد الإلكتروني', 'توليد العملاء المحتملين', 'أخرى'],
+        message: 'أخبرنا عن مشروعك',
+        submit: 'إرسال الاستفسار',
+        snapshot: 'تفاصيل المشروع',
+        allWork: 'استكشف جميع الأعمال',
+        liveProject: 'زيارة المشروع'
+      }
+    : {
+        name: 'Your name',
+        email: 'Business email',
+        service: 'What do you need help with?',
+        serviceOptions: ['SEO', 'Website design', 'Content & copywriting', 'Social media', 'Email marketing', 'Lead generation', 'Other'],
+        message: 'Tell us about your project',
+        submit: 'Send enquiry',
+        snapshot: 'Project snapshot',
+        allWork: 'Explore all work',
+        liveProject: 'Visit live project'
+      };
   const services = page.services.map(([number, title, description, href, link]) => `
         <article class="home-service-card">
           <span class="home-card-number">${number}</span>
@@ -227,18 +233,28 @@ function renderPage(page) {
           <p>${description}</p>
           <a class="home-text-link" href="${href}">${link}<span aria-hidden="true"> ↗</span></a>
         </article>`).join('');
-  const work = page.work.map(([image, label, title, description, href, link]) => `
-        <article class="home-work-card">
-          <a class="home-work-image" href="${href}" target="_blank" rel="noopener noreferrer">
-            <img src="${assetPrefix}assets/images/${image}" alt="${title}" width="700" height="420" loading="lazy">
-          </a>
-          <div class="home-work-copy">
-            <p class="home-kicker">${label}</p>
-            <h3>${title}</h3>
-            <p>${description}</p>
-            <a class="home-text-link" href="${href}" target="_blank" rel="noopener noreferrer">${link}<span aria-hidden="true"> ↗</span></a>
-          </div>
-        </article>`).join('');
+  const focusServices = page.services.map(([number, title]) => `
+        <li><span>${number}</span><strong>${title}</strong></li>`).join('');
+  const storyPromises = isArabic
+    ? [
+        ['٠١', 'نستمع قبل أن نقترح', 'نفهم عملك وجمهورك قبل تحديد الخطوات المناسبة.'],
+        ['٠٢', 'خطة واضحة', 'نرتب الأولويات ونوضح ما يمكن إنجازه في كل مرحلة.'],
+        ['٠٣', 'متابعة صريحة', 'نشارك التقدم بوضوح ونحدد ما يحتاج إلى تحسين.']
+      ]
+    : [
+        ['01', 'Listen before we recommend', 'Understand your business and audience before choosing the next step.'],
+        ['02', 'A clear plan', 'Set priorities and make the work for each stage easy to understand.'],
+        ['03', 'Honest progress', 'Share what is moving forward and what needs attention.']
+      ];
+  const growthSteps = isArabic
+    ? [['٠١', 'الظهور', 'تحسين البحث والمحتوى'], ['٠٢', 'بناء الثقة', 'مواقع واضحة ومفيدة'], ['٠٣', 'بدء التواصل', 'خطوة تالية سهلة للعميل']]
+    : [['01', 'Be discovered', 'SEO and useful content'], ['02', 'Earn trust', 'Clear, helpful websites'], ['03', 'Start a conversation', 'A simple next step']];
+  const work = page.work.map(([, label, title, , , , slug]) => `
+        <li class="home-work-row">
+          <span class="home-work-category">${label}</span>
+          <strong>${title}</strong>
+          <a class="home-text-link" href="${workBase}${slug}/">${formLabels.snapshot}<span aria-hidden="true"> ↗</span></a>
+        </li>`).join('');
   const steps = page.process.map(([number, title, description]) => `
         <article class="home-process-step">
           <span class="home-card-number">${number}</span>
@@ -252,25 +268,26 @@ function renderPage(page) {
           <p>${description}</p>
           <a class="home-text-link" href="${href}">${isArabic ? 'اقرأ المقال' : 'Read the article'}<span aria-hidden="true"> ↗</span></a>
         </article>`).join('');
-  const signalSteps = page.signalSteps.map(([number, title, description]) => `
-          <li class="home-signal-step">
-            <span class="home-signal-number">${number}</span>
-            <div><strong>${title}</strong><p>${description}</p></div>
-          </li>`).join('');
   const nav = page.nav.map((label, index) => {
-    const targets = ['#about', '#services', '#work', '#process', '#insights'];
+    const targets = ['#about', '#services', workBase, '#process', '#insights'];
     return `<a href="${targets[index]}">${label}</a>`;
   }).join('');
   const mobileNav = page.nav.map((label, index) => {
-    const targets = ['#about', '#services', '#work', '#process', '#insights'];
+    const targets = ['#about', '#services', workBase, '#process', '#insights'];
     return `<a href="${targets[index]}">${label}</a>`;
   }).join('');
+  const serviceOptions = formLabels.serviceOptions
+    .map(option => `<option value="${option}">${option}</option>`)
+    .join('');
+  const brandTitle = isArabic
+    ? page.name
+    : '<span>NAFEER</span><span class="home-brand-digital">DIGITAL</span>';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: isArabic ? 'نفير الرقمي | NAFEER DIGITAL' : 'NAFEER DIGITAL',
     url: canonical,
-    image: `${origin}/assets/images/logo.jpg`,
+    image: `${origin}/assets/images/hero-map.jpg`,
     telephone: '+601170066150',
     email: page.email,
     address: { '@type': 'PostalAddress', addressCountry: 'MY' },
@@ -312,8 +329,8 @@ function renderPage(page) {
   <header class="site-header home-site-header">
     <div class="home-container home-header-inner">
       <a class="home-brand" href="${page.home}" aria-label="${page.name}">
-        <img src="${assetPrefix}assets/images/logo-icon.png" alt="" width="44" height="44">
-        <span><strong>${page.name}</strong><small>${page.tagline}</small></span>
+        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+        <span><strong>${brandTitle}</strong><small>${page.tagline}</small></span>
       </a>
       <nav class="home-nav" aria-label="${isArabic ? 'التنقل الرئيسي' : 'Main navigation'}">${nav}</nav>
       <div class="home-header-actions">
@@ -340,20 +357,51 @@ function renderPage(page) {
           </div>
           <p class="home-hero-note">${isArabic ? 'تواصل مباشر · خطة واضحة · نمو رقمي مستدام' : 'A direct conversation · A clear plan · Sustainable digital growth'}</p>
         </div>
-        <aside class="home-signal-card" aria-label="${page.signalTitle}">
-          <div class="home-signal-orbit" aria-hidden="true"></div>
-          <p class="home-signal-label">${isArabic ? 'رحلة رقمية مترابطة' : 'THE NAFEER SIGNAL'}</p>
-          <h2>${page.signalTitle}</h2>
-          <ol>${signalSteps}</ol>
-          <span class="home-signal-foot">${isArabic ? 'من أول بحث إلى أول تواصل' : 'From first search to first conversation'}</span>
-        </aside>
+        <figure class="home-hero-visual" aria-label="${isArabic ? 'منظومة النمو الرقمي' : 'A connected digital growth system'}">
+          <div class="home-visual-header">
+            <span>${isArabic ? 'منظومة النمو الرقمي' : 'THE NAFEER GROWTH SYSTEM'}</span>
+            <span aria-hidden="true">01 — 03</span>
+          </div>
+          <div class="home-visual-statement">${isArabic ? 'من الظهور إلى<br>الثقة ثم التواصل.' : 'From being found<br>to being chosen.'}</div>
+          <svg class="home-visual-curve" viewBox="0 0 620 150" aria-hidden="true" focusable="false">
+            <path d="M12 22H608 M12 58H608 M12 94H608 M12 130H608" fill="none" stroke="#FFFFFF" stroke-opacity=".09" stroke-width="1"></path>
+            <path d="M12 127 C105 127 120 102 198 102 S286 112 352 72 S454 73 586 21" fill="none" stroke="#F0C95C" stroke-linecap="round" stroke-width="4"></path>
+            <path d="M564 24L589 19L580 43" fill="none" stroke="#F0C95C" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+            <circle cx="12" cy="127" r="5" fill="#FFF3D7"></circle>
+            <circle cx="198" cy="102" r="5" fill="#FFF3D7"></circle>
+            <circle cx="352" cy="72" r="5" fill="#FFF3D7"></circle>
+            <circle cx="586" cy="21" r="6" fill="#F0C95C"></circle>
+          </svg>
+          <ol class="home-visual-steps">
+            ${growthSteps.map(([number, title, description]) => `<li><span>${number}</span><div><strong>${title}</strong><small>${description}</small></div></li>`).join('')}
+          </ol>
+          <figcaption>${isArabic ? 'تحسين البحث · مواقع الويب · المحتوى المفيد' : 'SEO · WEBSITES · USEFUL CONTENT'}</figcaption>
+        </figure>
       </div>
+      <ul class="home-container home-focus-ribbon" aria-label="${isArabic ? 'مجالات التركيز' : 'Our focus areas'}">${focusServices}
+      </ul>
     </section>
 
-    <section class="home-intro-strip" id="about">
-      <div class="home-container home-intro-grid">
-        <p class="home-kicker">${page.aboutLabel}</p>
-        <div><h2>${page.aboutTitle}</h2><p>${page.aboutText}</p></div>
+    <section class="home-story" id="about">
+      <div class="home-container home-story-grid">
+        <div class="home-story-copy">
+          <p class="home-kicker">${page.aboutLabel}</p>
+          <h2>${page.aboutTitle}</h2>
+          <p>${page.aboutText}</p>
+          <div class="home-story-promises">
+            <p>${isArabic ? 'تجربة عميل تستحق الثقة' : 'A better client experience starts here'}</p>
+            <ul>${storyPromises.map(([number, title, description]) => `
+              <li><span>${number}</span><div><strong>${title}</strong><small>${description}</small></div></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+        <figure class="home-story-visual">
+          <img src="/assets/images/hero-map.jpg" alt="" width="440" height="520" loading="lazy">
+          <figcaption>
+            <span>${isArabic ? 'نفير الرقمي · منظور عالمي' : 'NAFEER DIGITAL · A GLOBAL PERSPECTIVE'}</span>
+            <strong>${isArabic ? 'رؤية أوضح. تواصل أكثر معنى.' : 'Clearer visibility. More meaningful connections.'}</strong>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -365,6 +413,9 @@ function renderPage(page) {
           <p>${page.servicesIntro}</p>
         </div>
         <div class="home-service-grid">${services}</div>
+        <div class="home-services-action">
+          <a class="home-button home-button--outline" href="${isArabic ? '/ar/services/' : '/en/services/'}">${isArabic ? 'استكشف دليل الخدمات' : 'Explore all services'}<span aria-hidden="true"> ↗</span></a>
+        </div>
         <p class="home-paid-note">${page.paidNote}</p>
       </div>
     </section>
@@ -376,7 +427,8 @@ function renderPage(page) {
           <h2>${page.workTitle}</h2>
           <p>${page.workIntro}</p>
         </div>
-        <div class="home-work-grid">${work}</div>
+        <ul class="home-work-list">${work}</ul>
+        <div class="home-work-action"><a class="home-button home-button--outline" href="${workBase}">${formLabels.allWork}<span aria-hidden="true"> ↗</span></a></div>
       </div>
     </section>
 
@@ -402,11 +454,30 @@ function renderPage(page) {
 
     <section class="home-contact" id="contact">
       <div class="home-container home-contact-inner">
-        <div><p class="home-kicker">${page.contactLabel}</p><h2>${page.contactTitle}</h2><p>${page.contactText}</p></div>
-        <div class="home-contact-actions">
-          <a class="home-button home-button--light js-whatsapp-link" href="https://wa.me/601170066150">${whatsappIcon}<span>${page.contactCta}</span></a>
-          <p>${page.emailLabel} <a href="mailto:${page.email}">${page.email}</a></p>
+        <div class="home-contact-copy">
+          <p class="home-kicker">${page.contactLabel}</p>
+          <h2>${page.contactTitle}</h2>
+          <p>${page.contactText}</p>
+          <div class="home-contact-actions">
+            <a class="home-button home-button--light js-whatsapp-link" href="https://wa.me/601170066150">${whatsappIcon}<span>${page.contactCta}</span></a>
+            <p>${page.emailLabel} <a href="mailto:${page.email}">${page.email}</a></p>
+          </div>
         </div>
+        <form class="home-contact-form" id="consultation-form" action="https://formsubmit.co/${page.email}" method="POST">
+          <label for="contact-name">${formLabels.name}</label>
+          <input class="form-input" id="contact-name" name="name" autocomplete="name" required>
+          <label for="contact-email">${formLabels.email}</label>
+          <input class="form-input" id="contact-email" type="email" name="email" autocomplete="email" required>
+          <label for="contact-service">${formLabels.service}</label>
+          <select class="form-select" id="contact-service" name="service" required>
+            <option value="" selected disabled>${formLabels.service}</option>
+            ${serviceOptions}
+          </select>
+          <label for="contact-message">${formLabels.message}</label>
+          <textarea class="form-textarea" id="contact-message" name="message" rows="4" required></textarea>
+          <button class="home-button home-button--primary" type="submit">${formLabels.submit}</button>
+          <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -415,14 +486,15 @@ function renderPage(page) {
     <div class="home-container">
       <div class="home-footer-main">
         <a class="home-brand" href="${page.home}" aria-label="${page.name}">
-          <img src="${assetPrefix}assets/images/logo-icon.png" alt="" width="42" height="42">
-          <span><strong>${page.name}</strong><small>${page.tagline}</small></span>
+          <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+          <span><strong>${brandTitle}</strong><small>${page.tagline}</small></span>
         </a>
         <p>${page.footerTagline}</p>
         <nav aria-label="${isArabic ? 'روابط الخدمات' : 'Service links'}">
           <a href="${isArabic ? '/ar/services/seo.html' : '/en/services/seo.html'}">${isArabic ? 'تحسين محركات البحث' : 'SEO'}</a>
           <a href="${isArabic ? '/ar/services/website-design-development.html' : '/en/services/website-design-development.html'}">${isArabic ? 'تصميم المواقع' : 'Websites'}</a>
           <a href="${isArabic ? '/ar/services/content-marketing.html' : '/en/services/content-marketing.html'}">${isArabic ? 'التسويق بالمحتوى' : 'Content'}</a>
+          <a href="${isArabic ? '/ar/services/email-marketing.html' : '/en/services/email-marketing.html'}">${isArabic ? 'التسويق بالبريد الإلكتروني' : 'Email marketing'}</a>
           <a href="${isArabic ? '/ar/services/social-media-marketing.html' : '/en/services/social-media-marketing.html'}">${isArabic ? 'التواصل الاجتماعي' : 'Social media'}</a>
           <a href="${isArabic ? '/ar/services/b2b-lead-generation.html' : '/en/services/b2b-lead-generation.html'}">${isArabic ? 'توليد العملاء المحتملين' : 'Lead generation'}</a>
         </nav>
