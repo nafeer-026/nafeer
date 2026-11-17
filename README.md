@@ -127,8 +127,8 @@ nafeer/
 No external frameworks or build dependencies required. Powered by Node.js built-ins.
 
 ```bash
-# Generate / update all 56 pages & sitemap:
-node scripts/build_all.js
+# Generate the English and Arabic homepages:
+node scripts/build_homepages.js
 
 # Run the automated endpoint test harness:
 node scripts/test_server.js

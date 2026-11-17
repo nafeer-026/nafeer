@@ -8,8 +8,8 @@
   'use strict';
 
   const WHATSAPP_NUMBER = '601170066150';
-  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I am looking for a strategic partner to grow our business through digital marketing. I'd like to book a free consultation.";
-  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أود استشارة فريقكم الاستراتيجي لتطوير خطة تسويق ونمو رقمي لأعمالنا.";
+  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I'd like to discuss growing my business through SEO, website design, and digital content.";
+  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أود مناقشة تنمية عملي من خلال تحسين محركات البحث وتصميم المواقع والمحتوى الرقمي.";
 
   function getActiveLang() {
     return document.documentElement.getAttribute('lang') || 'en';
