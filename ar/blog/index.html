@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://nafeer-sigma.vercel.app/ar/blog/">
   <meta property="og:title" content="مجلة ورؤى التسويق الرقمي والنمو التجاري | نفير الرقمي">
   <meta property="og:description" content="أدلة عملية ورؤى تخصصية في تصدر محركات البحث وتوليد صفقات الأعمال وتحقيق نمو تجاري مستدام.">
-  <meta property="og:image" content="https://nafeer-sigma.vercel.app/assets/images/hero-map.jpg">
+  <meta property="og:image" content="https://nafeer-sigma.vercel.app/assets/images/logo-icon.png">
   <meta property="og:site_name" content="نفير الرقمي">
 
   <!-- Google Fonts: Cairo & Tajawal -->
@@ -32,6 +32,14 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/main.css">
+  
+  <!-- Early Theme State Init (Prevent Flash of Unstyled Theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('nafeer_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -39,7 +47,7 @@
   <header class="site-header scrolled">
     <div class="container header-inner">
       <a href="../../ar/" class="brand-logo-wrap" aria-label="نفير الرقمي">
-        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="44" height="44">
+        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="42" height="42">
         <div class="brand-text-block">
           <span class="brand-name">نفير الرقمي</span>
           <span class="brand-tagline">وكالة تسويق رقمي متكاملة</span>
@@ -60,14 +68,20 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
+        <!-- Dual Mode Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn js-toggle-theme" aria-label="تبديل المظهر بين الوضع الفاتح والداكن" title="تبديل الوضع (فاتح / داكن)">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
         <!-- Language Switcher Pill -->
-        <a href="#" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
+        <a href="../../en/blog/" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
           <span>English</span>
         </a>
 
         <!-- Header CTA -->
-        <a href="../../ar/#contact" class="btn btn-primary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
-          ابدأ استشارتك
+        <a href="../../ar/#contact" class="btn btn-primary btn-sm header-cta">
+          <span>ابدأ استشارتك</span>
         </a>
 
         <!-- Mobile Hamburger Trigger -->

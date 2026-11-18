@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150" dir="rtl">
+  <defs>
+    <linearGradient id="maroonEmblemAr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9E1B1B" />
+      <stop offset="50%" stop-color="#7B1111" />
+      <stop offset="100%" stop-color="#550A0A" />
+    </linearGradient>
+    <linearGradient id="goldEmblemAr" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ECC66D" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8A6508" />
+    </linearGradient>
+    <linearGradient id="goldHighlightAr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="40%" stop-color="#ECC66D" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <linearGradient id="blueLineAr" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B4B79" />
+      <stop offset="50%" stop-color="#58679E" />
+      <stop offset="100%" stop-color="#3B4B79" />
+    </linearGradient>
+    <filter id="logoShadowAr" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="-1" dy="2" stdDeviation="2.5" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Typography Block (Aligned Left in RTL) -->
+  <g transform="translate(430, 0)">
+    <!-- Primary Brand Name: نفير -->
+    <text x="0" y="66" font-family="'Cairo', 'Tajawal', Arial, sans-serif" font-size="52" font-weight="900" fill="#4E6C54" text-anchor="end">نفـيــر</text>
+    
+    <!-- Sub-Brand: — الرقمي — with Gradient Line -->
+    <line x1="0" y1="84" x2="-80" y2="84" stroke="url(#blueLineAr)" stroke-width="2.5" stroke-linecap="round" />
+    <text x="-95" y="89" font-family="'Cairo', 'Tajawal', Arial, sans-serif" font-size="17" font-weight="800" fill="#4B5894" text-anchor="end">الـرقـمـي</text>
+    <line x1="-180" y1="84" x2="-350" y2="84" stroke="url(#blueLineAr)" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Official Brand Tagline -->
+    <text x="0" y="118" font-family="'Cairo', 'Tajawal', serif" font-size="14" font-weight="600" fill="#1C355E" text-anchor="end">
+      نمو <tspan font-weight="800" fill="#102542">أعمالكم</tspan> غايتنا.. ونجاحكم <tspan font-weight="800" fill="#102542">شغفنا</tspan> الأسمى.
+    </text>
+  </g>
+
+  <!-- Circular Emblem (Right side in RTL) -->
+  <g transform="translate(460, 10) scale(0.65)" filter="url(#logoShadowAr)">
+    <!-- Maroon Upper Arc -->
+    <path d="M 50,42 A 85,85 0 0,1 170,55" fill="none" stroke="url(#maroonEmblemAr)" stroke-width="8" stroke-linecap="round" />
+    <path d="M 30,75 A 85,85 0 0,1 55,38" fill="none" stroke="url(#maroonEmblemAr)" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Gold Lower Arc -->
+    <path d="M 165,50 A 85,85 0 0,1 145,170" fill="none" stroke="url(#goldEmblemAr)" stroke-width="8" stroke-linecap="round" />
+    <path d="M 150,165 A 85,85 0 0,1 45,155" fill="none" stroke="url(#goldEmblemAr)" stroke-width="5" stroke-linecap="round" />
+    <path d="M 45,155 A 85,85 0 0,1 28,100" fill="none" stroke="url(#maroonEmblemAr)" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Letter 'N' -->
+    <rect x="52" y="48" width="28" height="104" rx="2" fill="url(#maroonEmblemAr)" />
+    <rect x="120" y="48" width="28" height="104" rx="2" fill="url(#maroonEmblemAr)" />
+    <polygon points="52,48 80,48 148,152 120,152" fill="url(#maroonEmblemAr)" />
+
+    <!-- Swooping Golden Upward Growth Arrow -->
+    <path d="M 28,144 C 55,138 90,118 135,75" fill="none" stroke="url(#goldEmblemAr)" stroke-width="16" stroke-linecap="round" />
+    <path d="M 28,144 C 55,138 90,118 135,75" fill="none" stroke="url(#goldHighlightAr)" stroke-width="5" stroke-linecap="round" opacity="0.7" />
+    <polygon points="120,68 156,60 148,96 138,82 126,92 118,84 130,74" fill="url(#goldEmblemAr)" />
+    <polygon points="122,70 154,62 147,94" fill="url(#goldHighlightAr)" opacity="0.6" />
+  </g>
+</svg>

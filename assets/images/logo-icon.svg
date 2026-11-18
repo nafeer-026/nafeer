@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Maroon Gradients for 'N' and Outer Ring -->
+    <linearGradient id="maroonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9E1B1B" />
+      <stop offset="50%" stop-color="#7B1111" />
+      <stop offset="100%" stop-color="#550A0A" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ECC66D" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8A6508" />
+    </linearGradient>
+    <linearGradient id="goldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="40%" stop-color="#ECC66D" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring Elements -->
+  <!-- Top/Left Maroon Ring Arc -->
+  <path d="M 50,42 A 85,85 0 0,1 170,55" fill="none" stroke="url(#maroonGrad)" stroke-width="7" stroke-linecap="round" />
+  <path d="M 30,75 A 85,85 0 0,1 55,38" fill="none" stroke="url(#maroonGrad)" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Bottom/Right Gold Ring Arc -->
+  <path d="M 165,50 A 85,85 0 0,1 145,170" fill="none" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" />
+  <path d="M 150,165 A 85,85 0 0,1 45,155" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" />
+  <path d="M 45,155 A 85,85 0 0,1 28,100" fill="none" stroke="url(#maroonGrad)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- The Bold 'N' in Center -->
+  <g filter="url(#subtleShadow)">
+    <!-- Left Vertical Stem of N -->
+    <rect x="52" y="48" width="28" height="104" rx="2" fill="url(#maroonGrad)" />
+    <!-- Right Vertical Stem of N -->
+    <rect x="120" y="48" width="28" height="104" rx="2" fill="url(#maroonGrad)" />
+    <!-- Diagonal Stroke of N -->
+    <polygon points="52,48 80,48 148,152 120,152" fill="url(#maroonGrad)" />
+  </g>
+
+  <!-- Dynamic Curved Golden Upward Arrow -->
+  <g filter="url(#subtleShadow)">
+    <!-- Swooping Golden Arc Curve -->
+    <path d="M 28,144 C 55,138 90,118 135,75" fill="none" stroke="url(#goldGrad)" stroke-width="15" stroke-linecap="round" />
+    <path d="M 28,144 C 55,138 90,118 135,75" fill="none" stroke="url(#goldGradLight)" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    
+    <!-- Arrowhead Pointing Up and Right -->
+    <polygon points="120,68 156,60 148,96 138,82 126,92 118,84 130,74" fill="url(#goldGrad)" />
+    <polygon points="122,70 154,62 147,94" fill="url(#goldGradLight)" opacity="0.5" />
+  </g>
+</svg>

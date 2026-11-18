@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="signature" data-mood="professional" data-mode="light">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,14 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/main.css">
+  
+  <!-- Early Theme State Init (Prevent Flash of Unstyled Theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('nafeer_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
   
@@ -75,13 +83,19 @@
 
             <!-- Header Actions -->
       <div class="header-actions">
+        <!-- Dual Mode Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn js-toggle-theme" aria-label="تبديل المظهر بين الوضع الفاتح والداكن" title="تبديل المظهر (فاتح / داكن)">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
         <!-- Language Switcher Button -->
-        <a href="#" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
+        <a href="../../en/services/local-seo.html" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
           <span>English</span>
         </a>
 
         <!-- Header CTA -->
-        <a href="../../ar/#contact" class="btn btn-primary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
+        <a href="../../ar/#contact" class="btn btn-primary btn-sm header-cta">
           ابدأ الآن
         </a>
 
@@ -115,8 +129,11 @@
       <a href="../../ar/#contact" class="drawer-nav-link">تواصل معنا</a>
     </nav>
 
-        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.85rem;">
-      <a href="#" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.85rem;">
+      <button type="button" class="btn btn-secondary btn-full js-toggle-theme" style="justify-content: center; gap: 0.65rem;">
+        <span>تبديل المظهر (فاتح / داكن)</span>
+      </button>
+      <a href="../../en/services/local-seo.html" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
         التحويل إلى English
       </a>
       <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
@@ -372,7 +389,7 @@
           © 2026 نفير الرقمي. جميع الحقوق محفوظة. وكالة تسويق رقمي متكاملة.
         </div>
         <div style="display:flex; gap:1.5rem; align-items:center;">
-          <a href="#" class="js-switch-lang" data-target-lang="en" style="color:var(--color-gold);">English</a>
+          <a href="../../en/services/local-seo.html" class="js-switch-lang" data-target-lang="en" style="color:var(--color-gold);">English</a>
           <span>•</span>
           <a href="../../sitemap.xml" target="_blank" style="color:var(--text-light);">خريطة الموقع XML</a>
         </div>

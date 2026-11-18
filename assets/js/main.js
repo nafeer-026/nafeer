@@ -1,7 +1,14 @@
 /**
  * NAFEER DIGITAL | نفير الرقمي
- * Core International Agency Script: Navigation, Dynamic Expertise Showcase,
- * Multilingual Switching, Validated Lead Forms & Direct WhatsApp Routing
+ * Core International Agency Script
+ * Features:
+ * 1. Dual-Mode Theme Engine (Official Default: Light Mode, Toggleable: Dark Mode)
+ * 2. Sticky Glassmorphism Header on Scroll
+ * 3. Mobile Navigation Drawer & Backdrop Control
+ * 4. Strict Bilingual Navigation Switcher (English LTR / Arabic RTL)
+ * 5. Direct WhatsApp Inbound Routing
+ * 6. Lead Generation & Consultation Form Validation
+ * 7. FAQ Accordion Interaction
  */
 
 (function () {
@@ -15,13 +22,34 @@
     return document.documentElement.getAttribute('lang') || 'en';
   }
 
-  // 1. Transparent Header on Scroll
+  // 1. Dual-Mode Theme Engine (Light Mode is Official Default)
+  function initThemeEngine() {
+    const savedTheme = localStorage.getItem('nafeer_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    const toggleBtns = document.querySelectorAll('.js-toggle-theme');
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('nafeer_theme', next);
+      } catch (e) {}
+    }
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', toggleTheme);
+    });
+  }
+
+  // 2. Transparent & Frosted Glass Header on Scroll
   function initHeaderScroll() {
     const header = document.querySelector('.site-header');
     if (!header) return;
 
     function handleScroll() {
-      if (window.scrollY > 25) {
+      if (window.scrollY > 20) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
@@ -30,33 +58,6 @@
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-  }
-
-  // 2. Interactive Expertise Showcase Tabs
-  function initExpertiseTabs() {
-    const tabBtns = document.querySelectorAll('.expertise-tab-btn');
-    const panels = document.querySelectorAll('.expertise-panel');
-
-    if (!tabBtns.length || !panels.length) return;
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-
-        // Toggle active button
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Toggle active panel
-        panels.forEach(p => {
-          if (p.id === targetId) {
-            p.classList.add('active');
-          } else {
-            p.classList.remove('active');
-          }
-        });
-      });
-    });
   }
 
   // 3. Mobile Navigation Drawer
@@ -89,7 +90,7 @@
     });
   }
 
-  // 4. Multilingual Switching Engine
+  // 4. Strict Multilingual Switcher (No Language Mixing)
   function initLanguageSwitcher() {
     const langBtns = document.querySelectorAll('.js-switch-lang');
 
@@ -106,7 +107,7 @@
         let targetUrl = '/';
 
         if (targetLang === 'ar') {
-          if (currentPath === '/' || (currentPath.endsWith('index.html') && !currentPath.includes('/ar/'))) {
+          if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/ar/')) {
             targetUrl = '/ar/';
           } else if (currentPath.includes('/en/')) {
             targetUrl = currentPath.replace('/en/', '/ar/');
@@ -118,7 +119,7 @@
         } else {
           // targetLang === 'en'
           if (currentPath.includes('/ar/')) {
-            targetUrl = currentPath.replace('/ar/', '/en/');
+            targetUrl = currentPath.replace('/ar/', '/');
             if (targetUrl === '/en/') targetUrl = '/';
           } else {
             targetUrl = '/';
@@ -156,7 +157,6 @@
 
       const nameInput = form.querySelector('[name="name"]');
       const emailInput = form.querySelector('[name="email"]');
-      const messageInput = form.querySelector('[name="message"]');
 
       if (!nameInput || !emailInput) return;
 
@@ -165,7 +165,7 @@
           feedback.className = 'form-feedback error';
           feedback.textContent = isAr 
             ? 'يرجى إكمال الحقول الإلزامية (الاسم والبريد الإلكتروني).'
-            : 'Please complete all required fields (Name and Business Email).';
+            : 'Please complete all required fields (Full Name and Business Email).';
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
         return;
@@ -176,7 +176,7 @@
         if (feedback) {
           feedback.className = 'form-feedback error';
           feedback.textContent = isAr
-            ? 'يرجى إدخال عنوان بريد إلكتروني صحيح.'
+            ? 'يرجى إدخال عنوان بريد إلكتروني صحيح للعمل.'
             : 'Please enter a valid business email address.';
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
@@ -205,8 +205,8 @@
         if (feedback) {
           feedback.className = 'form-feedback success';
           feedback.textContent = isAr
-            ? 'شكراً لتواصلك معنا! تم استلام طلب الاستشارة وسيتواصل معك أحد خبرائنا الاستراتيجيين خلال 24 ساعة.'
-            : 'Thank you for reaching out! Your consultation request has been received. A senior growth strategist will contact you within 24 hours.';
+            ? 'شكراً لتواصلك معنا! تم استلام طلبك وسيتواصل معك خبير استراتيجي خلال 24 ساعة عمل.'
+            : 'Thank you for reaching out! Your request has been received. A senior growth strategist will contact you within 24 hours.';
         }
         form.reset();
       })
@@ -242,7 +242,6 @@
 
       question.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
-        // Close others in the same list
         const parentList = item.closest('.faq-list');
         if (parentList) {
           parentList.querySelectorAll('.faq-item').forEach(other => {
@@ -254,14 +253,121 @@
     });
   }
 
+  // 8. Scroll-Triggered Reveal Animations
+  function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+    if (!revealElements.length) return;
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    } else {
+      revealElements.forEach(el => el.classList.add('is-visible'));
+    }
+  }
+
+  // 9. Full-Size Case Study Lightbox Modal
+  function initCaseStudyLightbox() {
+    const modal = document.getElementById('case-study-lightbox');
+    if (!modal) return;
+
+    const modalImg = modal.querySelector('#lightbox-img');
+    const modalTitle = modal.querySelector('#lightbox-title');
+    const modalBadge = modal.querySelector('#lightbox-badge');
+    const modalDesc = modal.querySelector('#lightbox-desc');
+    const modalLink = modal.querySelector('#lightbox-link');
+    const closeBtn = modal.querySelector('#lightbox-close');
+
+    function openModal(data) {
+      if (modalImg && data.image) modalImg.src = data.image;
+      if (modalTitle && data.title) modalTitle.textContent = data.title;
+      if (modalBadge && data.badge) modalBadge.textContent = data.badge;
+      if (modalDesc && data.desc) modalDesc.textContent = data.desc;
+      if (modalLink && data.url) modalLink.href = data.url;
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.js-open-lightbox').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = trigger.closest('.work-case-card');
+        if (!card) return;
+
+        openModal({
+          image: card.getAttribute('data-full-img') || trigger.getAttribute('data-full-img'),
+          title: card.getAttribute('data-title') || '',
+          badge: card.getAttribute('data-badge') || '',
+          desc: card.getAttribute('data-desc') || '',
+          url: card.getAttribute('data-url') || '#'
+        });
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  // 10. Portfolio Filter Pills
+  function initWorkFilter() {
+    const filterBtns = document.querySelectorAll('.js-work-filter-btn');
+    const workCards = document.querySelectorAll('.work-case-card');
+    if (!filterBtns.length || !workCards.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filterVal = btn.getAttribute('data-filter');
+
+        workCards.forEach(card => {
+          const category = card.getAttribute('data-category') || 'all';
+          if (filterVal === 'all' || category === filterVal || category.includes(filterVal)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   // DOM Loaded Trigger
   document.addEventListener('DOMContentLoaded', () => {
+    initThemeEngine();
     initHeaderScroll();
-    initExpertiseTabs();
     initMobileNav();
     initLanguageSwitcher();
     initWhatsAppIntegration();
     initConsultationForm();
     initFaqAccordion();
+    initScrollReveal();
+    initCaseStudyLightbox();
+    initWorkFilter();
   });
 })();

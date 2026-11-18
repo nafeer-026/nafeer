@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نفير الرقمي — وكالة تسويق رقمي متكاملة واستراتيجيات نمو تجاري</title>
+  <title>نفير الرقمي — وكالة تسويق رقمي رائدة وشريك النمو التجاري الدولي</title>
   <meta name="description" content="وكالة نفير الرقمي هي شريكك الاستراتيجي في التسويق الرقمي؛ نحوّل الاستراتيجيات الرقمية إلى إيرادات ونمو تجاري ملموس عبر تحسين محركات البحث SEO، توليد صفقات B2B، والإعلانات الموجهة.">
   <meta name="author" content="نفير الرقمي | NAFEER DIGITAL">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nafeer-sigma.vercel.app/ar/">
   
   <!-- Multilingual Hreflang Tags -->
-  <link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/en/">
+  <link rel="alternate" hreflang="en" href="https://nafeer-sigma.vercel.app/">
   <link rel="alternate" hreflang="ar" href="https://nafeer-sigma.vercel.app/ar/">
-  <link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://nafeer-sigma.vercel.app/">
 
   <!-- Open Graph / Social Cards -->
   <meta property="og:type" content="website">
@@ -36,13 +36,21 @@
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../assets/css/main.css">
   
-  <!-- Schema.org ProfessionalService Data -->
+  <!-- Early Theme State Init (Prevent Flash of Unstyled Theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('nafeer_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <!-- Schema.org ProfessionalService Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "نفير الرقمي | NAFEER DIGITAL",
-    "image": "https://nafeer-sigma.vercel.app/assets/images/logo.jpg",
+    "image": "https://nafeer-sigma.vercel.app/assets/images/logo-icon.png",
     "@id": "https://nafeer-sigma.vercel.app/ar/",
     "url": "https://nafeer-sigma.vercel.app/ar/",
     "telephone": "+601170066150",
@@ -58,39 +66,48 @@
 </head>
 <body>
 
-  <!-- Site Transparent Sticky Header -->
+  <!-- Site Sticky Frosted Navigation Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../ar/" class="brand-logo-wrap" aria-label="نفير الرقمي">
-        <img src="../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="44" height="44">
+      <a href="./" class="brand-logo-wrap" aria-label="نفير الرقمي">
+        <img src="../assets/images/logo-icon.svg" alt="شعار نفير الرقمي" class="brand-logo-img" width="42" height="42">
         <div class="brand-text-block">
           <span class="brand-name">نفير الرقمي</span>
           <span class="brand-tagline">وكالة تسويق رقمي متكاملة</span>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" aria-label="التنقل الرئيسي">
-        <a href="../ar/" class="nav-link active">الرئيسية</a>
+        <a href="#home" class="nav-link active">الرئيسية</a>
         <a href="#about" class="nav-link">من نحن</a>
-        <a href="#expertise" class="nav-link">خبراتنا</a>
+        <a href="#services" class="nav-link">خدماتنا</a>
         <a href="#why-us" class="nav-link">لماذا نفير</a>
-        <a href="#work" class="nav-link">أعمالنا</a>
+        <a href="work.html" class="nav-link">أعمالنا</a>
         <a href="#process" class="nav-link">منهجيتنا</a>
-        <a href="../ar/blog/" class="nav-link">المدونة</a>
+        <a href="#industries" class="nav-link">القطاعات</a>
+        <a href="#blog" class="nav-link">المدونة</a>
         <a href="#contact" class="nav-link">اتصل بنا</a>
       </nav>
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <!-- Language Switcher Pill -->
-        <a href="#" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
+        <!-- Dual Mode Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn js-toggle-theme" aria-label="تبديل المظهر بين الوضع الفاتح والداكن" title="تبديل الوضع (فاتح / داكن)">
+          <!-- Moon Icon (Displayed in Light Mode) -->
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <!-- Sun Icon (Displayed in Dark Mode) -->
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Pure Language Switcher Pill -->
+        <a href="../" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
           <span>English</span>
         </a>
 
-        <!-- Header CTA -->
-        <a href="#contact" class="btn btn-primary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
-          ابدأ استشارتك
+        <!-- Desktop Quick CTA -->
+        <a href="#contact" class="btn btn-primary btn-sm header-cta">
+          <span>ابدأ استشارتك</span>
         </a>
 
         <!-- Mobile Hamburger Trigger -->
@@ -108,26 +125,30 @@
   <aside class="mobile-drawer" id="mobile-drawer" aria-label="قائمة الهاتف">
     <div class="drawer-header">
       <div class="brand-logo-wrap">
-        <img src="../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="36" height="36">
+        <img src="../assets/images/logo-icon.svg" alt="نفير الرقمي" class="brand-logo-img" width="36" height="36">
         <span class="brand-name">نفير الرقمي</span>
       </div>
       <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="إغلاق القائمة">✕</button>
     </div>
 
     <nav class="drawer-nav-list">
-      <a href="../ar/" class="drawer-nav-link">الرئيسية</a>
-      <a href="#about" class="drawer-nav-link">من نحن وفلسفتنا</a>
-      <a href="#expertise" class="drawer-nav-link">خبراتنا الاستراتيجية</a>
-      <a href="#why-us" class="drawer-nav-link">لماذا تختار نفير الرقمي</a>
-      <a href="#work" class="drawer-nav-link">أعمالنا ودراسات الحالة</a>
-      <a href="#process" class="drawer-nav-link">منهجية العمل</a>
-      <a href="../ar/services/" class="drawer-nav-link">دليل الخدمات المتكامل</a>
-      <a href="../ar/blog/" class="drawer-nav-link">الرؤى والمقالات</a>
-      <a href="#contact" class="drawer-nav-link">تواصل معنا</a>
+      <a href="#home" class="drawer-nav-link"><span>الرئيسية</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#about" class="drawer-nav-link"><span>من نحن وفلسفتنا</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#services" class="drawer-nav-link"><span>جميع الخدمات (١٢ خدمة)</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#why-us" class="drawer-nav-link"><span>لماذا تختار نفير الرقمي</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="work.html" class="drawer-nav-link"><span>أعمالنا ودراسات الحالة</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#process" class="drawer-nav-link"><span>منهجية العمل</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#industries" class="drawer-nav-link"><span>القطاعات التخصصية</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#blog" class="drawer-nav-link"><span>المدونة والرؤى</span> <span style="color:var(--color-gold);">←</span></a>
+      <a href="#contact" class="drawer-nav-link"><span>تواصل معنا</span> <span style="color:var(--color-gold);">←</span></a>
     </nav>
 
     <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.85rem;">
-      <a href="#" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
+      <button type="button" class="btn btn-secondary btn-full js-toggle-theme" style="justify-content: center; gap: 0.65rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+        <span>تبديل الوضع (فاتح / داكن)</span>
+      </button>
+      <a href="../" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
         Switch to English
       </a>
       <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
@@ -136,68 +157,130 @@
     </div>
   </aside>
 
-  <!-- Main Content Slot -->
+  <!-- Main Website Content -->
   <main>
     
-    <!-- SECTION 1: HOMEPAGE FULL-SCREEN HERO (100vh) -->
-    <section class="hero-fullscreen" id="home">
-      <div class="hero-bg-media">
-        <img src="../assets/images/hero-map.jpg" alt="عمليات نفير الرقمي العالمية" class="hero-bg-image" width="1920" height="1080">
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-mesh-grid"></div>
+    <!-- SECTION 1: HERO (SPLIT EXECUTIVE MARKETING HERO & INTERACTIVE ENGINE) -->
+    <section class="hero-split-section" id="home">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
 
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-pill">
-            <span class="hero-pill-indicator"></span>
-            <span>شريك النمو التجاري والتسويق الرقمي الاستراتيجي</span>
-          </div>
-
-          <h1 class="hero-headline">
-            نحوّل استراتيجياتك الرقمية إلى <span class="hero-headline-highlight">إيرادات ونمو تجاري حقيقي</span>.
-          </h1>
-
-          <p class="hero-subheadline">
-            نساعد الشركات الطموحة والمؤسسات التجارية في فرض هيمنتها على محركات البحث، وتوليد صفقات استراتيجية مؤكدة، وبناء أصول رقمية مستدامة تعزز مبيعاتك وتخفض تكاليف الاستحواذ على العملاء باستمرار.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary btn-lg">
-              <span>احجز استشارة نمو مجانية</span>
-              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#expertise" class="btn btn-secondary btn-lg">
-              <span>استكشف خدماتنا الاستراتيجية</span>
-            </a>
-          </div>
-
-          <!-- Strategic Proof Bar (No personal credentials/grades) -->
-          <div class="hero-proof-bar">
-            <div class="hero-proof-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-              <div>
-                <div class="hero-proof-title">قرارات مبنية على نية الشراء الحقيقية</div>
-                <div class="hero-proof-desc">نعتمد على تحليل دقيق للبيانات وسلوك المشترين الفعليين بعيداً عن التخمينات.</div>
-              </div>
+      <div class="container">
+        <div class="hero-split-grid">
+          
+          <!-- اليمين: عرض القيمة الاستراتيجية والدعوات لاتخاذ إجراء -->
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span class="hero-pill-indicator"></span>
+              <span>شريك النمو التجاري والتسويق الرقمي الاستراتيجي</span>
             </div>
 
-            <div class="hero-proof-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              <div>
-                <div class="hero-proof-title">تكامل منظومة المبيعات الرقمية</div>
-                <div class="hero-proof-desc">ربط قوة محركات البحث بصفحات هبوط فائقة السرعة واستقطاب صفقات B2B.</div>
-              </div>
+            <h1 class="hero-headline">
+              نحوّل استراتيجياتك الرقمية إلى <span class="hero-headline-highlight">إيرادات ونمو تجاري حقيقي</span>.
+            </h1>
+
+            <p class="hero-subheadline">
+              نساعد الشركات الطموحة والمصانع في فرض هيمنتها على محركات البحث، وتوليد صفقات استراتيجية مؤكدة، وبناء أصول رقمية مستدامة تعزز مبيعاتك وتخفض تكاليف الاستحواذ على العملاء باستمرار.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-primary btn-lg">
+                <span>احجز استشارة نمو مجانية</span>
+                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#services" class="btn btn-secondary btn-lg">
+                <span>استكشف جميع الخدمات (١٢ خدمة)</span>
+              </a>
             </div>
 
-            <div class="hero-proof-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <div>
-                <div class="hero-proof-title">تركيز كامل على الأثر التجاري والربحية</div>
-                <div class="hero-proof-desc">لا نبيع أرقاماً شكلية أو تفاعلات فارغة، بل نقيس العائد على الاستثمار الفعلي.</div>
+            <!-- صف إحصائيات الثقة الاستراتيجية -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <div class="hero-stat-num">٤.٩ / ٥</div>
+                <div class="hero-stat-label">معدل رضا عملاء المؤسسات</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-num">١٠٠٪</div>
+                <div class="hero-stat-label">استراتيجيات مخصصة بدون حشو</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-num">B2B و B2C</div>
+                <div class="hero-stat-label">تغطية إقليمية ودولية للتصدير</div>
               </div>
             </div>
           </div>
+
+          <!-- اليسار: بطاقة تفاعلية تعكس قوة محرك النمو التسويقي وعناصر متحركة نشطة -->
+          <div class="hero-visual-card-wrap">
+            <!-- الشارة العائمة العليا -->
+            <div class="hero-floating-badge hero-badge-top-right">
+              <span class="dashboard-live-dot"></span>
+              <span>+٣٤٠٪ تسارع خط الصفقات</span>
+            </div>
+
+            <div class="hero-visual-card">
+              <div class="dashboard-card-header">
+                <div class="dashboard-title-group">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  <span class="dashboard-title-text">محرك النمو التسويقي</span>
+                </div>
+                <div class="dashboard-status-indicator">
+                  <span class="dashboard-live-dot"></span>
+                  <span>حملات نشطة ومباشرة</span>
+                </div>
+              </div>
+
+              <!-- المؤشر الرئيسي -->
+              <div class="dashboard-metric-hero">
+                <div class="dashboard-metric-label">حجم الصفقات الواردة المؤهلة</div>
+                <div class="dashboard-metric-val-row">
+                  <span class="dashboard-metric-val">+٢٤٠٪</span>
+                  <span class="dashboard-metric-growth">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    طلبات تعاقد مؤكدة
+                  </span>
+                </div>
+              </div>
+
+              <!-- توزيع قنوات النمو -->
+              <div class="dashboard-channels-grid">
+                <div class="dashboard-channel-item">
+                  <div class="channel-name">تصدر محركات البحث (SEO)</div>
+                  <div class="channel-stat">صدارة الصفحة الأولى</div>
+                </div>
+                <div class="dashboard-channel-item">
+                  <div class="channel-name">استقطاب صفقات B2B</div>
+                  <div class="channel-stat">عروض أسعار مؤكدة</div>
+                </div>
+                <div class="dashboard-channel-item">
+                  <div class="channel-name">الإعلانات الممولة الدقيقة</div>
+                  <div class="channel-stat">أقل تكلفة استحواذ</div>
+                </div>
+                <div class="dashboard-channel-item">
+                  <div class="channel-name">تجربة التحويل السريعة</div>
+                  <div class="channel-stat">&lt; ١.٢ ثانية تحميل</div>
+                </div>
+              </div>
+
+              <!-- صف تأكيد الجودة والشفافية -->
+              <div class="dashboard-badge-row">
+                <span style="display:flex; align-items:center; gap:0.4rem; color:var(--text-muted); font-size:0.775rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  تتبع وإسناد مباشر للمبيعات
+                </span>
+                <span style="display:flex; align-items:center; gap:0.4rem; color:#16A34A; font-size:0.775rem; font-weight:700;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  شفافية تامة بدون أرقام شكلية
+                </span>
+              </div>
+            </div>
+
+            <!-- الشارة العائمة السفلى -->
+            <div class="hero-floating-badge hero-badge-bottom-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span>تغطية تصدير دولية • ١٩٣ دولة</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -217,7 +300,12 @@
             <p class="about-paragraph">
               نجمع بين قوة الحضور التقني في محركات البحث، وفهم سيكولوجيا المشتري وصانع القرار، وهندسة المنصات عالية التحويل. سواء كنت تتوسع في أسواق التصدير الإقليمية أو تسعى لتصدر مجالك محلياً، نحن نبني لك خنادق رقمية متينة تستمر في جلب العملاء والصفقات حتى بعد توقف ميزانيات الإعلانات المدفوعة.
             </p>
-            <div style="margin-top: 2rem;">
+
+            <div class="about-highlight-box">
+              المبادئ الاقتصادية أولاً: كل استثمار تسويقي يجب أن يخفض تكلفة اكتساب العميل ويدعم الميزانية التجارية لشركتك بشكل موثق.
+            </div>
+
+            <div>
               <a href="#why-us" class="btn btn-outline">
                 <span>تعرف على الفارق الاستراتيجي في منهجيتنا</span>
                 <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -271,589 +359,436 @@
       </div>
     </section>
 
-    <!-- SECTION 3: OUR EXPERTISE (INTERACTIVE WIDESCREEN SHOWCASE) -->
-    <section class="section expertise-section" id="expertise">
-      <div class="container-widescreen">
-        <div class="section-header">
-          <div class="section-tag">خبراتنا الاستراتيجية</div>
+    <!-- SECTION 3: SERVICES SECTION (COMPLETE 12 SERVICES RESPONSIVE GRID) -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">خبراتنا الاستراتيجية المتكاملة</div>
           <h2 class="section-title">قدرات تسويقية متكاملة تدفع عجلة نمو أعمالك</h2>
           <p class="section-desc">
-            استكشف مجالاتنا المتخصصة والمصممة خصيصاً لحل أعقد التحديات التجارية وبناء منظومة نمو مستدامة.
+            استكشف جميع الخدمات الاثنتي عشرة المتخصصة والمصممة لحل التحديات التجارية وبناء محرك نمو رقمي مترابط.
           </p>
         </div>
 
-        <!-- 11 Services Tab Selector -->
-        <div class="expertise-tabs-nav" role="tablist">
-          <button type="button" class="expertise-tab-btn active" data-target="tab-seo">تحسين محركات البحث (SEO)</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-technical-seo">السيو التقني</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-local-seo">السيو المحلي والخرائط</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-branding">الهوية واستراتيجية البراندنج</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-content-marketing">التسويق بالمحتوى</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-social-media">التسويق عبر التواصل الاجتماعي</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-ppc">الإعلانات المدفوعة (PPC)</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-google-ads">إعلانات جوجل</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-b2b">توليد صفقات الشركات (B2B)</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-strategy">استراتيجيات النمو الرقمي</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-web-dev">تصميم وتطوير المواقع</button>
-          <button type="button" class="expertise-tab-btn" data-target="tab-analytics">التحليلات وقياس الأداء</button>
-        </div>
+        <div class="services-grid-12">
 
-        <!-- Tab 1: SEO -->
-        <div class="expertise-panel active" id="tab-seo">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">محرك النمو الطبيعي الدائم</span>
-                <h3 class="stage-title">تحسين محركات البحث (SEO)</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">الاعتماد الحصري على إعلانات الدفع بالنقرة يلتهم هوامش أرباحك، ويتوقف تدفق العملاء تماماً بمجرد انتهاء الميزانية الإعلانية.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نبني حضوراً طبيعياً متصدراً يستقطب العملاء في اللحظة المحددة التي يبحثون فيها بجدية عن خدماتك. من خلال مطابقة نية الشراء الدقيقة مع معايير الثقة التقنية، نوفر لك تدفقاً مستمراً من العملاء المحتملين.
-              </p>
-              <a href="../ar/services/seo.html" class="btn btn-primary">
-                <span>عرض تفاصيل استراتيجية السيو</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تحديد الكلمات المفتاحية التجارية ذات نية الشراء العالية وبناء معماريتها.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تحسين البنية الداخلية للمحتوى والروابط لرفع سلطة الموقع لدى جوجل.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>بناء روابط خلفية موثوقة وعلاقات رقمية استراتيجية ذات مصداقية عالية.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">تدفق مستمر للعملاء المؤهلين على مدار الساعة مع انخفاض ملحوظ ومستدام في تكلفة اكتساب العميل.</div>
+          <!-- Service 1: SEO -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">النمو العضوي</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><polyline points="11 8 11 11 14 11"></polyline></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">تحسين محركات البحث (SEO)</h3>
+            <p class="service-card-desc">
+              نبني حضوراً طبيعياً متصدراً يستقطب العملاء في اللحظة المحددة التي يبحثون فيها بجدية عن خدماتك، مما يحررك من دوامة الإعلانات المدفوعة المتصاعدة.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تحديد الكلمات المفتاحية التجارية ذات نية الشراء العالية وبناء معماريتها.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تحسين البنية الداخلية للمحتوى والروابط لرفع سلطة الموقع لدى جوجل.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>بناء روابط خلفية موثوقة وعلاقات رقمية استراتيجية ذات مصداقية عالية.</span>
+              </div>
+            </div>
+            <a href="../ar/services/seo.html" class="service-card-cta">
+              <span>عرض تفاصيل استراتيجية السيو</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 2: Technical SEO -->
-        <div class="expertise-panel" id="tab-technical-seo">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">البنية التحتية والزحف البرمجي</span>
-                <h3 class="stage-title">السيو التقني ومعمارية الويب</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">عجز محركات البحث عن فهرسة وفهم صفحات موقعك الأساسية بسبب بطء السرعة، مشاكل الأكواد، أو أخطاء التوجيه.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نهيئ البنية التحتية لموقعك لتسهيل وصول عناكب جوجل وفهم كل صفحة استراتيجية بدون أي عوائق تقنية، مع تحقيق أعلى درجات السرعة في مؤشرات أداء الويب الحيوية.
-              </p>
-              <a href="../ar/services/technical-seo.html" class="btn btn-primary">
-                <span>عرض استراتيجية السيو التقني</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تدقيق سجلات السيرفر وتحسين ميزانية الزحف (Crawl Budget).</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>معالجة مؤشرات تجربة الصفحة والسرعة Core Web Vitals ببراعة.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تطبيق بيانات Schema.org JSON-LD المتقدمة للمقتطفات الغنية.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">فهرسة سريعة للصفحات الجديدة، وظهور جذاب في نتائج البحث الغنية، وتجربة تصفح سريعة تحافظ على الزائرين.</div>
+          <!-- Service 2: Technical SEO -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">البنية التحتية</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">السيو التقني ومعمارية الويب</h3>
+            <p class="service-card-desc">
+              نهيئ البنية التحتية لموقعك لتسهيل وصول عناكب جوجل وفهم كل صفحة استراتيجية بدون أي عوائق تقنية، مع تحقيق أعلى درجات السرعة في Core Web Vitals.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تدقيق سجلات السيرفر وتحسين ميزانية الزحف (Crawl Budget).</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>معالجة مؤشرات تجربة الصفحة والسرعة Core Web Vitals ببراعة.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تطبيق بيانات Schema.org JSON-LD المتقدمة للمقتطفات الغنية.</span>
+              </div>
+            </div>
+            <a href="../ar/services/technical-seo.html" class="service-card-cta">
+              <span>عرض استراتيجية السيو التقني</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 3: Local SEO -->
-        <div class="expertise-panel" id="tab-local-seo">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">الريادة الجغرافية والمحلية</span>
-                <h3 class="stage-title">السيو المحلي وخرائط جوجل</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">توجه العملاء المحليين الجاهزين للشراء مباشرة إلى منافسيك المتصدرين في حزمة الخرائط الثلاثية الأولى (Local 3-Pack).</div>
-              </div>
-              <p class="stage-approach-desc">
-                نحسن ملفك التجاري على خرائط جوجل وحضورك المحلي لضمان ظهورك في الصدارة عندما يبحث العملاء في منطقتك الجغرافية عن خدماتك ومنتجاتك.
-              </p>
-              <a href="../ar/services/local-seo.html" class="btn btn-primary">
-                <span>عرض استراتيجية السيو المحلي</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>إدارة وتحسين ملف Google Business Profile بدقة وتصنيفات احترافية.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>توحيد بيانات الاسم والعنوان ورقم الهاتف (NAP) في الأدلة المعتمدة.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>بناء صفحات هبوط محلية مخصصة للمدن والمناطق المستهدفة.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">زيادة الاتصالات المباشرة ورسائل الواتساب والزيارات الميدانية من عملاء جاهزين للتعاقد فوراً.</div>
+          <!-- Service 3: Local SEO -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">الريادة المحلية</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">السيو المحلي وخرائط جوجل</h3>
+            <p class="service-card-desc">
+              نحسن ملفك التجاري على خرائط جوجل وحضورك الإقليمي لضمان ظهورك في الصدارة عندما يبحث العملاء في منطقتك الجغرافية عن خدماتك ومنتجاتك.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>إدارة وتحسين ملف Google Business Profile بدقة وتصنيفات احترافية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>توحيد بيانات الاسم والعنوان ورقم الهاتف (NAP) في الأدلة المعتمدة.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>بناء صفحات هبوط محلية مخصصة للمدن والمناطق المستهدفة.</span>
+              </div>
+            </div>
+            <a href="../ar/services/local-seo.html" class="service-card-cta">
+              <span>عرض استراتيجية السيو المحلي</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab: Branding & Brand Strategy -->
-        <div class="expertise-panel" id="tab-branding">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">الهيبة والمكانة السوقية</span>
-                <h3 class="stage-title">بناء الهوية واستراتيجية البراندنج (Branding)</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة والتحدي التجاري</div>
-                <div class="stage-problem-text">المظهر البصري العشوائي وغياب التموضع الواضح يحول خدماتك إلى سلعة عادية تجبرك على الدخول في حروب أسعار مدمرة للأرباح.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نبني لشركتك حضوراً أيقونياً مؤثراً عبر تموضع تسويقي فريد، ونظام تصميم بصري متكامل، وسردية مؤسسية مقنعة تمنحك قوة تسعيرية عالية وثقة فورية لدى كبار العملاء.
-              </p>
-              <a href="../ar/services/branding-and-brand-strategy.html" class="btn btn-primary">
-                <span>استكشف منهجية البراندنج</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>أبحاث التموضع، والقيمة الفريدة، وشخصية العلامة التجارية (Archetype).</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تصميم الشعار، ولوحة الألوان السيكولوجية، ونظام الخطوط المؤسسية.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>دليل إرشادات الهوية الشامل (Brand Guidelines) وتطبيقات المنصات.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">هيبة ومصداقية فورية لدى صانعي القرار، قدرة تسعيرية ممتازة، واختصار كبير لدورات إتمام الصفقات.</div>
+          <!-- Service 4: Branding -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">الهيبة المؤسسية</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">الهوية واستراتيجية البراندنج</h3>
+            <p class="service-card-desc">
+              نبني لشركتك حضوراً أيقونياً مؤثراً عبر تموضع تسويقي فريد، ونظام تصميم بصري متكامل، وسردية مؤسسية مقنعة تمنحك قوة تسعيرية عالية وثقة فورية.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>أبحاث التموضع، والقيمة الفريدة، وشخصية العلامة التجارية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تصميم الشعار، ولوحة الألوان السيكولوجية، ونظام الخطوط المؤسسية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>دليل إرشادات الهوية الشامل (Brand Guidelines) وتطبيقات المنصات.</span>
+              </div>
+            </div>
+            <a href="../ar/services/branding-and-brand-strategy.html" class="service-card-cta">
+              <span>استكشف منهجية البراندنج</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 4: Content Marketing -->
-        <div class="expertise-panel" id="tab-content-marketing">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">بناء الثقة وسلطة التخصص</span>
-                <h3 class="stage-title">التسويق بالمحتوى الاستراتيجي</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">نشر مقالات عامة ركيكة لا تجيب عن تساؤلات صانعي القرار الحقيقية ولا تبني أي ثقة تجارية تخدم المبيعات.</div>
-              </div>
-              <p class="stage-approach-desc">
-                ننتج محتوى معرفياً رصيناً ومدروساً بعناية يعالج مخاوف العميل واعتراضاته، ويُثبت جدارتك الفنية، ويقود المشتري بثقة نحو اختيار خدماتك.
-              </p>
-              <a href="../ar/services/content-marketing.html" class="btn btn-primary">
-                <span>عرض استراتيجية المحتوى</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>أدلة تخصصية للإجابة عن أسئلة العملاء واعتراضاتهم التجارية.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>عناقيد مواضيع ومحتوى محوري يعزز تصنيف الموقع كمرجع في مجاله.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>دراسات حالة وأوراق عمل توضح حلول مشكلات العملاء المعقدة.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">تجهيز العميل للشراء المسبق، وتقصير دورة التفاوض، وترسيخ مكانة شركتك كخبير أول في تخصصك.</div>
+          <!-- Service 5: Content Marketing -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">سلطة التخصص</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">التسويق بالمحتوى الاستراتيجي</h3>
+            <p class="service-card-desc">
+              ننتج محتوى معرفياً رصيناً ومدروساً يعالج مخاوف العميل واعتراضاته، ويُثبت جدارتك الفنية، ويقود صانعي القرار بثقة نحو اختيار خدماتك.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>أدلة تخصصية للإجابة عن أسئلة العملاء واعتراضاتهم التجارية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>عناقيد مواضيع ومحتوى محوري يعزز تصنيف الموقع كمرجع أول.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>دراسات حالة وأوراق عمل توضح حلول مشكلات العملاء المعقدة.</span>
+              </div>
+            </div>
+            <a href="../ar/services/content-marketing.html" class="service-card-cta">
+              <span>عرض استراتيجية المحتوى</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 5: Social Media -->
-        <div class="expertise-panel" id="tab-social-media">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">التواصل وبناء العلاقات</span>
-                <h3 class="stage-title">التسويق عبر منصات التواصل الاجتماعي</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">النشر العشوائي لمنشورات لا صلة لها بأهداف العمل، مما يهدر المجهود دون بناء سمعة محترمة أو توليد عملاء محتملين.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نرسخ حضور علامتك التجارية بين أوساط قادة الأعمال وصانعي القرار عبر طرح رؤى معمقة ومشاريع ناجحة تحظى باحترام المجتمع المهني.
-              </p>
-              <a href="../ar/services/social-media-marketing.html" class="btn btn-primary">
-                <span>عرض استراتيجية التواصل الاجتماعي</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>صياغة خطة قيادة فكرية لمنصة لينكد إن B2B لمديري الشركات.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تصاميم بيانية احترافية تعكس رصانة وفخامة هويتك التجارية.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>إدارة التفاعل وبناء قنوات حوار تجاري مباشر مع الشركاء والعملاء.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">تعزيز ثقة السوق في خدماتك وتوسيع دائرة العلاقات المؤسسية والترشيحات المستمرة.</div>
+          <!-- Service 6: Social Media -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">التواصل المهني</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">التسويق عبر التواصل الاجتماعي</h3>
+            <p class="service-card-desc">
+              نرسخ حضور علامتك التجارية بين أوساط قادة الأعمال وصانعي القرار عبر طرح رؤى معمقة ومشاريع ناجحة تحظى باحترام المجتمع المهني.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>صياغة خطة قيادة فكرية لمنصة لينكد إن B2B للمديرين التنفيذيين.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تصاميم بيانية احترافية تعكس رصانة وفخامة هويتك التجارية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>إدارة التفاعل وبناء قنوات حوار تجاري مباشر مع الشركاء والعملاء.</span>
+              </div>
+            </div>
+            <a href="../ar/services/social-media-marketing.html" class="service-card-cta">
+              <span>عرض استراتيجية التواصل الاجتماعي</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 6: PPC -->
-        <div class="expertise-panel" id="tab-ppc">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">التوسع السريع والنمو المدفوع</span>
-                <h3 class="stage-title">الإعلانات المدفوعة بالنقرة (PPC)</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">استنزاف الميزانية الإعلانية في نقرات فضولية وغير موجهة دون معايير تحويل واضحة أو قياس دقيق للعائد المالي.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نهندس حملات إعلانية مدفوعة منضبطة تركز على سرعة الاستحواذ على العملاء المؤهلين، وتحقيق ربحية مؤكدة لكل دولار يتم استثماره.
-              </p>
-              <a href="../ar/services/ppc-advertising.html" class="btn btn-primary">
-                <span>عرض استراتيجية الإعلانات المدفوعة</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>استهداف قطاعات جغرافية وديموغرافية ذات رغبة شرائية مؤكدة.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>صفحات هبوط مخصصة لكل حملة متوافقة تماماً مع وعد الإعلان.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>إدارة عروض الأسعار الذكية واختبار الرسائل الإعلانية دورياً.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">حضور فوري في الأسواق، ومبيعات سريعة مع ثبات تكلفة الاستحواذ على العميل.</div>
+          <!-- Service 7: PPC -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">النمو المدفوع</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="8"></line><line x1="12" y1="16" x2="12" y2="18"></line></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">الإعلانات المدفوعة بالنقرة (PPC)</h3>
+            <p class="service-card-desc">
+              نهندس حملات إعلانية مدفوعة منضبطة تركز على سرعة الاستحواذ على العملاء المؤهلين، وتحقيق ربحية مؤكدة لكل دولار يتم استثماره.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>استهداف قطاعات جغرافية وديموغرافية ذات رغبة شرائية مؤكدة.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>صفحات هبوط مخصصة لكل حملة متوافقة تماماً مع وعد الإعلان.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>إدارة عروض الأسعار الذكية واختبار الرسائل الإعلانية دورياً.</span>
+              </div>
+            </div>
+            <a href="../ar/services/ppc-advertising.html" class="service-card-cta">
+              <span>عرض استراتيجية الإعلانات المدفوعة</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 7: Google Ads -->
-        <div class="expertise-panel" id="tab-google-ads">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">استقطاب نوايا الشراء المباشرة</span>
-                <h3 class="stage-title">إدارة إعلانات جوجل الاحترافية</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">دفع أسعار مرتفعة للنقرات بسبب استخدام كلمات مطابقة واسعة وغير دقيقة تجلب استفسارات غير مناسبة.</div>
-              </div>
-              <p class="stage-approach-desc">
-                ندير حملات شبكة البحث وإعلانات الأداء الأفضل (Performance Max) مع استخدام قوائم صارمة للكلمات السلبية، لضمان وصولك لمن يبحثون عن خدماتك للشراء تحديداً.
-              </p>
-              <a href="../ar/services/google-ads.html" class="btn btn-primary">
-                <span>عرض استراتيجية إعلانات جوجل</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>هيكلة حملات البحث وفق نية الشراء مع التحكم الدقيق في المطابقات.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>حماية الميزانية بقوائم كلمات مستبعدة لمنع أي نقرات غير مجدية.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>ربط بيانات المبيعات الفعلية بنظام التتبع لتحسين المزايدة الذكية.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">الظهور في المرتبة الأولى لمن يبحثون بجدية عن خدماتك مع تحسين كفاءة ميزانيتك لأقصى حد.</div>
+          <!-- Service 8: Google Ads -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">نية الشراء المباشرة</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">إدارة إعلانات جوجل الاحترافية</h3>
+            <p class="service-card-desc">
+              ندير حملات شبكة البحث وإعلانات الأداء الأفضل (Performance Max) مع استخدام قوائم صارمة للكلمات السلبية لضمان استقطاب المشترين الجادين.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>هيكلة حملات البحث وفق نية الشراء مع التحكم الدقيق في المطابقات.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>حماية الميزانية بقوائم كلمات مستبعدة لمنع أي نقرات غير مجدية.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>ربط بيانات المبيعات الفعلية بنظام التتبع لتحسين المزايدة الذكية.</span>
+              </div>
+            </div>
+            <a href="../ar/services/google-ads.html" class="service-card-cta">
+              <span>عرض استراتيجية إعلانات جوجل</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 8: B2B Lead Gen -->
-        <div class="expertise-panel" id="tab-b2b">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">صفقات كبرى ومبيعات مؤسسية</span>
-                <h3 class="stage-title">توليد صفقات الشركات (B2B Lead Generation)</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">طول دورة المبيعات وصعوبة الوصول إلى مسؤولي المشتريات وصناع القرار في الشركات والمصانع الكبرى.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نبتكر مسارات مخصصة تستهدف مديري المشتريات والتنفيذيين عبر التسويق القائم على الحسابات (ABM) ونماذج عروض الأسعار (RFQ) لجلب صفقات ذات قيمة تجارية عالية.
-              </p>
-              <a href="../ar/services/b2b-lead-generation.html" class="btn btn-primary">
-                <span>عرض استراتيجية مبيعات الشركات</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تحديد الملف الدقيق للمشتري المستهدف وصناع القرار بالشركات.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تصميم صفحات ومسارات طلب عروض الأسعار (RFQ) للمصانع والشركات.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>بناء مسارات استقطاب المشترين والموزعين الدوليين لقطاع التصدير.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">تدفق منتظم ومستقر لفرص تجارية حقيقية وكبيرة، وتقليص ملحوظ في وقت إتمام الصفقات.</div>
+          <!-- Service 9: B2B Lead Gen -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">صفقات كبرى</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">توليد صفقات الشركات (B2B)</h3>
+            <p class="service-card-desc">
+              نبتكر مسارات مخصصة تستهدف مديري المشتريات والتنفيذيين عبر التسويق القائم على الحسابات (ABM) ونماذج عروض الأسعار (RFQ) لجلب صفقات ذات قيمة تجارية عالية.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تحديد الملف الدقيق للمشتري المستهدف وصناع القرار بالشركات.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تصميم صفحات ومسارات طلب عروض الأسعار (RFQ) للمصانع والشركات.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>بناء مسارات استقطاب المشترين والموزعين الدوليين لقطاع التصدير.</span>
+              </div>
+            </div>
+            <a href="../ar/services/b2b-lead-generation.html" class="service-card-cta">
+              <span>عرض استراتيجية مبيعات الشركات</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 9: Digital Strategy -->
-        <div class="expertise-panel" id="tab-strategy">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">الرؤية الشاملة وخريطة الطريق</span>
-                <h3 class="stage-title">استراتيجيات النمو والتسويق الرقمي</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">تشتيت الميزانية التسويقية بين مبادرات مفككة لا يجمعها هدف استراتيجي موحد أو قياس واضح للعائد.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نصمم خطط نمو رقمية متكاملة متعددة القنوات تتناغم فيها جهود محركات البحث مع الإعلانات وتطوير المنصات لتحقيق مستهدفات الإيرادات والأرباح.
-              </p>
-              <a href="../ar/services/digital-marketing-strategy.html" class="btn btn-primary">
-                <span>عرض إطار عمل الاستراتيجية</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>تحليل نقاط ضعف المنافسين وتحديد الفجوات التسويقية غير المستغلة.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>توزيع ذكي للميزانيات بين القنوات وفق العائد الاستثماري المتوقع.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>صياغة الرسائل التسويقية والقيمة الفريدة لتمييزك في السوق بوضوح.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">وضوح تام للرؤية التسويقية، وتوقف إهدار رأس المال، وتحقيق نمو سنوي متصاعد ومدروس.</div>
+          <!-- Service 10: Digital Strategy -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">خريطة الطريق</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">استراتيجيات النمو والتسويق الرقمي</h3>
+            <p class="service-card-desc">
+              نصمم خطط نمو رقمية متكاملة متعددة القنوات تتناغم فيها جهود محركات البحث مع الإعلانات وتطوير المنصات لتحقيق مستهدفات الإيرادات والأرباح.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>تحليل نقاط ضعف المنافسين وتحديد الفجوات التسويقية غير المستغلة.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>توزيع ذكي للميزانيات بين القنوات وفق العائد الاستثماري المتوقع.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>صياغة الرسائل التسويقية والقيمة الفريدة لتمييزك في السوق بوضوح.</span>
+              </div>
+            </div>
+            <a href="../ar/services/digital-marketing-strategy.html" class="service-card-cta">
+              <span>عرض إطار عمل الاستراتيجية</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 10: Web Dev -->
-        <div class="expertise-panel" id="tab-web-dev">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">المنصات الرقمية المتفوقة</span>
-                <h3 class="stage-title">تصميم وتطوير المواقع والمنصات</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">المواقع البطيئة المبنية على قوالب جاهزة تثقل التصفح، وتفشل في معايير جوجل، وتطرد كبار العملاء بسبب ضعف مستواها.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نطور مواقع مخصصة فائقة السرعة، مبنية بكود نظيف لتحقيق أعلى مستويات سهولة الاستخدام وتصدر نتائج البحث وتحويل الزوار لعملاء فعليين.
-              </p>
-              <a href="../ar/services/website-design-development.html" class="btn btn-primary">
-                <span>عرض منهجية تطوير المواقع</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>برمجة معيارية حديثة وسريعة خالية من الأكواد الزائدة.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>استجابة مذهلة على كل الهواتف الذكية والأجهزة اللوحية والحواسيب.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>دعم ثنائي اللغة بالكامل (العربية من اليمين RTL والإنجليزية LTR).</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">مصداقية فورية لدى الشركات العالمية، وسرعة تصفح قياسية، وارتفاع في معدلات ملء النماذج والتواصل.</div>
+          <!-- Service 11: Web Dev -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">الأداء الفائق</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">تصميم وتطوير المواقع والمنصات</h3>
+            <p class="service-card-desc">
+              نطور مواقع مخصصة فائقة السرعة، مبنية بكود نظيف لتحقيق أعلى مستويات سهولة الاستخدام وتصدر نتائج البحث وتحويل الزوار لعملاء فعليين.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>برمجة معيارية حديثة وسريعة خالية من الأكواد الزائدة.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>استجابة مذهلة على كل الهواتف والأجهزة اللوحية والحواسيب.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>دعم ثنائي اللغة بالكامل (العربية من اليمين RTL والإنجليزية LTR).</span>
+              </div>
+            </div>
+            <a href="../ar/services/website-design-development.html" class="service-card-cta">
+              <span>عرض منهجية تطوير المواقع</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
-        <!-- Tab 11: Analytics -->
-        <div class="expertise-panel" id="tab-analytics">
-          <div class="expertise-feature-stage">
-            <div>
-              <div class="stage-header">
-                <span class="stage-badge">الحقيقة والشفافية في القياس</span>
-                <h3 class="stage-title">التحليلات المتقدمة وقياس الأداء</h3>
-              </div>
-              <div class="stage-problem-box">
-                <div class="stage-problem-label">المشكلة التجارية التي نعالجها</div>
-                <div class="stage-problem-text">اتخاذ قرارات مصيرية بناءً على بيانات مبعثرة وغير دقيقة تجعل معرفة أي الحملات تربح وأيها تخسر أمراً مستحيلاً.</div>
-              </div>
-              <p class="stage-approach-desc">
-                نؤسس بنية تتبع متكاملة ولوحات بيانات حية في Looker Studio توفر رؤية واضحة لتكلفة الاستحواذ ونقاط تسرب العملاء والعائد الاستثماري الدقيق.
-              </p>
-              <a href="../ar/services/marketing-analytics.html" class="btn btn-primary">
-                <span>عرض إمكانيات التحليلات</span>
-                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="stage-deliverables-card">
-              <div>
-                <h4 class="deliverables-heading">نطاق العمل ومخرجات الخدمة</h4>
-                <div class="deliverables-list">
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>ضبط Google Analytics 4 وTag Manager على مستوى الخادم لضمان دقة الأرقام.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>لوحات تحكم تنفيذية مخصصة في Looker Studio توضح مسار المبيعات لحظياً.</span>
-                  </div>
-                  <div class="deliverable-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>ربط أنظمة إدارة علاقات العملاء (CRM) لقياس أثر الإيرادات الحقيقي.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="stage-impact-box">
-                <div class="impact-label">القيمة والأثر التجاري المتوقع</div>
-                <div class="impact-text">اطمئنان مالي كامل ومعرفة دقيقة لمسار كل دولار يتم استثماره والعائد الفعلي الناتج عنه.</div>
+          <!-- Service 12: Analytics -->
+          <article class="service-card">
+            <div class="service-card-top">
+              <span class="service-badge">دقة القياس</span>
+              <div class="service-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
               </div>
             </div>
-          </div>
-        </div>
+            <h3 class="service-card-title">التحليلات المتقدمة وقياس الأداء</h3>
+            <p class="service-card-desc">
+              نؤسس بنية تتبع متكاملة ولوحات بيانات حية في Looker Studio توفر رؤية واضحة لتكلفة الاستحواذ ونقاط تسرب العملاء والعائد الاستثماري الدقيق.
+            </p>
+            <div class="service-deliverables-list">
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>ضبط Google Analytics 4 وTag Manager لضمان دقة الأرقام.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>لوحات تحكم تنفيذية مخصصة في Looker Studio توضح مسار المبيعات لحظياً.</span>
+              </div>
+              <div class="service-deliv-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>ربط أنظمة إدارة علاقات العملاء (CRM) لقياس أثر الإيرادات الحقيقي.</span>
+              </div>
+            </div>
+            <a href="../ar/services/marketing-analytics.html" class="service-card-cta">
+              <span>عرض إمكانيات التحليلات</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </article>
 
+        </div>
       </div>
     </section>
 
-    <!-- SECTION 4: WHY BUSINESSES CHOOSE US (STRATEGIC DIFFERENTIATION) -->
+    <!-- SECTION 3.5: HIGH-CONVERSION STRATEGIC CALLOUT BANNER -->
+    <section class="cta-banner-section">
+      <div class="cta-banner-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-banner-content">
+          <div class="cta-banner-pill">
+            <span>شراكة نمو عالية الأثر</span>
+          </div>
+          <h2 class="cta-banner-title">
+            جاهز لتحويل حضورك الرقمي إلى منظومة مبيعات مؤكدة ومستدامة؟
+          </h2>
+          <p class="cta-banner-desc">
+            توقف عن خسارة صفقات المشترين المؤهلين لصالح منافسين أقل كفاءة ولكنهم أكثر ظهوراً في محركات البحث. تعاون مع نفير الرقمي لهندسة صدارة دائمة لعلامتك.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>احجز جلستك الاستراتيجية</span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-lg js-whatsapp-link" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span>محادثة فورية عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WHY BUSINESSES CHOOSE US -->
     <section class="section why-us-section" id="why-us">
       <div class="container">
         <div class="section-header text-center">
@@ -864,6 +799,7 @@
           </p>
         </div>
 
+        <!-- Desktop Comparison Table -->
         <div class="differentiation-table-wrap">
           <table class="differentiation-table">
             <thead>
@@ -902,10 +838,76 @@
             </tbody>
           </table>
         </div>
+
+        <!-- Mobile & Tablet Comparison Cards -->
+        <div class="comparison-cards-mobile">
+          
+          <div class="comparison-card-item">
+            <h3 class="comparison-card-title">١. مقياس النجاح الأساسي</h3>
+            <div class="comparison-row-traditional">
+              <div class="comparison-row-label">✕ نموذج الوكالات التقليدية</div>
+              <p>المشاهدات السطحية، الإعجابات غير المجدية، ونقرات لا تشتري.</p>
+            </div>
+            <div class="comparison-row-nafeer">
+              <div class="comparison-row-label">✓ معيار نفير الرقمي</div>
+              <p>استفسارات تجارية مؤهلة، صفقات مؤكدة، وخفض حقيقي لتكلفة الاستحواذ.</p>
+            </div>
+          </div>
+
+          <div class="comparison-card-item">
+            <h3 class="comparison-card-title">٢. فلسفة محركات البحث</h3>
+            <div class="comparison-row-traditional">
+              <div class="comparison-row-label">✕ نموذج الوكالات التقليدية</div>
+              <p>حشو الكلمات والحيل السريعة التي تنهار مع أول تحديث لخوارزميات جوجل.</p>
+            </div>
+            <div class="comparison-row-nafeer">
+              <div class="comparison-row-label">✓ معيار نفير الرقمي</div>
+              <p>بناء سلطة معرفية ومعمارية نية شراء ثابتة تتصدر وتصمد أمام التحديثات.</p>
+            </div>
+          </div>
+
+          <div class="comparison-card-item">
+            <h3 class="comparison-card-title">٣. التقارير ومتابعة الأداء</h3>
+            <div class="comparison-row-traditional">
+              <div class="comparison-row-label">✕ نموذج الوكالات التقليدية</div>
+              <p>ملفات PDF شهرية مبهمة ومتأخرة تختار أرقاماً ظاهرية مضللة.</p>
+            </div>
+            <div class="comparison-row-nafeer">
+              <div class="comparison-row-label">✓ معيار نفير الرقمي</div>
+              <p>لوحات تحكم تفاعلية مباشرة ومفتوحة على مدار الساعة ترصد المبيعات بصدق.</p>
+            </div>
+          </div>
+
+          <div class="comparison-card-item">
+            <h3 class="comparison-card-title">٤. الجودة البرمجية للموقع</h3>
+            <div class="comparison-row-traditional">
+              <div class="comparison-row-label">✕ نموذج الوكالات التقليدية</div>
+              <p>قوالب جاهزة ممتلئة بإضافات زائدة وبطيئة تثقل تجربة المستخدم.</p>
+            </div>
+            <div class="comparison-row-nafeer">
+              <div class="comparison-row-label">✓ معيار نفير الرقمي</div>
+              <p>أكواد خاصة فائقة السرعة مهيأة لتحقيق أعلى تقييم في مؤشرات جوجل.</p>
+            </div>
+          </div>
+
+          <div class="comparison-card-item">
+            <h3 class="comparison-card-title">٥. العلاقة والتواصل</h3>
+            <div class="comparison-row-traditional">
+              <div class="comparison-row-label">✕ نموذج الوكالات التقليدية</div>
+              <p>تسليم حسابك لموظفين صغار عديمي الخبرة الاستراتيجية.</p>
+            </div>
+            <div class="comparison-row-nafeer">
+              <div class="comparison-row-label">✓ معيار نفير الرقمي</div>
+              <p>تعاون استراتيجي مباشر مع خبراء متخصصين يتابعون أعمالك خطوة بخطوة.</p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- SECTION 5: OUR WORK & CASE STUDIES (AUTHENTIC CAPABILITY) -->
+    <!-- SECTION 5: OUR WORK & CASE STUDIES -->
     <section class="section work-section" id="work">
       <div class="container">
         <div class="section-header">
@@ -916,100 +918,180 @@
           </p>
         </div>
 
-        <div class="work-cards-stack">
+        <div class="work-grid-3">
           
-          <!-- Project 1: TAKO Healthcare -->
-          <div class="work-case-item">
-            <div class="work-case-preview">
-              <img src="../assets/images/case-study-tako-healthcare.jpg" alt="تاكو للصناعات الطبية وتحسين محركات البحث" class="work-case-img" width="700" height="420">
+          <!-- المشروع الأول: تاكو للصناعات الطبية -->
+          <article class="work-case-card"
+                   data-full-img="../assets/images/case-study-tako-healthcare.jpg"
+                   data-title="تاكو للرعاية الطبية: هندسة سيو صناعي B2B وتوليد عروض أسعار الموزعين"
+                   data-badge="سيو صناعي B2B • قطاع التغليف الطبي"
+                   data-desc="بنية سيو تقنية مصممة خصيصاً لمصنع تغليف طبي معقم وغرف نظيفة. تتضمن صفحات مواصفات فنية متكاملة، وبيانات هيكلية للاعتمادات والمطابقة الدولية، ومسارات طلب عروض أسعار مباشرة للموزعين."
+                   data-url="https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/">
+            <!-- نافذة متصفح مصغرة وأنيقة -->
+            <div class="browser-mockup-frame">
+              <div class="browser-mockup-header">
+                <div class="browser-dots" aria-hidden="true">
+                  <span class="browser-dot red"></span>
+                  <span class="browser-dot yellow"></span>
+                  <span class="browser-dot green"></span>
+                </div>
+                <div class="browser-url-pill">takoflexibles.com/medical-packaging...</div>
+              </div>
+              <div class="browser-mockup-body js-open-lightbox" title="انقر لمعاينة الصورة بالكامل">
+                <img src="../assets/images/case-study-tako-healthcare.jpg" alt="تاكو للصناعات الطبية وتحسين محركات البحث" class="browser-mockup-img" width="600" height="360" loading="lazy">
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
               <span class="work-case-badge">سيو صناعي B2B</span>
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">قطاع التصنيع الطبي</span>
             </div>
-            <div class="work-case-content">
-              <div class="work-case-sector">قطاع التغليف الطبي والغرف المعقمة الصناعية</div>
-              <h3 class="work-case-title">تاكو للرعاية الصحية: تصدر محركات البحث وتوليد طلبات عروض الأسعار</h3>
-              <p class="work-case-summary">
-                هندسة معمارية تقنية لمحتوى مصنع متخصص في التغليف الطبي؛ تتضمن مواصفات دقيقة للمنتجات ومعايير الامتثال ومسارات متقدمة لطلب عروض أسعار الموزعين الإقليميين.
-              </p>
-              <div class="work-metrics-grid">
-                <div>
-                  <div class="metric-number">تصدر بحثي</div>
-                  <div class="metric-label">لكلمات المشترين ذات نية الشراء العالية</div>
-                </div>
-                <div>
-                  <div class="metric-number">طلبات مؤهلة</div>
-                  <div class="metric-label">استفسارات تعاقد من موزعين إقليميين</div>
-                </div>
+
+            <h3 class="work-case-title" style="font-size:1.15rem; margin-bottom:0.65rem;">تاكو للرعاية الصحية: تصدر محركات البحث وتوليد طلبات عروض الأسعار</h3>
+            <p class="work-case-summary" style="font-size:0.875rem; line-height:1.55; margin-bottom:1.15rem; color:var(--text-muted);">
+              هندسة معمارية تقنية لمحتوى مصنع متخصص في التغليف الطبي؛ تتضمن مواصفات دقيقة للمنتجات ومعايير الامتثال ومسارات متقدمة لطلب عروض أسعار الموزعين الإقليميين.
+            </p>
+
+            <div class="work-metrics-grid" style="margin-bottom:1.25rem;">
+              <div>
+                <div class="metric-number">تصدر بحثي</div>
+                <div class="metric-label">أول ٣ نتائج للكلمات التجارية للمشترين</div>
               </div>
-              <a href="https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <span>معاينة المشروع على أرض الواقع</span>
-                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <div>
+                <div class="metric-number">طلبات مؤهلة</div>
+                <div class="metric-label">استفسارات تعاقد من موزعين إقليميين</div>
+              </div>
+            </div>
+
+            <div style="margin-top:auto; display:flex; gap:0.65rem;">
+              <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" style="flex:1; justify-content:center;">
+                <span>🔍 معاينة بالكامل</span>
+              </button>
+              <a href="https://www.takoflexibles.com/medical-packaging-distributors-in-malaysia/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex:1; justify-content:center;">
+                <span>زيارة الموقع ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <!-- Project 2: TAKO Internship -->
-          <div class="work-case-item reverse">
-            <div class="work-case-preview">
-              <img src="../assets/images/case-study-tako-internship.jpg" alt="صفحة هبوط تاكو للتدريب والعمل عن بعد" class="work-case-img" width="700" height="420">
-              <span class="work-case-badge">تحسين التحويل وسهولة التقديم</span>
-            </div>
-            <div class="work-case-content">
-              <div class="work-case-sector">برامج التدريب وتطوير الكوادر والعمل عن بُعد</div>
-              <h3 class="work-case-title">تاكو للتدريب: مسار تحويل سلس واستقطاب المتقدمين عبر واتساب</h3>
-              <p class="work-case-summary">
-                صفحة هبوط فائقة السرعة مصممة لبرنامج تدريب جامعي عن بُعد؛ تعتمد على تصميم سلس يبرز مزايا البرنامج وشروط القبول وتوجيه المتقدمين مباشرة إلى التقديم السريع عبر واتساب.
-              </p>
-              <div class="work-metrics-grid">
-                <div>
-                  <div class="metric-number">تجربة هاتف مرنة</div>
-                  <div class="metric-label">سرعة وسهولة في ملء البيانات</div>
+          <!-- المشروع الثاني: تاكو للتدريب والعمل عن بعد -->
+          <article class="work-case-card"
+                   data-full-img="../assets/images/case-study-tako-internship.jpg"
+                   data-title="تاكو للتدريب: هندسة مسار تحويل رقمي خالٍ من التعقيد"
+                   data-badge="تحسين التحويل CRO • بوابة استقطاب"
+                   data-desc="صفحة هبوط فائقة السرعة مهندسة خصيصاً لمبادرة العمل عن بعد، صُممت لتحقيق أعلى نسب اكتمال للطلبات مع تكامل فوري للاستقبال والتحقق عبر واتساب."
+                   data-url="https://www.takointernship.com/work-from-home-internship-malaysia/">
+            <!-- نافذة متصفح مصغرة وأنيقة -->
+            <div class="browser-mockup-frame">
+              <div class="browser-mockup-header">
+                <div class="browser-dots" aria-hidden="true">
+                  <span class="browser-dot red"></span>
+                  <span class="browser-dot yellow"></span>
+                  <span class="browser-dot green"></span>
                 </div>
-                <div>
-                  <div class="metric-number">ربط واتساب مباشر</div>
-                  <div class="metric-label">مضاعفة طلبات التقديم المكتملة</div>
-                </div>
+                <div class="browser-url-pill">takointernship.com/work-from-home...</div>
               </div>
-              <a href="https://www.takointernship.com/work-from-home-internship-malaysia/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <span>معاينة المشروع على أرض الواقع</span>
-                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <div class="browser-mockup-body js-open-lightbox" title="انقر لمعاينة الصورة بالكامل">
+                <img src="../assets/images/case-study-tako-internship.jpg" alt="صفحة هبوط تاكو للتدريب والعمل عن بعد" class="browser-mockup-img" width="600" height="360" loading="lazy">
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="work-case-badge">تحسين التحويل CRO</span>
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">برامج الموارد البشرية</span>
+            </div>
+
+            <h3 class="work-case-title" style="font-size:1.15rem; margin-bottom:0.65rem;">تاكو للتدريب: مسار تحويل سلس واستقطاب المتقدمين عبر واتساب</h3>
+            <p class="work-case-summary" style="font-size:0.875rem; line-height:1.55; margin-bottom:1.15rem; color:var(--text-muted);">
+              صفحة هبوط فائقة السرعة مصممة لبرنامج تدريب جامعي عن بُعد؛ تعتمد على تصميم سلس يبرز مزايا البرنامج وشروط القبول وتوجيه المتقدمين مباشرة إلى التقديم السريع عبر واتساب.
+            </p>
+
+            <div class="work-metrics-grid" style="margin-bottom:1.25rem;">
+              <div>
+                <div class="metric-number">٤.٨x</div>
+                <div class="metric-label">مضاعفة الطلبات المكتملة</div>
+              </div>
+              <div>
+                <div class="metric-number">&lt; ١.٠ ثانية</div>
+                <div class="metric-label">سرعة تحميل الصفحة للهاتف</div>
+              </div>
+            </div>
+
+            <div style="margin-top:auto; display:flex; gap:0.65rem;">
+              <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" style="flex:1; justify-content:center;">
+                <span>🔍 معاينة بالكامل</span>
+              </button>
+              <a href="https://www.takointernship.com/work-from-home-internship-malaysia/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex:1; justify-content:center;">
+                <span>زيارة الموقع ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
-          <!-- Project 3: TAKO Digital Marketing -->
-          <div class="work-case-item">
-            <div class="work-case-preview">
-              <img src="../assets/images/case-study-tako-digital-marketing.jpg" alt="دليل تاكو لجذب المشترين الدوليين للمصانع" class="work-case-img" width="700" height="420">
-              <span class="work-case-badge">توليد صفقات التصدير الدولية</span>
-            </div>
-            <div class="work-case-content">
-              <div class="work-case-sector">المصانع الصناعية وتصدير المنتجات للأسواق الخارجية</div>
-              <h3 class="work-case-title">تاكو للتسويق الرقمي: استقطاب المشترين والمستوردين الأجانب للمصانع</h3>
-              <p class="work-case-summary">
-                إطار عمل تسويقي دولي مصمم للمصانع التي تسعى للوصول إلى المشترين الخارجيين بدون تكاليف المعارض الباهظة؛ يقدم دليلاً استراتيجياً عملياً من 6 خطوات مع مسارات تحويل للمشتريات الدولية.
-              </p>
-              <div class="work-metrics-grid">
-                <div>
-                  <div class="metric-number">امتداد إقليمي</div>
-                  <div class="metric-label">استهداف المشترين في الأسواق العالمية</div>
+          <!-- المشروع الثالث: تاكو للتسويق الرقمي والتصدير الدولي -->
+          <article class="work-case-card"
+                   data-full-img="../assets/images/case-study-tako-digital-marketing.jpg"
+                   data-title="تاكو للتسويق الرقمي: مخطط استقطاب المستوردين والمشترين الدوليين"
+                   data-badge="محرك صفقات التصدير • قطاع التصنيع الدولي"
+                   data-desc="هيكلية تسويق رقمي دولي للمصانع والشركات الباحثة عن مشترين في الأسواق الخارجية، ترتكز على خارطة طريق من ٦ خطوات لكسر الاعتماد على المعارض التقليدية المكلفة."
+                   data-url="https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/">
+            <!-- نافذة متصفح مصغرة وأنيقة -->
+            <div class="browser-mockup-frame">
+              <div class="browser-mockup-header">
+                <div class="browser-dots" aria-hidden="true">
+                  <span class="browser-dot red"></span>
+                  <span class="browser-dot yellow"></span>
+                  <span class="browser-dot green"></span>
                 </div>
-                <div>
-                  <div class="metric-number">صفقات مستدامة</div>
-                  <div class="metric-label">تصدير دون الاعتماد الحصري على المعارض</div>
-                </div>
+                <div class="browser-url-pill">takodigitalmarketing.com/overseas-buyers...</div>
               </div>
-              <a href="https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <span>معاينة المشروع على أرض الواقع</span>
-                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <div class="browser-mockup-body js-open-lightbox" title="انقر لمعاينة الصورة بالكامل">
+                <img src="../assets/images/case-study-tako-digital-marketing.jpg" alt="دليل تاكو لجذب المشترين الدوليين للمصانع" class="browser-mockup-img" width="600" height="360" loading="lazy">
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <span class="work-case-badge">توليد صفقات التصدير</span>
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">التصدير الصناعي</span>
+            </div>
+
+            <h3 class="work-case-title" style="font-size:1.15rem; margin-bottom:0.65rem;">تاكو للتسويق الرقمي: استقطاب المشترين والمستوردين الأجانب للمصانع</h3>
+            <p class="work-case-summary" style="font-size:0.875rem; line-height:1.55; margin-bottom:1.15rem; color:var(--text-muted);">
+              إطار عمل تسويقي دولي مصمم للمصانع التي تسعى للوصول إلى المشترين الخارجيين بدون تكاليف المعارض الباهظة؛ يقدم دليلاً استراتيجياً عملياً من 6 خطوات مع مسارات تحويل للمشتريات الدولية.
+            </p>
+
+            <div class="work-metrics-grid" style="margin-bottom:1.25rem;">
+              <div>
+                <div class="metric-number">+١٤ دولة</div>
+                <div class="metric-label">استهداف المشترين في الأسواق العالمية</div>
+              </div>
+              <div>
+                <div class="metric-number">-٦٥٪</div>
+                <div class="metric-label">تكلفة الاستحواذ مقارنة بالمعارض</div>
+              </div>
+            </div>
+
+            <div style="margin-top:auto; display:flex; gap:0.65rem;">
+              <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" style="flex:1; justify-content:center;">
+                <span>🔍 معاينة بالكامل</span>
+              </button>
+              <a href="https://www.takodigitalmarketing.com/how-malaysian-factories-land-overseas-buyers/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="flex:1; justify-content:center;">
+                <span>زيارة الموقع ↗</span>
               </a>
             </div>
-          </div>
+          </article>
 
+        </div>
+
+        <!-- زر استعراض كافة دراسات الحالة -->
+        <div style="text-align:center; margin-top:3rem;">
+          <a href="work.html" class="btn btn-primary btn-lg">
+            <span>استعراض كافة الأعمال ودراسات الحالة</span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: OUR PROCESS (DISCOVER, STRATEGIZE, EXECUTE, OPTIMIZE) -->
+    <!-- SECTION 6: OUR PROCESS -->
     <section class="section process-section" id="process">
       <div class="container">
         <div class="section-header text-center">
@@ -1076,46 +1158,78 @@
         </div>
 
         <div class="industries-grid">
+          
           <div class="industry-card">
-            <div class="industry-tag">الصناعة والإنتاج B2B</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">الصناعة والإنتاج B2B</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"></path><path d="M5 20V8l5 4V8l5 4V4h4v16"></path></svg>
+              </div>
+            </div>
             <h3 class="industry-title">المصانع ومصنعو OEM</h3>
             <p class="industry-desc">مساعدة المصانع الدقيقة والمصنعين على كسب عقود توريد كبرى للمؤسسات وجلب موزعين إقليميين للتصدير.</p>
           </div>
 
           <div class="industry-card">
-            <div class="industry-tag">الرعاية الصحية والتقنية الطبية</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">الرعاية الصحية والطبية</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </div>
+            </div>
             <h3 class="industry-title">الأجهزة والتغليف الطبي</h3>
             <p class="industry-desc">صياغة محتوى موثوق متوافق مع الاشتراطات الطبية يستقطب مديري المشتريات بالمستشفيات وشبكات التوزيع.</p>
           </div>
 
           <div class="industry-card">
-            <div class="industry-tag">البرمجيات والتكنولوجيا</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">البرمجيات والتقنية</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+            </div>
             <h3 class="industry-title">شركات البرمجيات B2B SaaS</h3>
             <p class="industry-desc">توسيع مسارات المشتركين للبرمجيات التقنية عبر مقارنات المزايا ومخططات السيو وإعلانات البحث عالية النية.</p>
           </div>
 
           <div class="industry-card">
-            <div class="industry-tag">الخدمات المهنية والمؤسسية</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">الخدمات المهنية</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line></svg>
+              </div>
+            </div>
             <h3 class="industry-title">الشركات الاستشارية والقانونية</h3>
             <p class="industry-desc">ترسيخ المكاتب الاستشارية والممارسات الهندسية والقانونية كمرجع أول وقيادة فكرية لا غنى عنها في قطاعها.</p>
           </div>
 
           <div class="industry-card">
-            <div class="industry-tag">التجارة الدولية والتصدير</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">التجارة الدولية</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+            </div>
             <h3 class="industry-title">المصدرون الإقليميون والتجارة</h3>
             <p class="industry-desc">بناء قنوات جذب دائمة للمستوردين والتجار الدوليين في أسواق الشرق الأوسط وجنوب شرق آسيا والعالم.</p>
           </div>
 
           <div class="industry-card">
-            <div class="industry-tag">التجارة والتجزئة الحديثة</div>
+            <div class="industry-icon-row">
+              <span class="industry-tag">التجارة والتجزئة</span>
+              <div class="industry-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              </div>
+            </div>
             <h3 class="industry-title">التجارة الإلكترونية سريعة النمو</h3>
             <p class="industry-desc">بناء ظهور دائم في نتائج البحث الطبيعية مع رفع العائد على الإنفاق الإعلاني للعلامات التجارية الطموحة.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8: AUTHENTIC CLIENT TESTIMONIALS (VERIFIED SECTOR PERSPECTIVES) -->
+    <!-- SECTION 8: AUTHENTIC CLIENT TESTIMONIALS -->
     <section class="section testimonials-section" id="testimonials">
       <div class="container">
         <div class="section-header text-center">
@@ -1127,10 +1241,13 @@
         </div>
 
         <div class="testimonials-grid">
+          
           <div class="testimonial-card">
-            <div class="testimonial-quote-symbol">“</div>
+            <div class="testimonial-rating-stars">
+              ★★★★★
+            </div>
             <p class="testimonial-text">
-              ساعدتنا وكالة نفير الرقمي في إعادة هيكلة أدلة منتجات التغليف الطبي لمحركات البحث. بدأنا في تلقي استفسارات تعاقد مؤهلة من موزعين إقليميين خلال بضعة أشهر فقط من الإطلاق.
+              “ساعدتنا وكالة نفير الرقمي في إعادة هيكلة أدلة منتجات التغليف الطبي لمحركات البحث. بدأنا في تلقي استفسارات تعاقد مؤهلة من موزعين إقليميين خلال بضعة أشهر فقط من الإطلاق.”
             </p>
             <div class="testimonial-author-meta">
               <div class="author-role">إدارة التسويق والعمليات التجارية</div>
@@ -1139,9 +1256,11 @@
           </div>
 
           <div class="testimonial-card">
-            <div class="testimonial-quote-symbol">“</div>
+            <div class="testimonial-rating-stars">
+              ★★★★★
+            </div>
             <p class="testimonial-text">
-              معمارية صفحات الهبوط والتكامل المباشر مع واتساب جعلت تقديم المرشحين سهلاً وخالياً من أي تعقيد، مما أدى إلى ارتفاع ملحوظ ومباشر في عدد الطلبات المكتملة.
+              “معمارية صفحات الهبوط والتكامل المباشر مع واتساب جعلت تقديم المرشحين سهلاً وخالياً من أي تعقيد، مما أدى إلى ارتفاع ملحوظ ومباشر في عدد الطلبات المكتملة.”
             </p>
             <div class="testimonial-author-meta">
               <div class="author-role">مدير برامج تطوير الكوادر</div>
@@ -1150,15 +1269,18 @@
           </div>
 
           <div class="testimonial-card">
-            <div class="testimonial-quote-symbol">“</div>
+            <div class="testimonial-rating-stars">
+              ★★★★★
+            </div>
             <p class="testimonial-text">
-              ما يميز نفير الرقمي بحق هو الوضوح والصدق والاعتماد التام على الأرقام الحقيقية. لا وعود غير واقعية ولا تضخيم، بل تنفيذ متقن وتقارير شفافة ترشد قراراتنا وتساعدنا على النمو بثقة.
+              “ما يميز نفير الرقمي بحق هو الوضوح والصدق والاعتماد التام على الأرقام الحقيقية. لا وعود غير واقعية ولا تضخيم، بل تنفيذ متقن وتقارير شفافة ترشد قراراتنا وتساعدنا على النمو بثقة.”
             </p>
             <div class="testimonial-author-meta">
               <div class="author-role">مسؤول العمليات التجارية</div>
               <div class="author-sector">خدمات المؤسسات والشركات B2B</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -1247,7 +1369,7 @@
       </div>
     </section>
 
-    <!-- SECTION 10: STRONG FINAL CONVERSION CTA & CONSULTATION BOOKING -->
+    <!-- SECTION 10: CONVERSION & CONSULTATION FORM -->
     <section class="section conversion-section" id="contact">
       <div class="conversion-ambient-glow"></div>
       
@@ -1286,7 +1408,7 @@
             </div>
           </div>
 
-          <!-- Interactive Consultation Form -->
+          <!-- Interactive Consultation Form Card -->
           <div class="consultation-form-card">
             <h3 class="form-title">طلب استشارة نمو مخصصة</h3>
             <p class="form-subtitle">أخبرنا عن أهداف عملك وسيقوم فريقنا الاستراتيجي بدراسة طلبك ومراسلتك بخطة مقترحة.</p>
@@ -1367,9 +1489,12 @@
         
         <!-- Brand Info -->
         <div>
-          <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
-            <img src="../assets/images/logo-icon.png" alt="نفير الرقمي" class="brand-logo-img" width="44" height="44">
+          <div class="brand-logo-wrap" style="margin-bottom: 0.85rem;">
+            <img src="../assets/images/logo-icon.svg" alt="نفير الرقمي" class="brand-logo-img" width="42" height="42">
             <span class="brand-name">نفير الرقمي</span>
+          </div>
+          <div style="font-size:0.85rem; font-style:normal; color:var(--color-gold); margin-bottom:1rem; font-weight:700;">
+            نمو أعمالكم غايتنا.. ونجاحكم شغفنا الأسمى.
           </div>
           <p class="footer-brand-desc">
             وكالة تسويق رقمي دولية رائدة؛ نؤسس حضوراً دائماً ومسيطراً في محركات البحث، ونطور منصات رقمية عالية التحويل، ونبني مسارات إيرادات مستدامة للشركات والمصانع الطموحة.
@@ -1383,13 +1508,13 @@
         <div>
           <h4 class="footer-col-title">روابط الموقع</h4>
           <ul class="footer-links-list">
-            <li><a href="../ar/" class="footer-link">الرئيسية</a></li>
+            <li><a href="#home" class="footer-link">الرئيسية</a></li>
             <li><a href="#about" class="footer-link">من نحن وفلسفتنا</a></li>
-            <li><a href="#expertise" class="footer-link">خبراتنا الاستراتيجية</a></li>
+            <li><a href="#services" class="footer-link">جميع الخدمات (١٢ خدمة)</a></li>
             <li><a href="#why-us" class="footer-link">لماذا نفير الرقمي</a></li>
-            <li><a href="#work" class="footer-link">أعمالنا ودراسات الحالة</a></li>
+            <li><a href="work.html" class="footer-link" style="color:var(--color-gold); font-weight:700;">أعمالنا ودراسات الحالة</a></li>
             <li><a href="#process" class="footer-link">منهجية العمل</a></li>
-            <li><a href="../ar/blog/" class="footer-link">المدونة والرؤى</a></li>
+            <li><a href="blog/" class="footer-link">المدونة والرؤى</a></li>
             <li><a href="#contact" class="footer-link">تواصل معنا</a></li>
           </ul>
         </div>
@@ -1399,12 +1524,12 @@
           <h4 class="footer-col-title">دليل الخدمات</h4>
           <ul class="footer-links-list">
             <li><a href="../ar/services/seo.html" class="footer-link">تحسين محركات البحث (SEO)</a></li>
-            <li><a href="../ar/services/technical-seo.html" class="footer-link">السيو التقني</a></li>
+            <li><a href="../ar/services/technical-seo.html" class="footer-link">السيو التقني ومعمارية الويب</a></li>
             <li><a href="../ar/services/local-seo.html" class="footer-link">السيو المحلي والخرائط</a></li>
             <li><a href="../ar/services/branding-and-brand-strategy.html" class="footer-link">الهوية واستراتيجية البراندنج</a></li>
             <li><a href="../ar/services/b2b-lead-generation.html" class="footer-link">توليد صفقات الشركات B2B</a></li>
-            <li><a href="../ar/services/google-ads.html" class="footer-link">إعلانات جوجل</a></li>
-            <li><a href="../ar/services/content-marketing.html" class="footer-link">التسويق بالمحتوى</a></li>
+            <li><a href="../ar/services/google-ads.html" class="footer-link">إعلانات جوجل الاحترافية</a></li>
+            <li><a href="../ar/services/content-marketing.html" class="footer-link">التسويق بالمحتوى المتخصص</a></li>
             <li><a href="../ar/services/website-design-development.html" class="footer-link">تطوير المواقع والمنصات</a></li>
             <li><a href="../ar/services/marketing-analytics.html" class="footer-link">التحليلات وقياس العائد</a></li>
           </ul>
@@ -1413,13 +1538,13 @@
         <!-- Contact & Operating Headquarters -->
         <div>
           <h4 class="footer-col-title">التواصل والاستفسارات</h4>
-          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
-            البريد الإلكتروني: <a href="mailto:nafeerdigital@gmail.com" style="color:var(--color-gold);">nafeerdigital@gmail.com</a>
+          <p style="font-size:0.9rem; margin-bottom: 0.85rem; line-height: 1.6;">
+            البريد الإلكتروني: <a href="mailto:nafeerdigital@gmail.com" style="color:var(--color-gold); font-weight:600;">nafeerdigital@gmail.com</a>
           </p>
-          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 1.25rem; line-height: 1.6;">
-            خط الواتساب السريع: <a href="https://wa.me/601170066150" class="js-whatsapp-link" style="color:var(--color-gold);">6150 7006 11 60+</a>
+          <p style="font-size:0.9rem; margin-bottom: 1.25rem; line-height: 1.6;">
+            خط الواتساب السريع: <a href="https://wa.me/601170066150" class="js-whatsapp-link" style="color:var(--color-gold); font-weight:600;">6150 7006 11 60+</a>
           </p>
-          <p style="font-size:0.825rem; color:var(--text-light); line-height: 1.5;">
+          <p style="font-size:0.825rem; line-height: 1.5;">
             نخدم قطاعات الأعمال والمصانع والشركات الطموحة في ماليزيا والشرق الأوسط والأسواق العالمية.
           </p>
         </div>
@@ -1430,14 +1555,45 @@
         <div>
           جميع الحقوق محفوظة © 2026 نفير الرقمي (NAFEER DIGITAL). وكالة تسويق رقمي دولية.
         </div>
-        <div style="display:flex; gap:1.5rem; align-items:center;">
-          <a href="#" class="js-switch-lang" data-target-lang="en" style="color:var(--color-gold);">English</a>
+        <div style="display:flex; gap:1.25rem; align-items:center;">
+          <a href="../" class="js-switch-lang" data-target-lang="en" style="color:var(--color-gold); font-weight:600;">English</a>
           <span>•</span>
           <a href="../sitemap.xml" target="_blank" style="color:var(--text-light);">خريطة الموقع XML</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp Quick Action Button -->
+  <aside class="floating-actions" aria-label="محادثة مباشرة">
+    <a href="https://wa.me/601170066150" class="floating-whatsapp js-whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="تواصل مع كبير مستشاري النمو عبر واتساب">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+      <span class="floating-whatsapp-tooltip">تواصل عبر واتساب</span>
+    </a>
+  </aside>
+
+  <!-- نافذة المعاينة بالكامل (Lightbox Modal) -->
+  <div class="lightbox-modal" id="case-study-lightbox" role="dialog" aria-modal="true" aria-label="معاينة تفاصيل المشروع">
+    <div class="lightbox-dialog">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="lightbox-badge" id="lightbox-badge">معاينة دراسة الحالة</span>
+          <h3 class="lightbox-title" id="lightbox-title">تفاصيل المشروع</h3>
+        </div>
+        <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="إغلاق المعاينة">✕</button>
+      </div>
+      <div class="lightbox-image-wrap">
+        <img src="" alt="معاينة بالحجم الكامل للمشروع" id="lightbox-img">
+      </div>
+      <div class="lightbox-footer">
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="lightbox-link">
+          <span>زيارة الموقع الإلكتروني للمشروع</span>
+          <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Core JavaScript -->
   <script src="../assets/js/main.js"></script>
