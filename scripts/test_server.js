@@ -41,10 +41,28 @@ server.listen(PORT, async () => {
 
   const endpoints = [
     '/',
+    '/work/',
+    '/work/tako-healthcare/',
+    '/work/tako-internship/',
+    '/work/tako-digital-marketing/',
     '/en/',
+    '/en/work/',
+    '/en/work/tako-healthcare/',
+    '/en/work/tako-internship/',
+    '/en/work/tako-digital-marketing/',
     '/ar/',
+    '/ar/work/',
+    '/ar/work/tako-healthcare/',
+    '/ar/work/tako-internship/',
+    '/ar/work/tako-digital-marketing/',
     '/en/services/',
     '/ar/services/',
+    '/en/services/email-marketing.html',
+    '/ar/services/email-marketing.html',
+    '/en/services/google-ads.html',
+    '/ar/services/google-ads.html',
+    '/en/services/ppc-advertising.html',
+    '/ar/services/ppc-advertising.html',
     '/en/services/seo.html',
     '/ar/services/seo.html',
     '/en/services/branding-and-brand-strategy.html',
@@ -61,6 +79,7 @@ server.listen(PORT, async () => {
     '/robots.txt',
     '/assets/css/main.css',
     '/assets/js/main.js',
+    '/assets/images/hero-map.jpg',
     '/assets/images/logo.jpg',
     '/assets/images/logo-icon.png',
     '/assets/images/favicon.png'
@@ -81,9 +100,32 @@ server.listen(PORT, async () => {
     }
   }
 
-  console.log(`\nResults: ${passed} / ${endpoints.length} tests passed successfully.`);
+  for (const ep of ['/en/', '/ar/']) {
+    try {
+      const res = await fetch(`http://localhost:${PORT}${ep}`);
+      const html = await res.text();
+      const hasInlineMark = html.includes('class="brand-mark"');
+      const hasFocusRibbon = html.includes('class="home-container home-focus-ribbon"');
+      const hasTextWorkList = html.includes('class="home-work-list"');
+      const hasStorySection = html.includes('class="home-story"');
+      const hasStoryPhoto = html.includes('src="/assets/images/hero-map.jpg"');
+      const hasClientCommitments = html.includes(ep === '/ar/' ? 'تجربة عميل تستحق الثقة' : 'A better client experience starts here');
+      const containsWorkImage = /<img\b[^>]*(?:logo(?:-icon)?\.(?:jpg|png)|case-study-tako-)/i.test(html);
+      if (res.ok && hasInlineMark && hasFocusRibbon && hasTextWorkList && hasStorySection && hasStoryPhoto && hasClientCommitments && !containsWorkImage) {
+        console.log(`[PASS] Brand, story image, client commitments, and text-only work layout: ${ep}`);
+        passed++;
+      } else {
+        console.error(`[FAIL] Brand, story image, client commitments, and text-only work layout: ${ep}`);
+      }
+    } catch (err) {
+      console.error(`[ERROR] Content check ${ep}:`, err.message);
+    }
+  }
+
+  const totalTests = endpoints.length + 2;
+  console.log(`\nResults: ${passed} / ${totalTests} tests passed successfully.`);
   server.close(() => {
     console.log('Server shut down cleanly.');
-    process.exit(passed === endpoints.length ? 0 : 1);
+    process.exit(passed === totalTests ? 0 : 1);
   });
 });

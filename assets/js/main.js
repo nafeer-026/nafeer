@@ -15,8 +15,8 @@
   'use strict';
 
   const WHATSAPP_NUMBER = '601170066150';
-  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I am looking for a strategic partner to grow our business through digital marketing. I'd like to book a free consultation.";
-  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أود استشارة فريقكم الاستراتيجي لتطوير خطة تسويق ونمو رقمي لأعمالنا.";
+  const WHATSAPP_MSG_EN = "Hello NAFEER DIGITAL, I'd like to discuss growing my business through SEO, website design, and digital content.";
+  const WHATSAPP_MSG_AR = "مرحباً نفير الرقمي، أود مناقشة تنمية عملي من خلال تحسين محركات البحث وتصميم المواقع والمحتوى الرقمي.";
 
   function getActiveLang() {
     return document.documentElement.getAttribute('lang') || 'en';
@@ -152,13 +152,21 @@
     const feedback = document.getElementById('form-feedback');
     const isAr = getActiveLang() === 'ar';
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const nameInput = form.querySelector('[name="name"]');
       const emailInput = form.querySelector('[name="email"]');
 
-      if (!nameInput || !emailInput) return;
+      if (!nameInput || !emailInput) {
+        if (feedback) {
+          feedback.className = 'form-feedback error';
+          feedback.textContent = isAr
+            ? 'تعذّر تجهيز نموذج الاستفسار. يرجى التواصل معنا عبر واتساب.'
+            : 'The enquiry form could not be prepared. Please contact us on WhatsApp.';
+        }
+        return;
+      }
 
       if (!nameInput.value.trim() || !emailInput.value.trim()) {
         if (feedback) {
@@ -187,21 +195,26 @@
       const originalText = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = isAr ? 'جارٍ الإرسال...' : 'Submitting Request...';
+        submitBtn.textContent = isAr ? 'جارٍ الإرسال...' : 'Sending enquiry...';
       }
 
       const formData = new FormData(form);
 
-      fetch('https://formsubmit.co/ajax/nafeerdigital@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(Object.fromEntries(formData))
-      })
-      .then(res => res.json())
-      .then(() => {
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/nafeerdigital@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(Object.fromEntries(formData))
+        });
+
+        const result = await response.json();
+        if (!response.ok || !result || (result.success !== true && result.success !== 'true')) {
+          throw new Error(result && result.message ? result.message : `Form submission failed (${response.status}).`);
+        }
+
         if (feedback) {
           feedback.className = 'form-feedback success';
           feedback.textContent = isAr
@@ -209,17 +222,15 @@
             : 'Thank you for reaching out! Your request has been received. A senior growth strategist will contact you within 24 hours.';
         }
         form.reset();
-      })
-      .catch(() => {
+      } catch (error) {
+        console.error('Enquiry form submission failed:', error);
         if (feedback) {
-          feedback.className = 'form-feedback success';
+          feedback.className = 'form-feedback error';
           feedback.textContent = isAr
-            ? 'تم استلام طلبك! يمكنك أيضاً التواصل معنا مباشرة عبر واتساب لرد سريع.'
-            : 'Your request has been received! You may also contact us directly via WhatsApp for immediate coordination.';
+            ? 'تعذّر إرسال استفسارك. يرجى المحاولة مرة أخرى أو التواصل عبر واتساب.'
+            : 'We could not send your enquiry. Please try again or contact us on WhatsApp.';
         }
-        form.reset();
-      })
-      .finally(() => {
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
@@ -227,7 +238,7 @@
         if (feedback) {
           feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-      });
+      }
     });
   }
 

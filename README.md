@@ -13,8 +13,10 @@ This repository contains the completely redesigned, fully responsive, bilingual 
 ### Key Pillars & Accomplishments
 
 1. **Brand Identity & Aesthetics:**
-   - **Deep Forest Green** (`#063B35`), **Dark Navy** (`#10243A`), **Premium Gold** (`#E7B94F`), **Pure White** (`#FFFFFF`), and **Soft Gray/Mint** (`#F5F7F6`).
-   - Official logos and graphic visual assets preserved, optimized, and linked.
+   - A restrained palette of deep burgundy (`#32131B`), brass gold (`#C69A35`), olive, violet, and soft ivory surfaces (`#F8F5F1`), drawn from the supplied logo.
+   - The on-page brand mark is recreated with HTML and CSS, including the N, circular arcs, and rising arrow; the logo image is not used in page headers or footers.
+   - The homepage pairs an original growth illustration with a market-connection image, a bilingual service ribbon, and a text-only project list. Project screenshots appear only on dedicated work pages.
+   - The bilingual story section explains the agency’s purpose and client commitments without inventing founding dates, customer quotes, or satisfaction statistics.
    - Professional typography: `Plus Jakarta Sans` for English and `Cairo` / `Tajawal` for Arabic.
 
 2. **Mobile-First Responsive Layout:**
@@ -32,6 +34,8 @@ This repository contains the completely redesigned, fully responsive, bilingual 
      - `/ar/` for Arabic
      - `/en/services/` and `/ar/services/`
      - `/en/blog/` and `/ar/blog/`
+     - `/en/work/` and `/ar/work/`, with bilingual project snapshots
+     - `/en/services/email-marketing.html` and `/ar/services/email-marketing.html`
    - Instant language switching with `localStorage` memory and automated URL synchronization.
    - Bidirectional `hreflang` tags on all 55 indexed pages.
 
@@ -49,18 +53,19 @@ This repository contains the completely redesigned, fully responsive, bilingual 
    - Verified experience in technical SEO, market research, content strategy, team operations, and voluntary community empowerment.
    - Ethical, transparent separation between individual qualifications and corporate milestones.
 
-6. **11 Dedicated Individual Service Pages (EN & AR):**
+6. **Current Service Pages (EN & AR):**
    - Search Engine Optimization (SEO)
    - Technical SEO
    - Local SEO
    - Content Marketing
    - Social Media Marketing
-   - Pay-Per-Click Advertising (PPC)
-   - Google Ads
+   - Email Marketing
    - B2B Lead Generation
    - Digital Marketing Strategy
    - Website Design and Development
    - Marketing Analytics and Reporting
+   - Branding and Brand Strategy
+   - PPC and Google Ads URLs are retained as noindex availability notices; paid campaign management is not currently offered.
    - Each with problems solved, 4-step methodology, commercial benefits, FAQs, schema, and internal linking.
 
 7. **13 In-Depth Blog Articles (EN & AR):**
@@ -68,15 +73,15 @@ This repository contains the completely redesigned, fully responsive, bilingual 
    - JSON-LD `BlogPosting` schema, reading times, category tags, author boxes, and conversion CTAs.
 
 8. **Lead Generation & Contact Integrations:**
-   - Interactive multi-field consultation form with client-side validation and bilingual feedback.
-   - Integrated with FormSubmit endpoint (`nafeerdigital@gmail.com`).
+   - Bilingual multi-field enquiry form with client-side validation and explicit error/success feedback.
+   - Integrated with FormSubmit endpoint (`nafeerdigital@gmail.com`); submissions are only reported as successful after a confirmed response.
    - Pre-filled **WhatsApp integrations** with language-tailored messages:
      - **EN:** `"Hello NAFEER DIGITAL, I'm interested in your digital marketing services. I'd like to discuss my business requirements."`
      - **AR:** `"مرحباً نفير الرقمي، أنا مهتم بخدمات التسويق الرقمي لديكم وأرغب في مناقشة احتياجات عملي."`
    - Direct contacts: Phone `+60 11 7006 6150`, `nafeerdigital@gmail.com`, manager `m.alhadi.alneel@gmail.com`.
 
 9. **Technical SEO & Core Web Vitals:**
-   - Clean `sitemap.xml` with 55 mapped bilingual URLs.
+   - `sitemap.xml` includes the bilingual home, services, blog, email-marketing, work, and project routes; unavailable paid-ad pages are excluded.
    - Optimized `robots.txt`.
    - `vercel.json` with security headers (`X-Frame-Options`, `X-Content-Type-Options`) and immutable static caching.
 
@@ -98,7 +103,7 @@ nafeer/
 │   │   ├── main.js              # Nav drawer, form validation, WhatsApp integration, routing
 │   │   └── theme-customizer.js  # Interactive 6-theme, 5-mood, dark/light customization engine
 │   ├── images/
-│   │   ├── logo.jpg             # Official NAFEER DIGITAL brand logo
+│   │   ├── logo.jpg             # Legacy logo asset; not used in page chrome
 │   │   ├── hero-map.jpg         # Hero visual map composition
 │   │   ├── case-study-tako-healthcare.jpg
 │   │   ├── case-study-tako-internship.jpg
@@ -127,8 +132,14 @@ nafeer/
 No external frameworks or build dependencies required. Powered by Node.js built-ins.
 
 ```bash
-# Generate / update all 56 pages & sitemap:
-node scripts/build_all.js
+# Generate the English and Arabic homepages:
+node scripts/build_homepages.js
+
+# Generate bilingual work and project pages:
+node scripts/build_work_pages.js
+
+# Generate email marketing pages and update service availability routes:
+node scripts/build_service_pages.js
 
 # Run the automated endpoint test harness:
 node scripts/test_server.js
