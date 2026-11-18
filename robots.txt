@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nafeer-sigma.vercel.app/sitemap.xml
+Sitemap: https://nafeerdigital.com/sitemap.xml
