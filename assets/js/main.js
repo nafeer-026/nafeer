@@ -368,6 +368,80 @@
     });
   }
 
+  // 11. Corporate Video Showreel Modal (Zero Lag, Lazy-Loaded)
+  function initCorporateVideoModal() {
+    const modal = document.getElementById('corporate-video-modal');
+    if (!modal) return;
+
+    const closeBtn = modal.querySelector('#cinema-close-btn');
+    const videoWrap = modal.querySelector('#cinema-video-wrap');
+    const triggers = document.querySelectorAll('.js-open-video-modal');
+
+    function openVideoModal() {
+      if (videoWrap && !videoWrap.querySelector('video') && !videoWrap.querySelector('iframe')) {
+        // High-definition responsive HTML5 agency showreel video player with custom ambient branding
+        videoWrap.innerHTML = `
+          <video id="cinema-player" controls autoplay playsinline style="width:100%; height:100%; object-fit:cover; border-radius:inherit;" poster="assets/images/case-study-tako-digital-marketing.jpg">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-with-charts-and-data-34563-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+      }
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      const player = modal.querySelector('#cinema-player');
+      if (player) {
+        player.currentTime = 0;
+        player.play().catch(() => {});
+      }
+    }
+
+    function closeVideoModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      const player = modal.querySelector('#cinema-player');
+      if (player) {
+        player.pause();
+      }
+    }
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openVideoModal();
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeVideoModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeVideoModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeVideoModal();
+      }
+    });
+  }
+
+  // 12. Interactive Accordion Service Architecture
+  function initInteractiveAccordions() {
+    const accordionCards = document.querySelectorAll('.accordion-service-card');
+    if (!accordionCards.length) return;
+
+    accordionCards.forEach(card => {
+      const header = card.querySelector('.accordion-service-header');
+      if (!header) return;
+
+      header.addEventListener('click', () => {
+        const isOpen = card.classList.contains('open');
+        // Toggle current card
+        card.classList.toggle('open', !isOpen);
+      });
+    });
+  }
+
   // DOM Loaded Trigger
   document.addEventListener('DOMContentLoaded', () => {
     initThemeEngine();
@@ -380,5 +454,7 @@
     initScrollReveal();
     initCaseStudyLightbox();
     initWorkFilter();
+    initCorporateVideoModal();
+    initInteractiveAccordions();
   });
 })();

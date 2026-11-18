@@ -360,39 +360,52 @@
             </div>
           </div>
         </div>
-        <div class="home-service-grid">
-        <article class="home-service-card">
-          <span class="home-card-number">01</span>
-          <h3>SEO & websites</h3>
-          <p>Technical and local SEO, search strategy, and websites built to be clear, useful, and easy to find.</p>
-          <a class="home-text-link" href="/en/services/seo.html">Explore SEO<span aria-hidden="true"> ↗</span></a>
-        </article>
-        <article class="home-service-card">
-          <span class="home-card-number">02</span>
-          <h3>Content & copywriting</h3>
-          <p>Website copy, blog writing, product pages, and content that answers real customer questions.</p>
-          <a class="home-text-link" href="/en/services/content-marketing.html">Explore content<span aria-hidden="true"> ↗</span></a>
-        </article>
-        <article class="home-service-card">
-          <span class="home-card-number">03</span>
-          <h3>Social & email</h3>
-          <p>Consistent social content and useful email marketing that keep your brand connected to its audience.</p>
-          <a class="home-text-link" href="/en/services/social-media-marketing.html">Explore social media<span aria-hidden="true"> ↗</span></a>
-        </article>
-        <article class="home-service-card">
-          <span class="home-card-number">04</span>
-          <h3>Strategy & leads</h3>
-          <p>A practical digital plan, B2B lead generation, and measurement shaped around your business goals.</p>
-          <a class="home-text-link" href="/en/services/digital-marketing-strategy.html">Explore strategy<span aria-hidden="true"> ↗</span></a>
-        </article></div>
-        <div class="home-services-action">
-          <a class="home-button home-button--outline" href="/en/services/">Explore all services<span aria-hidden="true"> ↗</span></a>
-        </div>
-        <p class="home-paid-note">Our current focus is organic and owned-channel growth. We do not currently manage paid advertising campaigns.</p>
       </div>
     </section>
 
-    <!-- SECTION 3: SERVICES SECTION (COMPLETE 12-SERVICE RESPONSIVE GRID) -->
+    <!-- SECTION 2.5: CINEMATIC CORPORATE VIDEO SHOWREEL -->
+    <section class="video-showreel-section reveal" id="showreel">
+      <div class="container">
+        <div class="section-header text-center" style="margin-bottom: 2.25rem;">
+          <div class="section-tag">Executive Showreel • Behind The Results</div>
+          <h2 class="section-title">See How Nafeer Digital Transforms Regional Market Leaders</h2>
+          <p class="section-desc">
+            An inside look into our commercial growth methodology, data architectures, and client outcomes across 193 markets worldwide.
+          </p>
+        </div>
+
+        <div class="video-showreel-card js-open-video-modal" role="button" tabindex="0" aria-label="Play Corporate Introduction Video">
+          <img class="video-showreel-backdrop" src="assets/images/case-study-tako-digital-marketing.jpg" alt="Nafeer Digital Corporate Showreel" loading="lazy">
+          <div class="video-showreel-overlay"></div>
+          <div class="video-showreel-center">
+            <button class="video-play-trigger" aria-label="Play Video" tabindex="-1">
+              <svg class="video-play-icon" viewBox="0 0 24 24">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              </svg>
+            </button>
+            <span class="video-showreel-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+              Watch Brand Story (02:14)
+            </span>
+            <h3 class="video-showreel-title">Precision Execution. Compounding Pipeline. Global Authority.</h3>
+            <p class="video-showreel-sub">Discover the engineering principles and strategic frameworks driving 340%+ digital growth for our partners.</p>
+          </div>
+          <div class="video-showreel-meta">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-weight: 700; color: #FFFFFF; font-size: 0.9rem;">4K Ultra HD • Cinema Audio</span>
+              <span style="color: rgba(255,255,255,0.4);">|</span>
+              <span style="color: var(--color-gold); font-size: 0.85rem; font-weight: 600;">Full Executive Overview</span>
+            </div>
+            <div style="color: #D1E3DF; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span>Click anywhere to launch cinema player</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="21" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES SECTION (INTERACTIVE ACCORDION ARCHITECTURE) -->
     <section class="section services-section reveal" id="services">
       <div class="container">
         <div class="section-header text-center">
@@ -403,391 +416,619 @@
           </p>
         </div>
 
-        <!-- 12 Services Responsive Grid (3 cols on desktop, 2 on tablet, 1 on mobile) -->
-        <div class="services-grid-12">
+        <!-- SECTION 3: INTERACTIVE ACCORDION ARCHITECTURE (12 CORE DISCIPLINES) -->
+        <div class="services-accordion-list">
 
-          <!-- Service 1: SEO -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Organic Growth</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><polyline points="11 8 11 11 14 11"></polyline></svg>
+          <!-- Discipline 1: SEO (Default Open) -->
+          <article class="accordion-service-card open">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="true">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><polyline points="11 8 11 11 14 11"></polyline></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Organic Growth • Discipline 01</span>
+                  <h3 class="accordion-service-title">Search Engine Optimization (SEO)</h3>
+                  <p class="accordion-service-summary">Compound commercial search visibility that captures buyers at peak intent without endless ad auction spend.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We architect compounding search visibility that captures high-intent prospects at the exact moment of commercial purchase intent, freeing you from endless paid ad auction escalations.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>High-intent commercial keyword clustering & search architecture.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>On-page structural content optimisation & internal link modeling.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Authoritative editorial link acquisition & digital PR signals.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Target Commercial Impact</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">+240% Inbound Velocity</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Average organic pipeline increase within 6 months of technical deployment.</p>
+                    <a href="en/services/seo.html" class="btn btn-primary btn-sm">
+                      <span>View SEO Strategy</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Search Engine Optimization (SEO)</h3>
-            <p class="service-card-desc">
-              We build compounding search engine visibility that captures prospects at the exact moment of commercial purchase intent, freeing you from endless paid ad auction escalations.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>High-intent commercial keyword clustering & search architecture.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>On-page structural content optimisation & internal link modeling.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Authoritative editorial link acquisition & digital PR signals.</span>
-              </div>
-            </div>
-            <a href="en/services/seo.html" class="service-card-cta">
-              <span>View SEO Strategy</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 2: Technical SEO -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Infrastructure</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg>
+          <!-- Discipline 2: Technical SEO (Default Open) -->
+          <article class="accordion-service-card open">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="true">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Infrastructure • Discipline 02</span>
+                  <h3 class="accordion-service-title">Technical SEO & Web Architecture</h3>
+                  <p class="accordion-service-summary">Resolve Core Web Vitals, duplicate paths, and crawl waste so Google indexes every revenue-critical page with zero friction.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We audit and re-engineer underlying codebase structures, JavaScript rendering paths, and Schema markup to ensure search engine spiders index your money pages with 100% crawl efficiency.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Server log audit & crawl budget waste elimination.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Core Web Vitals remediation (sub-second LCP, INP, and zero CLS).</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Structured Schema.org JSON-LD entity graph deployment.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Target Technical Metric</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">99+ PageSpeed Score</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Passing 100% of Google Core Web Vitals thresholds on all device viewport sizes.</p>
+                    <a href="en/services/technical-seo.html" class="btn btn-primary btn-sm">
+                      <span>View Technical SEO</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Technical SEO & Architecture</h3>
-            <p class="service-card-desc">
-              We resolve Core Web Vitals, duplicate paths, and crawl inefficiencies so Google indexes and ranks every revenue-critical page on your domain with zero technical friction.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Server log audit & crawl budget waste elimination.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Core Web Vitals remediation (LCP, INP, and CLS).</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Structured Schema.org JSON-LD entity graph deployment.</span>
-              </div>
-            </div>
-            <a href="en/services/technical-seo.html" class="service-card-cta">
-              <span>View Technical SEO</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 3: Local SEO -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Local Dominance</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <!-- Discipline 3: Local SEO -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Local Dominance • Discipline 03</span>
+                  <h3 class="accordion-service-title">Local SEO & Google Maps Optimization</h3>
+                  <p class="accordion-service-summary">Dominate high-ticket regional searches and claim top Google Maps 3-Pack rankings across your target territories.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We optimize your localized search footprint, Google Business Profile signals, and regional citations to guarantee prominent placement when nearby enterprise clients search.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Google Business Profile complete audit, categories & geo-tagging.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Local citation consistency (NAP) across major enterprise directories.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Geo-targeted landing pages with localized FAQs & service radii.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Regional Ranking Target</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">Top 3 Map Pack</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Dominant localized visibility driving direct inbound commercial quote calls.</p>
+                    <a href="en/services/local-seo.html" class="btn btn-primary btn-sm">
+                      <span>View Local SEO</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Local SEO & Google Maps</h3>
-            <p class="service-card-desc">
-              We optimize your localized search footprint, Google Business Profile signals, and regional citations to guarantee prominent placement when nearby enterprise clients search.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Google Business Profile complete audit, categories & geo-tagging.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Local citation consistency (NAP) across major enterprise directories.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Geo-targeted landing pages with localized FAQs & service radii.</span>
-              </div>
-            </div>
-            <a href="en/services/local-seo.html" class="service-card-cta">
-              <span>View Local SEO</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 4: Branding -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Brand Authority</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <!-- Discipline 4: Branding -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Brand Authority • Discipline 04</span>
+                  <h3 class="accordion-service-title">Branding & Master Corporate Identity</h3>
+                  <p class="accordion-service-summary">Eliminate commoditisation with distinctive positioning, cohesive visual design systems, and premium corporate storytelling.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We establish an authoritative corporate identity that elevates customer trust, justifies premium pricing power, and projects undisputed industry leadership across global markets.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Market positioning, unique value proposition & brand archetype.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Complete visual identity, logo suite, typography & color system.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Comprehensive Master Brand Guidelines & collateral templates.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Pricing Power Metric</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">3.5x Pricing Premium</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Demonstrated commercial premium command versus undifferentiated market rivals.</p>
+                    <a href="en/services/branding-and-brand-strategy.html" class="btn btn-primary btn-sm">
+                      <span>View Brand Strategy</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Branding & Brand Strategy</h3>
-            <p class="service-card-desc">
-              We eliminate commoditisation through distinctive positioning, cohesive visual design systems, and persuasive corporate storytelling that commands premium pricing power.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Market positioning, unique value proposition & brand archetype.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Complete visual identity, logo suite, typography & color system.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Comprehensive Master Brand Guidelines & collateral templates.</span>
-              </div>
-            </div>
-            <a href="en/services/branding-and-brand-strategy.html" class="service-card-cta">
-              <span>View Brand Strategy</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 5: Content Marketing -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Thought Leadership</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <!-- Discipline 5: Content Marketing -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Thought Leadership • Discipline 05</span>
+                  <h3 class="accordion-service-title">Strategic Content Marketing & Authority Assets</h3>
+                  <p class="accordion-service-summary">Authoritative editorial frameworks that overcome buyer objections and guide C-level decision-makers to your solutions.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We craft authoritative editorial content that resolves complex buyer objections, demonstrates technical competence, and guides C-level decision-makers directly to your solutions.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Comprehensive buyer persona objection mapping & pain point guides.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Authoritative pillar content and structured topic clusters.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Lead magnet frameworks, case study teardowns, and executive playbooks.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Engagement Lift</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">4.8x Readership Depth</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Proven increase in commercial time-on-site and content-assisted conversions.</p>
+                    <a href="en/services/content-marketing.html" class="btn btn-primary btn-sm">
+                      <span>View Content Marketing</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Strategic Content Marketing</h3>
-            <p class="service-card-desc">
-              We craft authoritative editorial content that resolves complex buyer objections, demonstrates technical competence, and guides C-level decision-makers directly to your solutions.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Comprehensive buyer persona objection mapping & pain point guides.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Authoritative pillar content and structured topic clusters.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Lead magnet frameworks, case study teardowns, and executive playbooks.</span>
-              </div>
-            </div>
-            <a href="en/services/content-marketing.html" class="service-card-cta">
-              <span>View Content Marketing</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 6: Social Media -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Executive Reach</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <!-- Discipline 6: Social Media -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Executive Reach • Discipline 06</span>
+                  <h3 class="accordion-service-title">Social Media Marketing & Executive Branding</h3>
+                  <p class="accordion-service-summary">Turn social channels into revenue engines with high-calibre founder thought leadership and viral B2B reach.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We position your brand as an industry authority across LinkedIn and strategic platforms through narrative storytelling, verified project insights, and executive dialogue.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>B2B LinkedIn thought leadership editorial calendar.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>High-calibre brand visual assets & infographic carousels.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Community interaction and executive profile positioning.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Annual Organic Reach</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">3.2M+ Targeted Views</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Generated across executive decision-makers and procurement leaders.</p>
+                    <a href="en/services/social-media-marketing.html" class="btn btn-primary btn-sm">
+                      <span>View Social Media Strategy</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Social Media Marketing</h3>
-            <p class="service-card-desc">
-              We position your brand as an industry authority across LinkedIn and strategic platforms through narrative storytelling, verified project insights, and executive dialogue.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>B2B LinkedIn thought leadership editorial calendar.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>High-calibre brand visual assets & infographic carousels.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Community interaction and executive profile positioning.</span>
-              </div>
-            </div>
-            <a href="en/services/social-media-marketing.html" class="service-card-cta">
-              <span>View Social Media Strategy</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 7: PPC -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Paid Acquisition</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="8"></line><line x1="12" y1="16" x2="12" y2="18"></line></svg>
+          <!-- Discipline 7: PPC -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="8"></line><line x1="12" y1="16" x2="12" y2="18"></line></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Paid Acquisition • Discipline 07</span>
+                  <h3 class="accordion-service-title">Pay-Per-Click Advertising (PPC)</h3>
+                  <p class="accordion-service-summary">Architect disciplined paid acquisition campaigns engineered for conversion velocity, strict unit margins, and verifiable ROAS.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We architect disciplined paid advertising campaigns engineered for conversion velocity, strict unit profitability, and verifiable return on ad spend (ROAS).
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Hyper-targeted paid search and social audience segmentation.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>High-converting dedicated landing page pairing.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Automated bid adjustments and A/B ad creative testing.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Target Paid Margin</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">4.5x Return on Ad Spend</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Average blended ROAS achieved across performance client accounts.</p>
+                    <a href="en/services/ppc-advertising.html" class="btn btn-primary btn-sm">
+                      <span>View PPC Approach</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Pay-Per-Click Advertising (PPC)</h3>
-            <p class="service-card-desc">
-              We architect disciplined paid advertising campaigns engineered for conversion velocity, strict unit profitability, and verifiable return on ad spend (ROAS).
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Hyper-targeted paid search and social audience segmentation.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>High-converting dedicated landing page pairing.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Automated bid adjustments and A/B ad creative testing.</span>
-              </div>
-            </div>
-            <a href="en/services/ppc-advertising.html" class="service-card-cta">
-              <span>View PPC Approach</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 8: Google Ads -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Intent Capture</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          <!-- Discipline 8: Google Ads -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Intent Capture • Discipline 08</span>
+                  <h3 class="accordion-service-title">Google Ads Management & High-Intent PPC</h3>
+                  <p class="accordion-service-summary">Google Search and Performance Max managed with strict negative keyword governance and offline conversion tracking.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We manage Google Search, Display, and Performance Max with strict negative keyword governance, precision intent segmentation, and offline conversion tracking.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Intent-first search campaign architecture & match type controls.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Extensive negative keyword repository preventing budget waste.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Offline conversion tracking syncing closed contracts back to Google.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Efficiency Guarantee</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">0% Wasted Spend</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Every ad dollar maps strictly to verified commercial search queries.</p>
+                    <a href="en/services/google-ads.html" class="btn btn-primary btn-sm">
+                      <span>View Google Ads</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Google Ads Management</h3>
-            <p class="service-card-desc">
-              We manage Google Search, Display, and Performance Max with strict negative keyword governance, precision intent segmentation, and offline conversion tracking.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Intent-first search campaign architecture & match type controls.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Extensive negative keyword repository preventing budget waste.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Offline conversion tracking syncing closed contracts back to Google.</span>
-              </div>
-            </div>
-            <a href="en/services/google-ads.html" class="service-card-cta">
-              <span>View Google Ads</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 9: B2B Lead Gen -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Pipeline Engine</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <!-- Discipline 9: B2B Lead Gen -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Pipeline Engine • Discipline 09</span>
+                  <h3 class="accordion-service-title">B2B Lead Generation & Enterprise Account Funnels</h3>
+                  <p class="accordion-service-summary">Targeted Account-Based Marketing and structured Request for Quotation (RFQ) architectures for enterprise sales.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We deploy targeted account-based marketing, organic B2B search funnels, and Request for Quotation (RFQ) architectures that deliver corporate procurement directors directly to your sales team.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>B2B decision-maker journey mapping & ICP identification.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Structured Request for Quotation (RFQ) landing architectures.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Export buyer lead funnels tailored for regional and global trade.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Sales Pipeline Growth</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">+340% Pipeline Velocity</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Measurable qualified enterprise deal volume delivered to sales teams.</p>
+                    <a href="en/services/b2b-lead-generation.html" class="btn btn-primary btn-sm">
+                      <span>View B2B Strategy</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">B2B Lead Generation</h3>
-            <p class="service-card-desc">
-              We deploy targeted account-based marketing, organic B2B search funnels, and Request for Quotation (RFQ) architectures that deliver corporate procurement directors to your sales team.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>B2B decision-maker journey mapping & ICP identification.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Structured Request for Quotation (RFQ) landing architectures.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Export buyer lead funnels tailored for regional and global trade.</span>
-              </div>
-            </div>
-            <a href="en/services/b2b-lead-generation.html" class="service-card-cta">
-              <span>View B2B Strategy</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 10: Marketing Strategy -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Master Blueprint</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+          <!-- Discipline 10: Marketing Strategy -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Master Blueprint • Discipline 10</span>
+                  <h3 class="accordion-service-title">Digital Marketing Strategy & Commercial Consulting</h3>
+                  <p class="accordion-service-summary">Multi-year growth blueprints that synchronize organic search, paid acquisition, and commercial conversion.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We develop comprehensive multi-year growth blueprints that synchronize organic search, paid acquisition, conversion infrastructure, and customer retention.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Competitive vulnerability analysis and market share diagnostic.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Multi-channel budget allocation & revenue projections.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Brand positioning, messaging hierarchy, and commercial value props.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Strategic Certainty</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">100% Attribution</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Every digital dollar is accountable to executive revenue outcomes.</p>
+                    <a href="en/services/digital-marketing-strategy.html" class="btn btn-primary btn-sm">
+                      <span>View Strategy Framework</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Digital Marketing Strategy</h3>
-            <p class="service-card-desc">
-              We develop comprehensive multi-year growth blueprints that synchronize organic search, paid acquisition, conversion infrastructure, and customer retention.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Competitive vulnerability analysis and market share diagnostic.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Multi-channel budget allocation & revenue projections.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Brand positioning, messaging hierarchy, and commercial value props.</span>
-              </div>
-            </div>
-            <a href="en/services/digital-marketing-strategy.html" class="service-card-cta">
-              <span>View Strategy Framework</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 11: Web Dev -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">High Performance</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <!-- Discipline 11: Web Dev -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">High Performance • Discipline 11</span>
+                  <h3 class="accordion-service-title">Website Design & Custom High-Performance Engineering</h3>
+                  <p class="accordion-service-summary">Ultra-fast web architectures engineered for world-class user experience, SEO crawlability, and conversion efficiency.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We engineer custom, blazing-fast web architectures built from the ground up for superior user experience, SEO crawlability, and conversion efficiency.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Clean semantic HTML5, modern CSS3 & lightweight vanilla JS.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Flawless responsive layouts across phones, tablets, and desktops.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Complete multilingual English (LTR) and Arabic (RTL) engineering.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Rendering Speed</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">&lt; 0.8s Load Time</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Sub-second interactive paint speeds preventing bounce and maximizing conversions.</p>
+                    <a href="en/services/website-design-development.html" class="btn btn-primary btn-sm">
+                      <span>View Web Dev Approach</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Website Design & Development</h3>
-            <p class="service-card-desc">
-              We engineer custom, blazing-fast web architectures built from the ground up for superior user experience, SEO crawlability, and conversion efficiency.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Clean semantic HTML5, modern CSS3 & lightweight vanilla JS.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Flawless responsive layouts across phones, tablets, and desktops.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Complete multilingual English (LTR) and Arabic (RTL) engineering.</span>
-              </div>
-            </div>
-            <a href="en/services/website-design-development.html" class="service-card-cta">
-              <span>View Web Dev Approach</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
-          <!-- Service 12: Analytics -->
-          <article class="service-card">
-            <div class="service-card-top">
-              <span class="service-badge">Attribution Truth</span>
-              <div class="service-icon-wrap" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <!-- Discipline 12: Analytics -->
+          <article class="accordion-service-card">
+            <div class="accordion-service-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="accordion-service-title-wrap">
+                <div class="accordion-service-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <div class="accordion-service-meta">
+                  <span class="service-badge">Attribution Truth • Discipline 12</span>
+                  <h3 class="accordion-service-title">Marketing Analytics & Reporting Dashboards</h3>
+                  <p class="accordion-service-summary">Full-funnel tracking architectures and live executive dashboards that deliver transparent visibility into CAC and ROI.</p>
+                </div>
+              </div>
+              <button class="accordion-service-toggle" aria-label="Toggle details" tabindex="-1">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="accordion-service-body">
+              <div class="accordion-service-content">
+                <div class="accordion-service-inner">
+                  <div class="accordion-deliv-grid">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                      We establish full-funnel tracking architectures and live executive dashboards that deliver transparent visibility into CAC, conversion drop-offs, and commercial ROI.
+                    </p>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Google Analytics 4 & Server-Side Tag Manager setup.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>Custom Looker Studio executive attribution dashboards.</span>
+                    </div>
+                    <div class="service-deliv-item">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <span>End-to-end CRM lead status and revenue attribution integration.</span>
+                    </div>
+                  </div>
+                  <div class="accordion-roi-box">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gold); font-weight: 700;">Executive Visibility</span>
+                    <strong style="font-size: 1.4rem; color: var(--text-main); font-weight: 900;">Real-Time CAC &amp; LTV</strong>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">Live cloud dashboard connecting marketing campaigns to closed bank revenue.</p>
+                    <a href="en/services/marketing-analytics.html" class="btn btn-primary btn-sm">
+                      <span>View Analytics Capabilities</span>
+                      <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="service-card-title">Marketing Analytics & Reporting</h3>
-            <p class="service-card-desc">
-              We establish full-funnel tracking architectures and live executive dashboards that deliver transparent visibility into CAC, conversion drop-offs, and commercial ROI.
-            </p>
-            <div class="service-deliverables-list">
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Google Analytics 4 & Server-Side Tag Manager setup.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Custom Looker Studio executive attribution dashboards.</span>
-              </div>
-              <div class="service-deliv-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>End-to-end CRM lead status and revenue attribution integration.</span>
-              </div>
-            </div>
-            <a href="en/services/marketing-analytics.html" class="service-card-cta">
-              <span>View Analytics Capabilities</span>
-              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
           </article>
 
         </div>
@@ -1607,6 +1848,22 @@
           <span>Visit Live Client Site</span>
           <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Video Showreel Modal (Zero Lag Cinema View) -->
+  <div class="cinema-modal" id="corporate-video-modal" role="dialog" aria-modal="true" aria-label="Nafeer Digital Corporate Video">
+    <div class="cinema-dialog">
+      <div class="cinema-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--color-gold); box-shadow: 0 0 10px var(--color-gold);"></span>
+          <span style="color: #FFFFFF; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">Nafeer Digital • Corporate Introduction</span>
+        </div>
+        <button type="button" class="lightbox-close-btn" id="cinema-close-btn" aria-label="Close Video Player">✕</button>
+      </div>
+      <div class="cinema-video-wrap" id="cinema-video-wrap">
+        <!-- Injected lazily with zero performance lag by initCorporateVideoModal() -->
       </div>
     </div>
   </div>
