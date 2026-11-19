@@ -11,62 +11,73 @@
    -------------------------------------------------------------------------- */
 :root {
   /* ================= LIGHT MODE (OFFICIAL DEFAULT) ================= */
-  --bg-page: #F8FAF9;
+  --bg-page: #F8F9FC;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #EEF4F1;
+  --bg-subtle: #F1F4F9;
   --bg-card: #FFFFFF;
   --bg-card-hover: #FFFFFF;
-  --bg-elevated: #F2F7F4;
-  --bg-glass: rgba(255, 255, 255, 0.88);
-  --bg-header-scrolled: rgba(255, 255, 255, 0.94);
-  --bg-hero: #F8FAF9;
+  --bg-elevated: #F4F7FC;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-header-scrolled: rgba(255, 255, 255, 0.96);
+  --bg-hero: #F8F9FC;
 
   /* Typography Colors */
-  --text-main: #061F1A;
-  --text-muted: #435E58;
-  --text-light: #6E8882;
+  --text-main: #0B132B;
+  --text-muted: #3D4A66;
+  --text-light: #64748B;
   --text-inverse: #FFFFFF;
-  --text-inverse-muted: #D1E3DF;
+  --text-inverse-muted: #CBD5E1;
 
-  /* Brand Colors: Deep Obsidian Emerald & Champagne Gold */
-  --color-obsidian: #041412;
-  --color-emerald-deep: #052620;
-  --color-emerald: #0A3630;
-  --color-emerald-light: #10594E;
-  --color-emerald-glow: rgba(10, 54, 48, 0.12);
+  /* Brand Colors: Deep Midnight Navy, Electric Blue & Cyan */
+  --color-obsidian: #0B132B;
+  --color-midnight: #0B132B;
+  --color-midnight-deep: #060B18;
+  --color-charcoal: #161922;
+  --color-primary: #0066FF;
+  --color-primary-hover: #0052CC;
+  --color-primary-glow: rgba(0, 102, 255, 0.15);
+  --color-cyan: #00C2FF;
+  --color-cyan-glow: rgba(0, 194, 255, 0.18);
 
-  /* Luminous Champagne Gold */
-  --color-gold: #B68B38;
-  --color-gold-hover: #9E7425;
+  /* Heritage Brand Gold / Champagne (Synergy with NAFEER Brandmark) */
+  --color-gold: #C59B27;
+  --color-gold-hover: #AA821C;
   --color-gold-light: #FFF9EE;
-  --color-gold-glow: rgba(182, 139, 56, 0.18);
-  --color-gold-border: rgba(182, 139, 56, 0.32);
+  --color-gold-glow: rgba(197, 155, 39, 0.18);
+  --color-gold-border: rgba(197, 155, 39, 0.32);
+
+  /* Legacy Compat Variables */
+  --color-emerald-deep: #0B132B;
+  --color-emerald: #0F172A;
+  --color-emerald-light: #0066FF;
+  --color-emerald-glow: rgba(0, 102, 255, 0.15);
 
   /* Borders & Dividers */
-  --border-light: #E0E7E3;
-  --border-subtle: rgba(6, 31, 26, 0.08);
-  --border-card: #E4ECE8;
-  --border-hover: rgba(182, 139, 56, 0.45);
+  --border-light: #E2E8F0;
+  --border-subtle: rgba(11, 19, 43, 0.08);
+  --border-card: #E2E8F0;
+  --border-hover: rgba(0, 102, 255, 0.45);
 
   /* Elevation Shadows */
-  --shadow-sm: 0 2px 8px rgba(6, 31, 26, 0.04);
-  --shadow-md: 0 8px 24px rgba(6, 31, 26, 0.06);
-  --shadow-lg: 0 16px 40px rgba(6, 31, 26, 0.08);
-  --shadow-xl: 0 24px 60px rgba(6, 31, 26, 0.11);
-  --shadow-gold: 0 8px 25px rgba(182, 139, 56, 0.22);
+  --shadow-sm: 0 2px 8px rgba(11, 19, 43, 0.04);
+  --shadow-md: 0 8px 24px rgba(11, 19, 43, 0.06);
+  --shadow-lg: 0 16px 40px rgba(11, 19, 43, 0.08);
+  --shadow-xl: 0 24px 60px rgba(11, 19, 43, 0.11);
+  --shadow-gold: 0 8px 25px rgba(197, 155, 39, 0.22);
+  --shadow-blue: 0 8px 25px rgba(0, 102, 255, 0.25);
   --shadow-dark: 0 16px 40px rgba(0, 0, 0, 0.25);
 
   /* Header & Overlay */
-  --header-border: rgba(6, 31, 26, 0.08);
-  --header-scrolled-border: rgba(182, 139, 56, 0.25);
-  --hero-overlay-gradient: radial-gradient(circle at 75% 25%, rgba(16, 89, 78, 0.08) 0%, transparent 60%),
-                           radial-gradient(circle at 20% 75%, rgba(182, 139, 56, 0.08) 0%, transparent 50%),
-                           linear-gradient(180deg, rgba(248, 250, 249, 0.6) 0%, #F8FAF9 100%);
+  --header-border: rgba(11, 19, 43, 0.08);
+  --header-scrolled-border: rgba(0, 102, 255, 0.2);
+  --hero-overlay-gradient: radial-gradient(circle at 75% 25%, rgba(0, 102, 255, 0.06) 0%, transparent 60%),
+                           radial-gradient(circle at 20% 75%, rgba(0, 194, 255, 0.06) 0%, transparent 50%),
+                           linear-gradient(180deg, rgba(248, 249, 252, 0.6) 0%, #F8F9FC 100%);
   --hero-mesh-opacity: 0.035;
 
   /* Typography Families */
-  --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-ar: 'Cairo', 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-en: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-ar: 'Tajawal', 'IBM Plex Sans Arabic', 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family: var(--font-en);
 
   /* Fluid Spacing Scale */
@@ -99,29 +110,39 @@
 
 /* ================= DARK MODE OVERRIDES (TOGGLEABLE) ================= */
 html[data-theme="dark"] {
-  --bg-page: #031411;
-  --bg-surface: #07211D;
-  --bg-subtle: #0B2B26;
-  --bg-card: #082420;
-  --bg-card-hover: #0C332D;
-  --bg-elevated: #0E3630;
-  --bg-glass: rgba(7, 33, 29, 0.88);
-  --bg-header-scrolled: rgba(4, 20, 18, 0.94);
-  --bg-hero: #031411;
+  --bg-page: #070C18;
+  --bg-surface: #0B132B;
+  --bg-subtle: #0E172F;
+  --bg-card: #0F1A38;
+  --bg-card-hover: #142247;
+  --bg-elevated: #121E3E;
+  --bg-glass: rgba(11, 19, 43, 0.9);
+  --bg-header-scrolled: rgba(7, 12, 24, 0.95);
+  --bg-hero: #070C18;
 
   /* Typography Colors */
   --text-main: #FFFFFF;
-  --text-muted: #A0BDB8;
-  --text-light: #7A9E98;
-  --text-inverse: #061F1A;
-  --text-inverse-muted: #435E58;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
+  --text-inverse: #0B132B;
+  --text-inverse-muted: #3D4A66;
 
   /* Brand Colors */
   --color-obsidian: #FFFFFF;
-  --color-emerald-deep: #072520;
-  --color-emerald: #0A3630;
-  --color-emerald-light: #177164;
-  --color-emerald-glow: rgba(16, 89, 78, 0.45);
+  --color-midnight: #0B132B;
+  --color-midnight-deep: #060B18;
+  --color-charcoal: #161922;
+  --color-primary: #388BFD;
+  --color-primary-hover: #58A6FF;
+  --color-primary-glow: rgba(56, 139, 253, 0.35);
+  --color-cyan: #38BDF8;
+  --color-cyan-glow: rgba(56, 189, 248, 0.3);
+
+  /* Legacy Compat */
+  --color-emerald-deep: #0B132B;
+  --color-emerald: #0F1A38;
+  --color-emerald-light: #388BFD;
+  --color-emerald-glow: rgba(56, 139, 253, 0.35);
 
   /* Gold in Dark Mode */
   --color-gold: #DFC17B;
@@ -134,22 +155,23 @@ html[data-theme="dark"] {
   --border-light: rgba(255, 255, 255, 0.09);
   --border-subtle: rgba(255, 255, 255, 0.05);
   --border-card: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(223, 193, 123, 0.45);
+  --border-hover: rgba(56, 139, 253, 0.5);
 
   /* Elevation Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
-  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.65);
   --shadow-gold: 0 8px 28px rgba(223, 193, 123, 0.22);
+  --shadow-blue: 0 8px 28px rgba(56, 139, 253, 0.3);
   --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.7);
 
   /* Header & Overlay */
   --header-border: rgba(255, 255, 255, 0.08);
-  --header-scrolled-border: rgba(223, 193, 123, 0.2);
-  --hero-overlay-gradient: radial-gradient(circle at 75% 25%, rgba(10, 54, 48, 0.55) 0%, transparent 60%),
-                           radial-gradient(circle at 20% 75%, rgba(223, 193, 123, 0.12) 0%, transparent 50%),
-                           linear-gradient(180deg, rgba(4, 20, 18, 0.65) 0%, rgba(4, 20, 18, 0.9) 60%, #031411 100%);
+  --header-scrolled-border: rgba(56, 139, 253, 0.3);
+  --hero-overlay-gradient: radial-gradient(circle at 75% 25%, rgba(0, 102, 255, 0.2) 0%, transparent 60%),
+                           radial-gradient(circle at 20% 75%, rgba(0, 194, 255, 0.1) 0%, transparent 50%),
+                           linear-gradient(180deg, rgba(7, 12, 24, 0.7) 0%, rgba(7, 12, 24, 0.95) 60%, #070C18 100%);
   --hero-mesh-opacity: 0.025;
 }
 
@@ -394,17 +416,31 @@ html[lang="ar"] .section-tag::before {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #DFC17B 0%, #B68B38 100%);
-  color: #051916;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 18px rgba(182, 139, 56, 0.28);
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 18px rgba(0, 102, 255, 0.28);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #EAD093 0%, #C89F48 100%);
-  box-shadow: 0 8px 24px rgba(182, 139, 56, 0.42);
+  background: linear-gradient(135deg, #1A75FF 0%, #0047B3 100%);
+  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.42);
   transform: translateY(-2px);
-  color: var(--color-accent-text);
+  color: #FFFFFF;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #DFC17B 0%, #C59B27 100%);
+  color: #0B132B;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.28);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #EAD093 0%, #D4AF37 100%);
+  box-shadow: 0 8px 24px rgba(197, 155, 39, 0.42);
+  transform: translateY(-2px);
+  color: #0B132B;
 }
 
 .btn-secondary {

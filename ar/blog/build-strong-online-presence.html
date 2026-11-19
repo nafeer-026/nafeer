@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="signature" data-mood="professional" data-mode="light">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
   <!-- Google Fonts: Plus Jakarta Sans & Cairo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/main.css">
@@ -62,11 +62,11 @@
 </head>
 <body>
 
-  <!-- Site Sticky Header -->
-  <header class="site-header">
+    <!-- Site Sticky Frosted Navigation Header -->
+  <header class="site-header scrolled">
     <div class="container header-inner">
       <a href="../../ar/" class="brand-logo-wrap" aria-label="نفير الرقمي">
-        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="42" height="42" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
         <div class="brand-text-block">
           <span class="brand-name">نفير الرقمي</span>
           <span class="brand-tagline">وكالة تسويق رقمي متكاملة</span>
@@ -77,26 +77,36 @@
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="../../ar/" class="nav-link">الرئيسية</a>
         <a href="../../ar/#about" class="nav-link">من نحن</a>
-        <a href="../../ar/services/" class="nav-link">خدماتنا</a>
-        <a href="../../ar/work/" class="nav-link">أعمالنا</a>
-        <a href="../../ar/blog/" class="nav-link">المدونة</a>
+        <a href="../../ar/services/" class="nav-link ">خدماتنا</a>
+        <a href="../../ar/#why-us" class="nav-link">لماذا نفير</a>
+        <a href="../../ar/work.html" class="nav-link ">أعمالنا</a>
+        <a href="../../ar/#process" class="nav-link">منهجيتنا</a>
+        <a href="../../ar/#industries" class="nav-link">القطاعات</a>
+        <a href="../../ar/blog/" class="nav-link active">المدونة</a>
         <a href="../../ar/#contact" class="nav-link">اتصل بنا</a>
       </nav>
 
-            <!-- Header Actions -->
+      <!-- Header Actions -->
       <div class="header-actions">
-        <!-- Language Switcher Button -->
-        <a href="#" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="Switch to English">
+        <!-- Dual Mode Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn js-toggle-theme" aria-label="تبديل المظهر" title="تبديل المظهر">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Clean Language Switcher -->
+        <a href="../../en/blog/build-strong-online-presence.html" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="English">
+          <span>🇬🇧</span>
           <span>English</span>
         </a>
 
         <!-- Header CTA -->
-        <a href="../../ar/#contact" class="btn btn-primary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
-          ابدأ الآن
+        <a href="../../ar/#contact" class="btn btn-primary btn-sm header-cta">
+          طلب استشارة
         </a>
 
-        <!-- Mobile Hamburger Trigger -->
-        <button type="button" class="hamburger-btn" id="btn-hamburger" aria-label="القائمة">
+        <!-- Mobile Drawer Hamburger -->
+        <button type="button" class="hamburger-btn" id="btn-hamburger" aria-label="فتح القائمة">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -107,10 +117,10 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="قائمة الجوال">
     <div class="drawer-header">
       <div class="brand-logo-wrap">
-        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="36" height="36" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
         <span class="brand-name">نفير الرقمي</span>
       </div>
       <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="Close">✕</button>
@@ -119,18 +129,22 @@
     <nav class="drawer-nav-list">
       <a href="../../ar/" class="drawer-nav-link">الرئيسية</a>
       <a href="../../ar/#about" class="drawer-nav-link">عن نفير الرقمي</a>
-      <a href="../../ar/services/" class="drawer-nav-link">خدماتنا الكاملة</a>
-      <a href="../../ar/work/" class="drawer-nav-link">أعمالنا</a>
-      <a href="../../ar/blog/" class="drawer-nav-link">المقالات والمدونة</a>
+      <a href="../../ar/services/" class="drawer-nav-link ">خدماتنا الكاملة</a>
+      <a href="../../ar/#why-us" class="drawer-nav-link">لماذا تختارنا</a>
+      <a href="../../ar/work.html" class="drawer-nav-link ">أعمالنا ودراسات الحالة</a>
+      <a href="../../ar/#process" class="drawer-nav-link">منهجية العمل</a>
+      <a href="../../ar/#industries" class="drawer-nav-link">القطاعات</a>
+      <a href="../../ar/blog/" class="drawer-nav-link active">المقالات والأفكار</a>
       <a href="../../ar/#contact" class="drawer-nav-link">تواصل معنا</a>
     </nav>
 
-        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.85rem;">
-      <a href="#" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
-        التحويل إلى English
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:0.75rem; padding-top:1.5rem;">
+      <a href="../../en/blog/build-strong-online-presence.html" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
+        🇬🇧 English
       </a>
       <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg> محادثة واتساب
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+        <span>محادثة عبر واتساب</span>
       </a>
     </div>
   </aside>
@@ -236,32 +250,38 @@
     </a>
   </div>
 
-  <!-- Site Footer -->
+    <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
+        <!-- Brand Info -->
         <div>
-          <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
-            <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+          <div class="brand-logo-wrap" style="margin-bottom: 0.85rem;">
+            <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="40" height="40" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
             <span class="brand-name">نفير الرقمي</span>
           </div>
+          <div style="font-size:0.85rem; font-style:italic; color:var(--color-gold); margin-bottom:1rem; font-weight:600;">
+            نمو أعمالكم غايتنا.. ونجاحكم شغفنا الأسمى.
+          </div>
           <p class="footer-brand-desc">
-            وكالة تسويق رقمي دولية رائدة؛ نؤسس حضوراً دائماً ومسيطراً في محركات البحث، ونطور منصات رقمية عالية التحويل، ونبني مسارات إيرادات مستدامة للشركات والمصانع الطموحة.
+            وكالة تسويق رقمي دولية متكاملة؛ نساعد الشركات والمؤسسات على تحقيق نمو تجاري مستدام ومضاعفة العملاء من خلال استراتيجيات مدروسة قائمة على البيانات.
           </p>
           <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-sm js-whatsapp-link">
-            <span>واتساب المباشر: 6150 7006 11 60+</span>
+            <span>تواصل عبر واتساب: 6150 7006 11 60+</span>
           </a>
         </div>
 
         <div>
-          <h4 class="footer-col-title">روابط الموقع</h4>
+          <h4 class="footer-col-title">روابط سريعة</h4>
           <ul class="footer-links-list">
             <li><a href="../../ar/" class="footer-link">الرئيسية</a></li>
-            <li><a href="../../ar/#about" class="footer-link">من نحن وفلسفتنا</a></li>
-            <li><a href="../../ar/services/" class="footer-link">خدماتنا الكاملة</a></li>
-            <li><a href="../../ar/#why-us" class="footer-link">لماذا نفير الرقمي</a></li>
-            <li><a href="../../ar/work/" class="footer-link">أعمالنا</a></li>
-            <li><a href="../../ar/blog/" class="footer-link">المدونة والتحليلات</a></li>
+            <li><a href="../../ar/#about" class="footer-link">عن نفير الرقمي</a></li>
+            <li><a href="../../ar/services/" class="footer-link">جميع الخدمات</a></li>
+            <li><a href="../../ar/#why-us" class="footer-link">لماذا تختارنا</a></li>
+            <li><a href="../../ar/work.html" class="footer-link">أعمالنا ودراسات الحالة</a></li>
+            <li><a href="../../ar/#process" class="footer-link">منهجية العمل</a></li>
+            <li><a href="../../ar/#industries" class="footer-link">القطاعات المستهدفة</a></li>
+            <li><a href="../../ar/blog/" class="footer-link">المقالات والأفكار</a></li>
             <li><a href="../../ar/#contact" class="footer-link">طلب استشارة</a></li>
           </ul>
         </div>
@@ -269,45 +289,51 @@
         <div>
           <h4 class="footer-col-title">دليل الخدمات</h4>
           <ul class="footer-links-list">
-            <li><a href="../../ar/services/seo.html" class="footer-link">تحسين محركات البحث SEO</a></li>
-            <li><a href="../../ar/services/technical-seo.html" class="footer-link">السيو التقني</a></li>
-            <li><a href="../../ar/services/local-seo.html" class="footer-link">السيو المحلي للشركات</a></li>
-            <li><a href="../../ar/services/b2b-lead-generation.html" class="footer-link">توليد صفقات الشركات B2B</a></li>
+            <li><a href="../../ar/services/seo.html" class="footer-link">تحسين محركات البحث (SEO)</a></li>
+            <li><a href="../../ar/services/technical-seo.html" class="footer-link">السيو التقني وسرعة الموقع</a></li>
+            <li><a href="../../ar/services/local-seo.html" class="footer-link">السيو المحلي وخرائط جوجل</a></li>
+            <li><a href="../../ar/services/b2b-lead-generation.html" class="footer-link">توليد صفقات الشركات (B2B)</a></li>
             <li><a href="../../ar/services/email-marketing.html" class="footer-link">التسويق بالبريد الإلكتروني</a></li>
             <li><a href="../../ar/services/content-marketing.html" class="footer-link">التسويق بالمحتوى الاستراتيجي</a></li>
+            <li><a href="../../ar/services/social-media-marketing.html" class="footer-link">التسويق عبر التواصل الاجتماعي</a></li>
+            <li><a href="../../ar/services/digital-marketing-strategy.html" class="footer-link">استراتيجية التسويق الرقمي</a></li>
             <li><a href="../../ar/services/website-design-development.html" class="footer-link">تصميم وتطوير المواقع</a></li>
-            <li><a href="../../ar/services/marketing-analytics.html" class="footer-link">تحليلات الأداء ولوحات البيانات</a></li>
+            <li><a href="../../ar/services/marketing-analytics.html" class="footer-link">التحليلات وقياس الأداء</a></li>
+            <li><a href="../../ar/services/branding-and-brand-strategy.html" class="footer-link">الهوية واستراتيجية البراندنج</a></li>
+            <li><a href="../../ar/services/ppc-advertising.html" class="footer-link">الإعلانات الممولة (PPC)</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">استفسارات استراتيجية</h4>
+          <h4 class="footer-col-title">بيانات التواصل المباشر</h4>
           <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
             البريد الإلكتروني: <a href="mailto:nafeerdigital@gmail.com" style="color:var(--color-gold);">nafeerdigital@gmail.com</a>
           </p>
-          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 1.25rem; line-height: 1.6;">
-            واتساب الإدارة: <a href="https://wa.me/601170066150" class="js-whatsapp-link" style="color:var(--color-gold);">6150 7006 11 60+</a>
+          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
+            الهاتف / الواتساب: <a href="https://wa.me/601170066150" style="color:var(--color-gold);" class="js-whatsapp-link">+60 11 7006 6150</a>
           </p>
-          <p style="font-size:0.825rem; color:var(--text-light); line-height: 1.5;">
-            نخدم عملاءنا من الشركات الكبرى والمؤسسات في ماليزيا ومنطقة الشرق الأوسط والأسواق العالمية.
-          </p>
+          <div style="font-size:0.85rem; color:var(--text-inverse-muted); margin-top: 1rem; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem;">
+            قيادة استراتيجية بإشراف محمد الهادي النيل، خريج معهد إلينوي للتكنولوجيا (IIT) بمرتبة الشرف.
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
         <div>
-          © 2026 نفير الرقمي. جميع الحقوق محفوظة. وكالة تسويق رقمي متكاملة.
+          © 2026 نفير الرقمي. جميع الحقوق محفوظة.
         </div>
-        <div style="display:flex; gap:1.5rem; align-items:center;">
-          <a href="#" class="js-switch-lang" data-target-lang="en" style="color:var(--color-gold);">English</a>
-          <span>•</span>
-          <a href="../../sitemap.xml" target="_blank" style="color:var(--text-light);">خريطة الموقع XML</a>
+        <div class="footer-legal-links">
+          <span>وكالة تسويق رقمي معتمدة دولياً</span>
+          <span>·</span>
+          <span>الأداء وسرعة التحميل</span>
+          <span>·</span>
+          <span>معايير السيو العالمية</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Core JavaScript -->
+  <!-- Scripts -->
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>

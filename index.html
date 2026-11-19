@@ -29,8 +29,15 @@
   <!-- Google Fonts: Plus Jakarta Sans & Cairo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="assets/images/nafeer-official-logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+    <!-- Favicon & Search Engine Identity -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0B132B">
   <link rel="stylesheet" href="assets/css/main.css?v=4.0">
   <meta name="build-time" content="2026-11-18T18:03:00">
   
@@ -44,22 +51,72 @@
 
   <!-- Schema.org ProfessionalService Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "NAFEER DIGITAL",
-    "image": "https://nafeerdigital.com/assets/images/logo-icon.png",
-    "@id": "https://nafeerdigital.com",
-    "url": "https://nafeerdigital.com",
-    "telephone": "+601170066150",
-    "email": "nafeerdigital@gmail.com",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "MY"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nafeerdigital.com/#organization",
+      "name": "NAFEER DIGITAL",
+      "alternateName": "نفير الرقمي",
+      "url": "https://nafeerdigital.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://nafeerdigital.com/#logo",
+        "url": "https://nafeerdigital.com/assets/images/logo-icon.png",
+        "caption": "NAFEER DIGITAL Official Brand Logo",
+        "width": 640,
+        "height": 640
+      },
+      "image": {
+        "@id": "https://nafeerdigital.com/#logo"
+      },
+      "description": "Premier international digital marketing agency engineering predictable commercial growth through technical SEO, B2B lead generation, multilingual content, and data-driven marketing strategy.",
+      "email": "nafeerdigital@gmail.com",
+      "telephone": "+601170066150",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MY"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Mohamed Alhadi Alneel",
+        "jobTitle": "Founder & Digital Marketing Strategist",
+        "alumniOf": "Illinois Institute of Technology"
+      }
     },
-    "description": "International full-service digital marketing agency engineering predictable commercial growth through SEO, B2B lead generation, paid acquisition, and growth strategy."
-  }
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://nafeerdigital.com/#service",
+      "name": "NAFEER DIGITAL",
+      "parentOrganization": {
+        "@id": "https://nafeerdigital.com/#organization"
+      },
+      "url": "https://nafeerdigital.com",
+      "priceRange": "$$",
+      "telephone": "+601170066150",
+      "email": "nafeerdigital@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nafeerdigital.com/#website",
+      "url": "https://nafeerdigital.com",
+      "name": "NAFEER DIGITAL",
+      "alternateName": "نفير الرقمي",
+      "publisher": {
+        "@id": "https://nafeerdigital.com/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "ar"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -68,7 +125,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="./" class="brand-logo-wrap" aria-label="NAFEER DIGITAL Homepage">
-        <img src="assets/images/nafeer-official-logo.jpg" alt="NAFEER DIGITAL Logo" class="brand-logo-img" width="44" height="44" style="border-radius:50%; object-fit:cover; border:1.5px solid var(--color-gold);">
+        <img src="assets/images/logo-icon.png" alt="NAFEER DIGITAL Official Logo" class="brand-logo-img" width="44" height="44" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
         <div class="brand-text-block">
           <span class="brand-name">NAFEER DIGITAL</span>
           <span class="brand-tagline">DIGITAL MARKETING AGENCY</span>
@@ -1320,6 +1377,61 @@
 
     
 
+    <!-- SECTION 6: OUR PROCESS -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Disciplined Methodology</div>
+          <h2 class="section-title">The Continuous Growth Loop in 4 Strategic Phases</h2>
+          <p class="section-desc">
+            A battle-tested framework engineered to translate strategic diagnosis into predictable, compounding commercial expansion.
+          </p>
+        </div>
+
+        <div class="process-flow-grid">
+          <!-- Step 1: Discover -->
+          <div class="process-step-card">
+            <div class="process-step-index">01</div>
+            <h3 class="process-step-name">Discover & Diagnose</h3>
+            <p class="process-step-desc">
+              We audit your market standing, buyer personas, unit economics, conversion friction points, and competitor blind spots.
+            </p>
+            <div class="process-deliverables-pill">Comprehensive Audit & Deep Analytics</div>
+          </div>
+
+          <!-- Step 2: Strategize -->
+          <div class="process-step-card">
+            <div class="process-step-index">02</div>
+            <h3 class="process-step-name">Strategic Blueprint</h3>
+            <p class="process-step-desc">
+              We engineer a clear multi-channel roadmap, high-intent search clusters, conversion pathways, and quantified commercial revenue KPIs.
+            </p>
+            <div class="process-deliverables-pill">Integrated Economic Action Plan</div>
+          </div>
+
+          <!-- Step 3: Execute -->
+          <div class="process-step-card">
+            <div class="process-step-index">03</div>
+            <h3 class="process-step-name">Precision Execution</h3>
+            <p class="process-step-desc">
+              We deploy technical SEO infrastructure, fast web architecture, targeted campaigns, and frictionless inbound lead journeys.
+            </p>
+            <div class="process-deliverables-pill">Full Production-Grade Launch</div>
+          </div>
+
+          <!-- Step 4: Optimize -->
+          <div class="process-step-card">
+            <div class="process-step-index">04</div>
+            <h3 class="process-step-name">Measure, Refine & Scale</h3>
+            <p class="process-step-desc">
+              We track bottom-line ROI, run continuous message A/B tests, eliminate latency, and aggressively scale top-performing acquisition channels.
+            </p>
+            <div class="process-deliverables-pill">Compounding ROI & Lower CAC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 7: INDUSTRIES WE SERVE -->
     <section class="section industries-section" id="industries">
       <div class="container">
@@ -1653,7 +1765,7 @@
         <!-- Brand Info -->
         <div>
           <div class="brand-logo-wrap" style="margin-bottom: 0.85rem;">
-            <img src="assets/images/nafeer-official-logo.jpg" alt="NAFEER DIGITAL Logo" class="brand-logo-img" width="38" height="38" style="border-radius:50%; object-fit:cover; border:1.5px solid var(--color-gold);">
+            <img src="assets/images/logo-icon.png" alt="NAFEER DIGITAL Official Logo" class="brand-logo-img" width="40" height="40" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
             <span class="brand-name">NAFEER DIGITAL</span>
           </div>
           <div style="font-size:0.8rem; font-style:italic; color:var(--color-gold); margin-bottom:1rem; font-weight:600;">

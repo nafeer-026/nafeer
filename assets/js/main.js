@@ -107,7 +107,7 @@
         let targetUrl = '/';
 
         if (targetLang === 'ar') {
-          if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/ar/')) {
+          if (currentPath === '/' || currentPath === '' || currentPath === '/index.html') {
             targetUrl = '/ar/';
           } else if (currentPath.includes('/en/')) {
             targetUrl = currentPath.replace('/en/', '/ar/');
@@ -118,11 +118,12 @@
           }
         } else {
           // targetLang === 'en'
-          if (currentPath.includes('/ar/')) {
-            targetUrl = currentPath.replace('/ar/', '/');
-            if (targetUrl === '/en/') targetUrl = '/';
-          } else {
+          if (currentPath === '/ar/' || currentPath === '/ar' || currentPath === '/ar/index.html') {
             targetUrl = '/';
+          } else if (currentPath.includes('/ar/')) {
+            targetUrl = currentPath.replace('/ar/', '/en/');
+          } else {
+            targetUrl = currentPath.includes('/en/') ? currentPath : '/';
           }
         }
 

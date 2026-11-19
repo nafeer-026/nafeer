@@ -1,0 +1,22 @@
+{
+  "name": "NAFEER DIGITAL | نفير الرقمي",
+  "short_name": "NAFEER DIGITAL",
+  "description": "International Full-Service Digital Marketing Agency & Commercial Growth Partner",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B132B",
+  "theme_color": "#0B132B",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-48x48.png",
+      "sizes": "48x48 64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo-icon.png",
+      "sizes": "640x640",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

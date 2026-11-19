@@ -1,120 +1,385 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>إعلانات الدفع بالنقرة — غير متاحة حالياً | نفير الرقمي</title>
-  <meta name="description" content="لا تدير نفير الرقمي حالياً حملات الدفع بالنقرة أو إعلانات جوجل. ينصب تركيزنا على تحسين محركات البحث والمواقع والمحتوى والكتابة التسويقية والتواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.">
-  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة حملات إعلانات الدفع بالنقرة (PPC) | نفير الرقمي</title>
+  <meta name="description" content="ضاعف العائد على الإنفاق الإعلاني (ROAS)، واجذب المشترين الجاهزين، وتخلص من الميزانيات المهدورة عبر إدارة حملات PPC من نفير الرقمي.">
+  <meta name="author" content="NAFEER DIGITAL | نفير الرقمي">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nafeerdigital.com/ar/services/ppc-advertising.html">
+  
+  <!-- Multilingual Hreflang Tags -->
   <link rel="alternate" hreflang="en" href="https://nafeerdigital.com/en/services/ppc-advertising.html">
   <link rel="alternate" hreflang="ar" href="https://nafeerdigital.com/ar/services/ppc-advertising.html">
+  <link rel="alternate" hreflang="x-default" href="https://nafeerdigital.com/en/services/ppc-advertising.html">
+
+  <!-- Open Graph / Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nafeerdigital.com/ar/services/ppc-advertising.html">
-  <meta property="og:title" content="إعلانات الدفع بالنقرة — غير متاحة حالياً | نفير الرقمي">
-  <meta property="og:description" content="لا تدير نفير الرقمي حالياً حملات الدفع بالنقرة أو إعلانات جوجل. ينصب تركيزنا على تحسين محركات البحث والمواقع والمحتوى والكتابة التسويقية والتواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.">
-  <meta property="og:site_name" content="NAFEER DIGITAL">
+  <meta property="og:title" content="إدارة حملات إعلانات الدفع بالنقرة (PPC) | نفير الرقمي">
+  <meta property="og:description" content="ضاعف العائد على الإنفاق الإعلاني (ROAS)، واجذب المشترين الجاهزين، وتخلص من الميزانيات المهدورة عبر إدارة حملات PPC من نفير الرقمي.">
+  <meta property="og:image" content="https://nafeerdigital.com/assets/images/logo-icon.png">
+  <meta property="og:site_name" content="نفير الرقمي">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="إدارة حملات إعلانات الدفع بالنقرة (PPC) | نفير الرقمي">
+  <meta name="twitter:description" content="ضاعف العائد على الإنفاق الإعلاني (ROAS)، واجذب المشترين الجاهزين، وتخلص من الميزانيات المهدورة عبر إدارة حملات PPC من نفير الرقمي.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, Cairo, Tajawal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"إعلانات الدفع بالنقرة — غير متاحة حالياً | نفير الرقمي","description":"لا تدير نفير الرقمي حالياً حملات الدفع بالنقرة أو إعلانات جوجل. ينصب تركيزنا على تحسين محركات البحث والمواقع والمحتوى والكتابة التسويقية والتواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.","url":"https://nafeerdigital.com/ar/services/ppc-advertising.html"}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon & Search Engine Identity -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/logo-icon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../assets/images/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0B132B">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  
+  <!-- Early Theme State Init -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('nafeer_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "إعلانات الدفع بالنقرة (PPC)",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "NAFEER DIGITAL",
+    "alternateName": "نفير الرقمي",
+    "url": "https://nafeerdigital.com",
+    "logo": "https://nafeerdigital.com/assets/images/logo-icon.png",
+    "telephone": "+601170066150",
+    "email": "nafeerdigital@gmail.com"
+  },
+  "description": "ضاعف العائد على الإنفاق الإعلاني (ROAS)، واجذب المشترين الجاهزين، وتخلص من الميزانيات المهدورة عبر إدارة حملات PPC من نفير الرقمي.",
+  "areaServed": "Worldwide"
+}
+  </script>
 </head>
 <body>
-  <header class="site-header service-site-header">
+
+    <!-- Site Sticky Frosted Navigation Header -->
+  <header class="site-header scrolled">
     <div class="container header-inner">
-      <a href="/ar/" class="brand-logo-wrap" aria-label="نفير الرقمي">
-        <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+      <a href="../../ar/" class="brand-logo-wrap" aria-label="نفير الرقمي">
+        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="42" height="42" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
         <div class="brand-text-block">
           <span class="brand-name">نفير الرقمي</span>
-          <span class="brand-tagline">التسويق الرقمي</span>
+          <span class="brand-tagline">وكالة تسويق رقمي متكاملة</span>
         </div>
       </a>
-      <nav class="nav-menu" aria-label="التنقل الرئيسي">
-        <a href="/ar/" class="nav-link">الرئيسية</a>
-        <a href="/ar/services/" class="nav-link active">خدماتنا</a>
-        <a href="/ar/work/" class="nav-link">أعمالنا</a>
-        <a href="/ar/blog/" class="nav-link">المقالات</a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="../../ar/" class="nav-link">الرئيسية</a>
+        <a href="../../ar/#about" class="nav-link">من نحن</a>
+        <a href="../../ar/services/" class="nav-link active">خدماتنا</a>
+        <a href="../../ar/#why-us" class="nav-link">لماذا نفير</a>
+        <a href="../../ar/work.html" class="nav-link ">أعمالنا</a>
+        <a href="../../ar/#process" class="nav-link">منهجيتنا</a>
+        <a href="../../ar/#industries" class="nav-link">القطاعات</a>
+        <a href="../../ar/blog/" class="nav-link ">المدونة</a>
+        <a href="../../ar/#contact" class="nav-link">اتصل بنا</a>
       </nav>
+
+      <!-- Header Actions -->
       <div class="header-actions">
-        <a href="/en/services/ppc-advertising.html" class="lang-switch-btn js-switch-lang" data-target-lang="en" lang="en">English</a>
-        <a href="/ar/#contact" class="btn btn-primary btn-sm service-header-cta">لنتحدث</a>
+        <!-- Dual Mode Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn js-toggle-theme" aria-label="تبديل المظهر" title="تبديل المظهر">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Clean Language Switcher -->
+        <a href="../../en/services/ppc-advertising.html" class="lang-switch-btn js-switch-lang" data-target-lang="en" title="English">
+          <span>🇬🇧</span>
+          <span>English</span>
+        </a>
+
+        <!-- Header CTA -->
+        <a href="../../ar/#contact" class="btn btn-primary btn-sm header-cta">
+          طلب استشارة
+        </a>
+
+        <!-- Mobile Drawer Hamburger -->
         <button type="button" class="hamburger-btn" id="btn-hamburger" aria-label="فتح القائمة">
-          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer -->
   <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="قائمة الهاتف">
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="قائمة الجوال">
     <div class="drawer-header">
-      <div class="brand-logo-wrap"><span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span><span class="brand-name">نفير الرقمي</span></div>
-      <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="إغلاق القائمة">×</button>
+      <div class="brand-logo-wrap">
+        <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="36" height="36" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
+        <span class="brand-name">نفير الرقمي</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="btn-drawer-close" aria-label="Close">✕</button>
     </div>
+
     <nav class="drawer-nav-list">
-      <a href="/ar/" class="drawer-nav-link">الرئيسية</a>
-      <a href="/ar/services/" class="drawer-nav-link">خدماتنا</a>
-      <a href="/ar/work/" class="drawer-nav-link">أعمالنا</a>
-      <a href="/ar/blog/" class="drawer-nav-link">المقالات</a>
-      <a href="/ar/#contact" class="drawer-nav-link">لنتحدث</a>
+      <a href="../../ar/" class="drawer-nav-link">الرئيسية</a>
+      <a href="../../ar/#about" class="drawer-nav-link">عن نفير الرقمي</a>
+      <a href="../../ar/services/" class="drawer-nav-link active">خدماتنا الكاملة</a>
+      <a href="../../ar/#why-us" class="drawer-nav-link">لماذا تختارنا</a>
+      <a href="../../ar/work.html" class="drawer-nav-link ">أعمالنا ودراسات الحالة</a>
+      <a href="../../ar/#process" class="drawer-nav-link">منهجية العمل</a>
+      <a href="../../ar/#industries" class="drawer-nav-link">القطاعات</a>
+      <a href="../../ar/blog/" class="drawer-nav-link ">المقالات والأفكار</a>
+      <a href="../../ar/#contact" class="drawer-nav-link">تواصل معنا</a>
     </nav>
-    <a href="/en/services/ppc-advertising.html" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en" lang="en">English</a>
-    <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">تواصل عبر واتساب</a>
+
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:0.75rem; padding-top:1.5rem;">
+      <a href="../../en/services/ppc-advertising.html" class="btn btn-secondary btn-full js-switch-lang" data-target-lang="en">
+        🇬🇧 English
+      </a>
+      <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.51-6.17c-.25-.12-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.57c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+        <span>محادثة عبر واتساب</span>
+      </a>
+    </div>
   </aside>
+
+  <!-- Main Content Slot -->
   <main>
-    <section class="page-hero">
+    <div class="page-hero">
       <div class="container">
-        <p class="section-tag">توفر الخدمة</p>
-        <h1 class="page-hero-title">إعلانات الدفع بالنقرة — غير متاحة حالياً | نفير الرقمي</h1>
-        <p class="page-hero-desc">لا تدير نفير الرقمي حالياً حملات الدفع بالنقرة أو إعلانات جوجل. ينصب تركيزنا على تحسين محركات البحث والمواقع والمحتوى والكتابة التسويقية والتواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.</p>
-        <div class="service-hero-actions">
-          <a href="/ar/services/" class="btn btn-primary">استكشف خدماتنا الحالية</a>
-          <a href="/ar/#contact" class="btn btn-dark-outline">اسألنا عن بديل مناسب</a>
+        <div class="breadcrumbs">
+          <a href="../../ar/">الرئيسية</a> <span>/</span> <a href="../../ar/services/">خدماتنا</a> <span>/</span> <span>إعلانات الدفع بالنقرة (PPC)</span>
+        </div>
+        <h1 class="section-title">إعلانات الدفع بالنقرة (PPC)</h1>
+        <p class="section-desc" style="color:rgba(255,255,255,0.88); max-width:720px; margin:0 auto;">
+          ضاعف مبيعاتك وأرباحك سريعاً عبر حملات إعلانية مدفوعة وموجهة بدقة لتحقيق أعلى معدل تحويل وأفضل عائد على الاستثمار.
+        </p>
+        <div style="margin-top:2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <a href="../../ar/#contact" class="btn btn-primary btn-lg">
+            <span>ناقش مشروعك معنا</span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-lg js-whatsapp-link">
+            <span>تواصل عبر واتساب</span>
+          </a>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="container service-main-article">
-        <h2>ما الذي نقدمه حالياً؟</h2>
-        <p>يمكنك استكشاف خدماتنا الحالية في تحسين محركات البحث وتصميم المواقع والمحتوى والكتابة التسويقية والتواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.</p>
-        <a href="/ar/services/" class="project-text-link">استكشف خدماتنا الحالية<span aria-hidden="true"> ↗</span></a>
+    </div>
+
+    <!-- Core Content Body -->
+    <div class="section section-white">
+      <div class="container service-detail-grid">
+        <div class="content-article">
+          <h2>تحديات الأعمال التي نحلها</h2>
+          <p>إن إدارة الحملات دون استراتيجية دقيقة ومحكمة يؤدي إلى هدر الميزانيات وفقدان فرص النمو التجاري. إليك أبرز التحديات التي نتولى حلها:</p>
+          <ul>
+            <li><strong>استنزاف الميزانيات الإعلانية دون الحصول على عوائد مبيعات مجدية.</strong></li>
+            <li><strong>ارتفاع تكلفة اكتساب العميل (CPA) بما يقضي على هامش الربح.</strong></li>
+            <li><strong>الاستهداف الخاطئ الذي يجلب نقرات غير مؤهلة ولا ترغب في الشراء.</strong></li>
+            <li><strong>ضعف أدوات التتبع وتضارب الأرقام وعدم معرفة مصدر المبيعات الفعلي.</strong></li>
+          </ul>
+
+          <h2>منهجية التنفيذ الدقيقة</h2>
+          <p>نتبع إطار عمل متكامل ومجرب هندسياً لضمان أعلى عائد استثماري وقابلية قياس دقيقة:</p>
+          <div style="display:flex; flex-direction:column; gap:1.25rem; margin:1.5rem 0;">
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.35rem; font-size:1.15rem; color:var(--color-primary);">01. بناء مسار التحويل وأدوات التتبع الدقيق. undefined</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.95rem;">نربط خوادم التتبع وأدوات Google Tag Manager لضمان قياس كل فلس يُنفق وتحديد مصدر كل عملية بيع.</p>
+              </div>
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.35rem; font-size:1.15rem; color:var(--color-primary);">02. أبحاث الجمهور وقوائم الكلمات السلبية. undefined</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.95rem;">نحدد شرائح الجمهور الأكثر جاهزية للشراء ونستبعد الكلمات غير المجدية لمنع إهدار أي نقرات.</p>
+              </div>
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.35rem; font-size:1.15rem; color:var(--color-primary);">03. كتابة الإعلانات وتصميم صفحات الهبوط. undefined</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.95rem;">نصمم نصوصاً ورسائل مقنعة متطابقة تماماً مع صفحات هبوط سريعة وسهلة الاستخدام لرفع التحويل.</p>
+              </div>
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.35rem; font-size:1.15rem; color:var(--color-primary);">04. تحسين عروض الأسعار والتوسع المالي. undefined</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.95rem;">نراقب النتائج يومياً، ونوقف الإعلانات غير المربحة، ونوجّه الميزانية نحو الحملات الأعلى عائداً.</p>
+              </div>
+            
+          </div>
+
+          <h2>العوائد التجارية والقيمة المضافة</h2>
+          <p>نركز على تحقيق نتائج ملموسة تنعكس مباشرة على خطط نمو شركتك وأرباحها:</p>
+          <ul>
+            <li>ظهور فوري وسريع في صدارة نتائج البحث وتوليد عملاء من اليوم الأول.</li>
+            <li>تحكم كامل ومرن في الميزانيات، والمناطق الجغرافية، والجمهور المستهدف.</li>
+            <li>شفافية مطلقة في قياس الأداء ومعرفة العائد الحقيقي على كل حملة.</li>
+            <li>القدرة على زيادة الميزانية ومضاعفة الأرباح بشكل متوقع ومدروس.</li>
+          </ul>
+
+          <h2>الأسئلة الشائعة</h2>
+          <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1.25rem;">
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-sm); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.05rem; color:var(--text-main); font-weight:700;">ما هي المنصات التي تديرون عليها حملات PPC؟</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.925rem; line-height:1.6;">ندير الحملات على إعلانات جوجل (البحث، الشبكة الإعلانية، Performance Max، يوتيوب)، وإعلانات ميتا (فيسبوك وإنستغرام)، ولينكد إن، وتيك توك وفقاً لأهداف نشاطك.</p>
+              </div>
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-sm); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.05rem; color:var(--text-main); font-weight:700;">ما هو العائد على الإنفاق الإعلاني (ROAS) المتوقع؟</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.925rem; line-height:1.6;">يعتمد ذلك على هامش ربح قطاعك؛ ففي المتاجر الإلكترونية نستهدف عادةً 3x إلى 5x، بينما في خدمات B2B عالية القيمة تكفي صفقة واحدة لتغطية تكاليف الإعلانات عشرات المرات.</p>
+              </div>
+            
+              <div style="background:var(--bg-page); border:1px solid var(--border-light); border-radius:var(--radius-sm); padding:1.25rem;">
+                <h3 style="margin-top:0; margin-bottom:0.5rem; font-size:1.05rem; color:var(--text-main); font-weight:700;">هل تتقاضون نسبة من الميزانية أم رسوم إدارة محددة؟</h3>
+                <p style="margin-bottom:0; color:var(--text-muted); font-size:0.925rem; line-height:1.6;">نعتمد نموذج تسعير شفافاً يقوم على رسوم إدارة شهرية ثابتة وواضحة دون أي رسوم خفية أو اقتطاع من ميزانيتك الإعلانية.</p>
+              </div>
+            
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="service-sidebar">
+          <div class="sidebar-card">
+            <h3 class="sidebar-title">مميزات الخدمة</h3>
+            <ul class="sidebar-list">
+              <li>✓ إدارة استراتيجية متكاملة</li>
+              <li>✓ تتبع دقيق لمصادر الإيرادات</li>
+              <li>✓ تحسين مستمر لخفض تكلفة العميل</li>
+              <li>✓ تقارير أداء دورية شفافة</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card" style="background:var(--bg-elevated); border-color:var(--color-gold-border);">
+            <h3 class="sidebar-title" style="color:var(--color-gold);">هل أنت جاهز لتسريع نموك؟</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.25rem;">
+              تحدث مع فريقنا الاستراتيجي لمناقشة أهداف عملك وتحديد الخطة المثالية.
+            </p>
+            <a href="../../ar/#contact" class="btn btn-primary btn-full" style="margin-bottom:0.75rem;">
+              <span>طلب استشارة</span>
+            </a>
+            <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-full js-whatsapp-link">
+              <span>محادثة عبر واتساب</span>
+            </a>
+          </div>
+        </aside>
       </div>
-    </section>
+    </div>
+
+    <!-- Conversion Banner -->
+    <div class="cta-banner-section">
+      <div class="container text-center">
+        <h2 class="cta-banner-title">جاهز لإطلاق حملات إعلانات الدفع بالنقرة (PPC)؟</h2>
+        <p class="cta-banner-desc">
+          دعنا نضع استراتيجيتك الرقمية على المسار الصحيح لتحقيق نتائج ريادية ومستدامة.
+        </p>
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="../../ar/#contact" class="btn btn-primary btn-lg">
+            <span>احجز استشارتك الآن</span>
+          </a>
+          <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-lg js-whatsapp-link">
+            <span>تواصل فوري عبر واتساب</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
+
+    <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
+        <!-- Brand Info -->
         <div>
-          <a class="brand-logo-wrap" href="/ar/" style="margin-bottom:1.25rem;">
-            <span class="brand-mark" aria-hidden="true">N<span class="brand-mark-dot"></span></span>
+          <div class="brand-logo-wrap" style="margin-bottom: 0.85rem;">
+            <img src="../../assets/images/logo-icon.png" alt="نفير الرقمي Logo" class="brand-logo-img" width="40" height="40" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
             <span class="brand-name">نفير الرقمي</span>
+          </div>
+          <div style="font-size:0.85rem; font-style:italic; color:var(--color-gold); margin-bottom:1rem; font-weight:600;">
+            نمو أعمالكم غايتنا.. ونجاحكم شغفنا الأسمى.
+          </div>
+          <p class="footer-brand-desc">
+            وكالة تسويق رقمي دولية متكاملة؛ نساعد الشركات والمؤسسات على تحقيق نمو تجاري مستدام ومضاعفة العملاء من خلال استراتيجيات مدروسة قائمة على البيانات.
+          </p>
+          <a href="https://wa.me/601170066150" class="btn btn-whatsapp btn-sm js-whatsapp-link">
+            <span>تواصل عبر واتساب: 6150 7006 11 60+</span>
           </a>
-          <p class="footer-brand-desc">نربط البحث والمواقع والمحتوى الرقمي بهدف نمو واضح.</p>
         </div>
+
         <div>
-          <h2 class="footer-col-title">التنقل</h2>
+          <h4 class="footer-col-title">روابط سريعة</h4>
           <ul class="footer-links-list">
-            <li><a class="footer-link" href="/ar/">الرئيسية</a></li>
-            <li><a class="footer-link" href="/ar/services/">خدماتنا</a></li>
-            <li><a class="footer-link" href="/ar/work/">أعمالنا</a></li>
-            <li><a class="footer-link" href="/ar/blog/">المقالات</a></li>
+            <li><a href="../../ar/" class="footer-link">الرئيسية</a></li>
+            <li><a href="../../ar/#about" class="footer-link">عن نفير الرقمي</a></li>
+            <li><a href="../../ar/services/" class="footer-link">جميع الخدمات</a></li>
+            <li><a href="../../ar/#why-us" class="footer-link">لماذا تختارنا</a></li>
+            <li><a href="../../ar/work.html" class="footer-link">أعمالنا ودراسات الحالة</a></li>
+            <li><a href="../../ar/#process" class="footer-link">منهجية العمل</a></li>
+            <li><a href="../../ar/#industries" class="footer-link">القطاعات المستهدفة</a></li>
+            <li><a href="../../ar/blog/" class="footer-link">المقالات والأفكار</a></li>
+            <li><a href="../../ar/#contact" class="footer-link">طلب استشارة</a></li>
           </ul>
         </div>
+
         <div>
-          <h2 class="footer-col-title">تواصل معنا</h2>
+          <h4 class="footer-col-title">دليل الخدمات</h4>
           <ul class="footer-links-list">
-            <li><a class="footer-link" href="mailto:nafeerdigital@gmail.com">nafeerdigital@gmail.com</a></li>
-            <li><a class="footer-link js-whatsapp-link" href="https://wa.me/601170066150">واتساب</a></li>
+            <li><a href="../../ar/services/seo.html" class="footer-link">تحسين محركات البحث (SEO)</a></li>
+            <li><a href="../../ar/services/technical-seo.html" class="footer-link">السيو التقني وسرعة الموقع</a></li>
+            <li><a href="../../ar/services/local-seo.html" class="footer-link">السيو المحلي وخرائط جوجل</a></li>
+            <li><a href="../../ar/services/b2b-lead-generation.html" class="footer-link">توليد صفقات الشركات (B2B)</a></li>
+            <li><a href="../../ar/services/email-marketing.html" class="footer-link">التسويق بالبريد الإلكتروني</a></li>
+            <li><a href="../../ar/services/content-marketing.html" class="footer-link">التسويق بالمحتوى الاستراتيجي</a></li>
+            <li><a href="../../ar/services/social-media-marketing.html" class="footer-link">التسويق عبر التواصل الاجتماعي</a></li>
+            <li><a href="../../ar/services/digital-marketing-strategy.html" class="footer-link">استراتيجية التسويق الرقمي</a></li>
+            <li><a href="../../ar/services/website-design-development.html" class="footer-link">تصميم وتطوير المواقع</a></li>
+            <li><a href="../../ar/services/marketing-analytics.html" class="footer-link">التحليلات وقياس الأداء</a></li>
+            <li><a href="../../ar/services/branding-and-brand-strategy.html" class="footer-link">الهوية واستراتيجية البراندنج</a></li>
+            <li><a href="../../ar/services/ppc-advertising.html" class="footer-link">الإعلانات الممولة (PPC)</a></li>
           </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">بيانات التواصل المباشر</h4>
+          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
+            البريد الإلكتروني: <a href="mailto:nafeerdigital@gmail.com" style="color:var(--color-gold);">nafeerdigital@gmail.com</a>
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-inverse-muted); margin-bottom: 0.85rem; line-height: 1.6;">
+            الهاتف / الواتساب: <a href="https://wa.me/601170066150" style="color:var(--color-gold);" class="js-whatsapp-link">+60 11 7006 6150</a>
+          </p>
+          <div style="font-size:0.85rem; color:var(--text-inverse-muted); margin-top: 1rem; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem;">
+            قيادة استراتيجية بإشراف محمد الهادي النيل، خريج معهد إلينوي للتكنولوجيا (IIT) بمرتبة الشرف.
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom-bar">
-        <span>© 2026 نفير الرقمي. جميع الحقوق محفوظة.</span>
-        <a href="/sitemap.xml">خريطة الموقع</a>
+        <div>
+          © 2026 نفير الرقمي. جميع الحقوق محفوظة.
+        </div>
+        <div class="footer-legal-links">
+          <span>وكالة تسويق رقمي معتمدة دولياً</span>
+          <span>·</span>
+          <span>الأداء وسرعة التحميل</span>
+          <span>·</span>
+          <span>معايير السيو العالمية</span>
+        </div>
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js" defer></script>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/main.js"></script>
 </body>
 </html>

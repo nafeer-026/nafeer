@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "rewrites": [
+    { "source": "/services", "destination": "/en/services" },
+    { "source": "/services/(.*)", "destination": "/en/services/$1" },
+    { "source": "/blog", "destination": "/en/blog" },
+    { "source": "/blog/(.*)", "destination": "/en/blog/$1" },
+    { "source": "/work", "destination": "/en/work" },
+    { "source": "/work/(.*)", "destination": "/en/work/$1" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

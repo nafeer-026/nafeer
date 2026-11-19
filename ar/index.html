@@ -26,8 +26,15 @@
   <meta name="twitter:description" content="نساعد الشركات على تنمية حضورها الرقمي عبر تحسين محركات البحث وتصميم المواقع وكتابة المحتوى والتسويق عبر التواصل الاجتماعي والبريد الإلكتروني وتوليد العملاء المحتملين.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+    <!-- Favicon & Search Engine Identity -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo-icon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0B132B">
   <link rel="stylesheet" href="../assets/css/main.css?v=3.2">
   
   <!-- Early Theme State Init (Prevent Flash of Unstyled Theme) -->
@@ -40,22 +47,73 @@
 
   <!-- Schema.org ProfessionalService Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "نفير الرقمي | NAFEER DIGITAL",
-    "image": "https://nafeerdigital.com/assets/images/logo-icon.png",
-    "@id": "https://nafeerdigital.com/ar/",
-    "url": "https://nafeerdigital.com/ar/",
-    "telephone": "+601170066150",
-    "email": "nafeerdigital@gmail.com",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "MY"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nafeerdigital.com/#organization",
+      "name": "نفير الرقمي",
+      "alternateName": "NAFEER DIGITAL",
+      "url": "https://nafeerdigital.com/ar/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://nafeerdigital.com/#logo",
+        "url": "https://nafeerdigital.com/assets/images/logo-icon.png",
+        "caption": "شعار نفير الرقمي الرسمي",
+        "width": 640,
+        "height": 640
+      },
+      "image": {
+        "@id": "https://nafeerdigital.com/#logo"
+      },
+      "description": "وكالة تسويق رقمي دولية متكاملة متخصصة في تحسين محركات البحث (SEO)، وتوليد صفقات الشركات (B2B)، وتصميم المواقع، واستراتيجيات النمو التجاري القائمة على البيانات.",
+      "email": "nafeerdigital@gmail.com",
+      "telephone": "+601170066150",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MY"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "محمد الهادي النيل",
+        "alternateName": "Mohamed Alhadi Alneel",
+        "jobTitle": "المؤسس واستراتيجي التسويق الرقمي",
+        "alumniOf": "Illinois Institute of Technology"
+      }
     },
-    "description": "وكالة تسويق رقمي دولية متخصصة في قيادة النمو التجاري وتحسين محركات البحث SEO وتوليد صفقات الشركات وإعلانات جوجل وحلول الويب عالية الأداء."
-  }
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://nafeerdigital.com/#service",
+      "name": "نفير الرقمي",
+      "parentOrganization": {
+        "@id": "https://nafeerdigital.com/#organization"
+      },
+      "url": "https://nafeerdigital.com/ar/",
+      "priceRange": "$$",
+      "telephone": "+601170066150",
+      "email": "nafeerdigital@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nafeerdigital.com/#website",
+      "url": "https://nafeerdigital.com/ar/",
+      "name": "نفير الرقمي",
+      "alternateName": "NAFEER DIGITAL",
+      "publisher": {
+        "@id": "https://nafeerdigital.com/#organization"
+      },
+      "inLanguage": [
+        "ar",
+        "en"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -64,7 +122,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="./" class="brand-logo-wrap" aria-label="نفير الرقمي">
-        <img src="../assets/images/logo-icon.svg" alt="شعار نفير الرقمي" class="brand-logo-img" width="42" height="42">
+        <img src="../assets/images/logo-icon.png" alt="شعار نفير الرقمي" class="brand-logo-img" width="44" height="44" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
         <div class="brand-text-block">
           <span class="brand-name">نفير الرقمي</span>
           <span class="brand-tagline">وكالة تسويق رقمي متكاملة</span>
@@ -1403,21 +1461,6 @@
             <div class="process-deliverables-pill">مضاعفة العائد وخفض تكلفة العميل</div>
           </div>
         </div>
-        <form class="home-contact-form" id="consultation-form" action="https://formsubmit.co/nafeerdigital@gmail.com" method="POST">
-          <label for="contact-name">الاسم</label>
-          <input class="form-input" id="contact-name" name="name" autocomplete="name" required>
-          <label for="contact-email">البريد الإلكتروني</label>
-          <input class="form-input" id="contact-email" type="email" name="email" autocomplete="email" required>
-          <label for="contact-service">الخدمة التي تحتاج إليها</label>
-          <select class="form-select" id="contact-service" name="service" required>
-            <option value="" selected disabled>الخدمة التي تحتاج إليها</option>
-            <option value="تحسين محركات البحث">تحسين محركات البحث</option><option value="تصميم المواقع">تصميم المواقع</option><option value="المحتوى والكتابة التسويقية">المحتوى والكتابة التسويقية</option><option value="التواصل الاجتماعي">التواصل الاجتماعي</option><option value="التسويق بالبريد الإلكتروني">التسويق بالبريد الإلكتروني</option><option value="توليد العملاء المحتملين">توليد العملاء المحتملين</option><option value="أخرى">أخرى</option>
-          </select>
-          <label for="contact-message">أخبرنا عن مشروعك</label>
-          <textarea class="form-textarea" id="contact-message" name="message" rows="4" required></textarea>
-          <button class="home-button home-button--primary" type="submit">إرسال الاستفسار</button>
-          <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
 
@@ -1765,7 +1808,7 @@
         <!-- Brand Info -->
         <div>
           <div class="brand-logo-wrap" style="margin-bottom: 0.85rem;">
-            <img src="../assets/images/logo-icon.svg" alt="نفير الرقمي" class="brand-logo-img" width="42" height="42">
+            <img src="../assets/images/logo-icon.png" alt="شعار نفير الرقمي" class="brand-logo-img" width="40" height="40" style="border-radius:50%; object-fit:contain; border:1.5px solid var(--color-gold);">
             <span class="brand-name">نفير الرقمي</span>
           </div>
           <div style="font-size:0.85rem; font-style:normal; color:var(--color-gold); margin-bottom:1rem; font-weight:700;">
