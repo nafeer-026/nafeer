@@ -9,14 +9,24 @@
   "icons": [
     {
       "src": "/assets/images/favicon-48x48.png",
-      "sizes": "48x48 64x64",
+      "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/logo-icon.png",
-      "sizes": "640x640",
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
