@@ -550,8 +550,8 @@ html[lang="ar"] .btn:hover .arrow-icon {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.1rem 0;
-  transition: all var(--transition-normal);
+  padding: 0.75rem 0;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
   border-bottom: 1px solid var(--header-border);
   background-color: var(--bg-glass);
   backdrop-filter: blur(16px);
@@ -911,7 +911,7 @@ html[lang="ar"] .mobile-drawer {
   background: radial-gradient(circle, rgba(182, 139, 56, 0.16) 0%, rgba(16, 89, 78, 0.1) 45%, transparent 70%);
   pointer-events: none;
   z-index: 1;
-  animation: auroraShift 12s ease-in-out infinite;
+  animation: none;
 }
 
 html[data-theme="dark"] .hero-ambient-glow {
@@ -1053,15 +1053,15 @@ html[data-theme="dark"] .hero-headline-highlight {
 }
 
 .hero-badge-top-right {
-  top: -18px;
-  right: -10px;
-  animation: floatSlow1 5.5s ease-in-out infinite;
+  top: -14px;
+  right: 0px;
+  animation: none;
 }
 
 .hero-badge-bottom-left {
-  bottom: -16px;
-  left: -12px;
-  animation: floatSlow2 6.5s ease-in-out infinite;
+  bottom: -14px;
+  left: 0px;
+  animation: none;
 }
 
 html[lang="ar"] .hero-badge-top-right {
@@ -1074,23 +1074,9 @@ html[lang="ar"] .hero-badge-bottom-left {
   right: -12px;
 }
 
-@keyframes floatSlow1 {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(1.2deg);
-  }
-}
 
-@keyframes floatSlow2 {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(-1.2deg);
-  }
-}
+
+
 
 .hero-visual-card {
   background: var(--bg-surface);
@@ -3003,21 +2989,16 @@ html[lang="ar"] .floating-actions {
     display: none;
   }
 
+  /* Header mobile padding */
   .site-header {
-    padding: 0.85rem 0;
+    padding: 0.6rem 0;
   }
 }
 
 /* Page Entrance Smooth Reveal */
 @keyframes pageFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 body {
@@ -3486,5 +3467,348 @@ html[lang="ar"] .video-play-icon {
   .accordion-service-inner {
     padding: 1rem;
     gap: 1rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   PHONE & MOBILE COMPACT REFINEMENT (SLEEK, PROPORTIONAL, UNMOVING)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  /* Compact Rock-Solid Header */
+  .site-header {
+    padding: 0.6rem 0 !important;
+  }
+
+  .brand-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+
+  .theme-toggle-btn, .lang-switch-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.75rem;
+  }
+
+  /* Compact Hero Section */
+  .hero-split-section {
+    padding-top: 4.85rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .hero-split-grid {
+    gap: 1.5rem !important;
+  }
+
+  .hero-badge-pill {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.725rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem) !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-subheadline {
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.15rem;
+    font-size: 0.875rem;
+  }
+
+  .hero-stats-row {
+    padding: 0.65rem 0.85rem;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .hero-stat-num {
+    font-size: 1.15rem !important;
+  }
+
+  .hero-stat-label {
+    font-size: 0.65rem !important;
+  }
+
+  /* Solid, Docked Hero Visual Card without Edge Overflow */
+  .hero-visual-card-wrap {
+    margin-top: 0.75rem;
+    position: relative;
+  }
+
+  .hero-visual-card {
+    padding: 1.15rem !important;
+    border-radius: 14px !important;
+  }
+
+  .hero-floating-badge {
+    position: static !important;
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    margin: 0.5rem 0 !important;
+    padding: 0.4rem 0.85rem !important;
+    font-size: 0.75rem !important;
+    animation: none !important;
+    transform: none !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+
+  .hero-badge-top-right,
+  .hero-badge-bottom-left {
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .dashboard-card-header {
+    margin-bottom: 0.75rem !important;
+    padding-bottom: 0.6rem !important;
+  }
+
+  .dashboard-title-text {
+    font-size: 0.85rem !important;
+  }
+
+  .dashboard-metric-hero {
+    padding: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .dashboard-metric-val {
+    font-size: 1.65rem !important;
+  }
+
+  .dashboard-channels-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .dashboard-channel-item {
+    padding: 0.5rem !important;
+  }
+
+  .channel-name {
+    font-size: 0.725rem !important;
+  }
+
+  .channel-stat {
+    font-size: 0.675rem !important;
+  }
+
+  /* Compact Sections */
+  .section {
+    padding: 2.75rem 0 !important;
+  }
+
+  .section-tag {
+    font-size: 0.675rem;
+    padding: 0.25rem 0.65rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.35rem, 4.5vw, 1.75rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .section-desc {
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* About Section Compact */
+  .about-narrative-title {
+    font-size: clamp(1.25rem, 4.2vw, 1.6rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .about-paragraph {
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .about-highlight-box {
+    padding: 0.85rem !important;
+    font-size: 0.85rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .pillars-container {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .pillar-item {
+    padding: 0.95rem !important;
+  }
+
+  .pillar-title {
+    font-size: 0.95rem !important;
+  }
+
+  .pillar-desc {
+    font-size: 0.825rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Services Accordion Compact */
+  .accordion-service-header {
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .accordion-service-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .accordion-service-title {
+    font-size: 0.95rem !important;
+  }
+
+  .accordion-service-summary {
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .accordion-service-inner {
+    padding: 0.85rem !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Case Studies / Work Grid */
+  .work-grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+  }
+
+  .work-case-card {
+    border-radius: 12px !important;
+  }
+
+  .work-case-card img {
+    height: 180px !important;
+  }
+
+  .work-case-body {
+    padding: 1rem !important;
+  }
+
+  .work-case-title {
+    font-size: 1.05rem !important;
+  }
+
+  /* Process Flow Grid */
+  .process-flow-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .process-step-card {
+    padding: 1rem !important;
+  }
+
+  .process-step-index {
+    font-size: 1.4rem !important;
+  }
+
+  /* Contact Form Compact & Elegant */
+  .contact-form-card {
+    padding: 1.15rem !important;
+    border-radius: 14px !important;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .form-field {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .form-label {
+    font-size: 0.775rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .form-input, .form-select, .form-textarea {
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .form-textarea {
+    min-height: 90px !important;
+  }
+
+  /* Story Visual */
+  .home-story-visual {
+    margin: 1.25rem 0 0 0 !important;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-card);
+  }
+
+  .home-story-visual img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: cover !important;
+    display: block;
+  }
+
+  .home-story-visual figcaption {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.75rem;
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 }
