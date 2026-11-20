@@ -2458,6 +2458,155 @@ html[lang="ar"] .browser-mockup-body::after {
   color: var(--color-gold);
 }
 
+.blog-journal-hero {
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(11, 19, 43, .96), rgba(11, 19, 43, .78)),
+    url("../images/global-digital-expansion.jpg") center 48% / cover;
+  color: #fff;
+}
+
+.blog-journal-hero .page-hero-title,
+.blog-journal-hero .page-hero-desc {
+  color: #fff;
+}
+
+.blog-journal-hero .page-hero-title {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.blog-journal-hero .page-hero-desc {
+  color: rgba(255, 255, 255, .84);
+}
+
+.blog-featured-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 4rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-page);
+  box-shadow: var(--shadow-md);
+}
+
+.blog-featured-copy {
+  min-width: 0;
+}
+
+.blog-featured-copy h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: var(--color-obsidian);
+}
+
+.blog-featured-copy h2 a {
+  color: inherit;
+}
+
+.blog-featured-copy p {
+  max-width: 880px;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.blog-featured-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.editorial-article-card::before {
+  display: block;
+  height: 164px;
+  margin: -1.85rem -1.85rem 1.35rem;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+.editorial-article-card:nth-child(4n + 1)::before {
+  background-image: linear-gradient(180deg, rgba(11, 19, 43, .03), rgba(11, 19, 43, .24)), url("../images/seo-content-operations-team.jpg");
+}
+
+.editorial-article-card:nth-child(4n + 2)::before {
+  background-image: linear-gradient(180deg, rgba(11, 19, 43, .03), rgba(11, 19, 43, .24)), url("../images/performance-funnel-analytics.jpg");
+}
+
+.editorial-article-card:nth-child(4n + 3)::before {
+  background-image: linear-gradient(180deg, rgba(11, 19, 43, .03), rgba(11, 19, 43, .24)), url("../images/global-digital-expansion.jpg");
+}
+
+.editorial-article-card:nth-child(4n)::before {
+  background-image: linear-gradient(180deg, rgba(11, 19, 43, .03), rgba(11, 19, 43, .24)), url("../images/consultation-executive-strategy.jpg");
+}
+
+.article-comparison-wrap {
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-comparison {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.article-comparison caption {
+  padding: 1rem 1.1rem;
+  color: var(--text-muted);
+  font-size: .88rem;
+  text-align: start;
+}
+
+.article-comparison th,
+.article-comparison td {
+  padding: .9rem 1.1rem;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-main);
+  font-size: .9rem;
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.article-comparison thead th {
+  border-top: 0;
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.article-comparison tbody th {
+  font-weight: 750;
+}
+
+@media (max-width: 700px) {
+  .blog-featured-story {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-featured-image {
+    grid-row: 1;
+    max-height: 260px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    16. FINAL CONVERSION & CONSULTATION FORM
    -------------------------------------------------------------------------- */

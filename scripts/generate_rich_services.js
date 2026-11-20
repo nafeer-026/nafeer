@@ -102,7 +102,7 @@ function generateRichServicePage(service, lang) {
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <!-- Favicon & Google Search Identity -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="../../assets/images/logo-icon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="../../assets/images/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">

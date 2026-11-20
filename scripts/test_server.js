@@ -87,9 +87,11 @@ server.listen(PORT, async () => {
     '/ar/blog/',
     '/en/blog/how-seo-helps-small-businesses.html',
     '/ar/blog/how-seo-helps-small-businesses.html',
+    '/en/blog/seo-vs-paid-advertising.html',
+    '/ar/blog/seo-vs-paid-advertising.html',
     '/sitemap.xml',
     '/robots.txt',
-    '/favicon.ico',
+    '/assets/images/favicon.ico',
     '/site.webmanifest',
     '/assets/css/main.css',
     '/assets/js/main.js',
@@ -115,7 +117,7 @@ server.listen(PORT, async () => {
   }
 
   // Content & Parity Check
-  for (const ep of ['/en/', '/ar/']) {
+  for (const ep of ['/', '/en/', '/ar/']) {
     try {
       const res = await fetch(`http://localhost:${PORT}${ep}`);
       const html = await res.text();
@@ -127,14 +129,17 @@ server.listen(PORT, async () => {
       const hasProcess = html.includes('id="process"');
       const hasContact = html.includes('id="contact"');
       const hasWhatsApp = html.includes('wa.me/601170066150');
-      const hasFavicon = html.includes('rel="icon"');
+      const logoElements = html.match(/<img\b[^>]*class="brand-logo-img"[^>]*>/g) || [];
+      const hasConsistentResponsiveLogo = logoElements.length > 1
+        && logoElements.every(element => /src="(?:\.\.\/)?assets\/images\/logo-icon\.png"/.test(element));
+      const hasFavicon = html.includes('rel="icon"') && html.includes('/assets/images/favicon.ico');
 
-      if (res.ok && hasCorrectLang && hasCorrectDir && hasLogo && hasServices && hasProcess && hasContact && hasWhatsApp && hasFavicon) {
+      if (res.ok && hasCorrectLang && hasCorrectDir && hasLogo && hasConsistentResponsiveLogo && hasServices && hasProcess && hasContact && hasWhatsApp && hasFavicon) {
         console.log(`[PASS] Complete brand, layout, RTL/LTR parity & navigation check: ${ep}`);
         passed++;
       } else {
         console.error(`[FAIL] Parity check failed for: ${ep}`, {
-          hasCorrectLang, hasCorrectDir, hasLogo, hasServices, hasProcess, hasContact, hasWhatsApp, hasFavicon
+          hasCorrectLang, hasCorrectDir, hasLogo, hasConsistentResponsiveLogo, hasServices, hasProcess, hasContact, hasWhatsApp, hasFavicon
         });
       }
     } catch (err) {
@@ -142,7 +147,45 @@ server.listen(PORT, async () => {
     }
   }
 
-  const totalTests = endpoints.length + 2;
+  for (const ep of ['/en/blog/', '/ar/blog/']) {
+    try {
+      const res = await fetch(`http://localhost:${PORT}${ep}`);
+      const html = await res.text();
+      const hasFeaturedImage = html.includes('class="blog-featured-image"');
+      const hasEditorialCards = html.includes('class="editorial-article-card"');
+
+      if (res.ok && hasFeaturedImage && hasEditorialCards) {
+        console.log(`[PASS] Editorial imagery and article cards: ${ep}`);
+        passed++;
+      } else {
+        console.error(`[FAIL] Blog listing presentation check failed for: ${ep}`, {
+          hasFeaturedImage, hasEditorialCards
+        });
+      }
+    } catch (err) {
+      console.error(`[ERROR] Blog listing check ${ep}:`, err.message);
+    }
+  }
+
+  for (const ep of ['/en/blog/seo-vs-paid-advertising.html', '/ar/blog/seo-vs-paid-advertising.html']) {
+    try {
+      const res = await fetch(`http://localhost:${PORT}${ep}`);
+      const html = await res.text();
+      const hasComparisonTable = html.includes('class="article-comparison"')
+        && html.includes('<th scope="col">');
+
+      if (res.ok && hasComparisonTable) {
+        console.log(`[PASS] Accessible comparison table: ${ep}`);
+        passed++;
+      } else {
+        console.error(`[FAIL] Comparison table check failed for: ${ep}`, { hasComparisonTable });
+      }
+    } catch (err) {
+      console.error(`[ERROR] Comparison table check ${ep}:`, err.message);
+    }
+  }
+
+  const totalTests = endpoints.length + 7;
   console.log(`\nResults: ${passed} / ${totalTests} tests passed successfully.`);
   server.close(() => {
     console.log('Server shut down cleanly.');
