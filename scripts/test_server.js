@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const blogArticles = require('./data_blog.js');
 
 const PORT = 3000;
 const ROOT_DIR = path.resolve(__dirname, '..');
@@ -89,6 +90,10 @@ server.listen(PORT, async () => {
     '/ar/blog/how-seo-helps-small-businesses.html',
     '/en/blog/seo-vs-paid-advertising.html',
     '/ar/blog/seo-vs-paid-advertising.html',
+    ...blogArticles.flatMap(article => [
+      `/en/blog/${article.slug}.html`,
+      `/ar/blog/${article.slug}.html`
+    ]),
     '/sitemap.xml',
     '/robots.txt',
     '/assets/images/favicon.ico',
@@ -167,25 +172,52 @@ server.listen(PORT, async () => {
     }
   }
 
-  for (const ep of ['/en/blog/seo-vs-paid-advertising.html', '/ar/blog/seo-vs-paid-advertising.html']) {
-    try {
-      const res = await fetch(`http://localhost:${PORT}${ep}`);
-      const html = await res.text();
-      const hasComparisonTable = html.includes('class="article-comparison"')
-        && html.includes('<th scope="col">');
+  for (const article of blogArticles) {
+    for (const language of ['en', 'ar']) {
+      const ep = `/${language}/blog/${article.slug}.html`;
+      try {
+        const res = await fetch(`http://localhost:${PORT}${ep}`);
+        const html = await res.text();
+        const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+        const articleHtml = main ? main[1] : '';
+        const isArabic = language === 'ar';
+        const hasLocalizedDocument = html.includes(isArabic ? 'lang="ar" dir="rtl"' : 'lang="en" dir="ltr"');
+        const hasCorrectTitle = articleHtml.includes(isArabic ? article.titleAr : article.titleEn);
+        const hasEditorialStructure = articleHtml.includes('class="article-process"')
+          && articleHtml.includes('class="article-guide-table"')
+          && articleHtml.includes('class="article-toc"')
+          && articleHtml.includes('class="article-related"');
+        const cover = articleHtml.match(/<img src="([^"]+)" alt="([^"]+)"/i);
+        const hasWorkingCover = cover && cover[1].startsWith('../../assets/images/')
+          && fs.existsSync(path.resolve(ROOT_DIR, 'assets', 'images', path.basename(cover[1])));
+        const tocTargets = [...articleHtml.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
+        const hasWorkingToc = tocTargets.length >= 3
+          && tocTargets.every(target => new RegExp(`\\bid="${target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`).test(articleHtml));
+        const wordCount = articleHtml.replace(/<[^>]*>/g, ' ').replace(/&[a-z]+;/gi, ' ').split(/\s+/).filter(Boolean).length;
+        const hasSearchMetadata = html.includes(`<meta name="description" content="`)
+          && !html.includes('content="undefined"')
+          && html.includes(`https://nafeerdigital.com/${language}/blog/${article.slug}.html`);
+        const hasSubstantialContent = wordCount >= 400;
+        const hasNoUnsupportedStats = !/(?:70%|65%|90%|96%|48 hours|3x higher|under 2 seconds)/i.test(articleHtml);
 
-      if (res.ok && hasComparisonTable) {
-        console.log(`[PASS] Accessible comparison table: ${ep}`);
-        passed++;
-      } else {
-        console.error(`[FAIL] Comparison table check failed for: ${ep}`, { hasComparisonTable });
+        if (res.ok && hasLocalizedDocument && hasCorrectTitle && hasEditorialStructure
+          && hasWorkingCover && hasWorkingToc && hasSearchMetadata && hasSubstantialContent
+          && hasNoUnsupportedStats) {
+          console.log(`[PASS] Localized editorial article, assets and structure: ${ep}`);
+          passed++;
+        } else {
+          console.error(`[FAIL] Editorial article check failed for: ${ep}`, {
+            hasLocalizedDocument, hasCorrectTitle, hasEditorialStructure, hasWorkingCover,
+            hasWorkingToc, hasSearchMetadata, hasSubstantialContent, wordCount, hasNoUnsupportedStats
+          });
+        }
+      } catch (err) {
+        console.error(`[ERROR] Editorial article check ${ep}:`, err.message);
       }
-    } catch (err) {
-      console.error(`[ERROR] Comparison table check ${ep}:`, err.message);
     }
   }
 
-  const totalTests = endpoints.length + 7;
+  const totalTests = endpoints.length + 5 + blogArticles.length * 2;
   console.log(`\nResults: ${passed} / ${totalTests} tests passed successfully.`);
   server.close(() => {
     console.log('Server shut down cleanly.');
