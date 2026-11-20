@@ -141,6 +141,9 @@ node scripts/build_work_pages.js
 # Generate email marketing pages and update service availability routes:
 node scripts/build_service_pages.js
 
+# Generate the bilingual editorial pages for all 13 blog topics:
+node scripts/build_blog_editorial.js
+
 # Run the automated endpoint test harness:
 node scripts/test_server.js
 ```
